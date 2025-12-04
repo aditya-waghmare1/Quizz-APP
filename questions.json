@@ -2,123 +2,183 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which of the following ensures external schemas remain unchanged when logical schema changes?",
-      "options": ["Logical Data Independence", "Physical Data Independence", "Concurrency Control", "Durability"],
-      "answer": 0
+      "question": "Which term refers to the description of data types and constraints of attributes?",
+      "options": ["Instance", "Schema", "Tuple", "Relation"],
+      "answer": 1
     },
     {
       "id": 2,
-      "question": "Which layer primarily deals with file organization and indexing?",
-      "options": ["Conceptual Level", "External Level", "Internal Level", "Application Level"],
+      "question": "Which SQL operation combines tuples from two relations based on a matching attribute?",
+      "options": ["Projection", "Selection", "Join", "Union"],
       "answer": 2
     },
     {
       "id": 3,
-      "question": "Which NoSQL model uses edges and nodes to represent relationships?",
-      "options": ["Document Store", "Column Family Store", "Graph Database", "Key-Value Store"],
-      "answer": 2
+      "question": "Which type of NoSQL is best used for full-text search?",
+      "options": ["Key-Value Store", "Document Store", "Graph Store", "Column Family Store"],
+      "answer": 1
     },
     {
       "id": 4,
-      "question": "Which MySQL component optimizes SELECT queries?",
-      "options": ["Query Optimizer", "Storage Engine", "View Manager", "Metadata Manager"],
-      "answer": 0
+      "question": "Which DBMS component manages buffer pages between disk and memory?",
+      "options": ["Lock Manager", "Buffer Manager", "Query Compiler", "Index Manager"],
+      "answer": 1
     },
     {
       "id": 5,
-      "question": "In relational algebra, projection operation returns?",
-      "options": ["Specific rows", "Specific columns", "Joined tables", "Sorted data"],
-      "answer": 1
+      "question": "BCNF removes anomalies caused by?",
+      "options": ["Partial dependencies", "Multi-valued dependencies", "Trivial dependencies", "Non-key attribute determining key"],
+      "answer": 3
     },
     {
       "id": 6,
-      "question": "Which term refers to a property that uniquely identifies tuples?",
-      "options": ["Foreign Key", "Primary Key", "Domain", "Constraint"],
-      "answer": 1
+      "question": "Which index type stores both key and data in the leaf nodes?",
+      "options": ["Dense Index", "Sparse Index", "Primary Index", "Clustered Index"],
+      "answer": 0
     },
     {
       "id": 7,
-      "question": "Which consistency model ensures reads return the most recent write?",
-      "options": ["Eventual Consistency", "Strong Consistency", "Weak Consistency", "Causal Consistency"],
-      "answer": 1
+      "question": "Stored procedures primarily help improve?",
+      "options": ["Schema design", "Network latency", "Modularity and performance", "Physical storage"],
+      "answer": 2
     },
     {
       "id": 8,
-      "question": "Which MySQL command provides info about storage engines?",
-      "options": ["SHOW STATUS", "SHOW ENGINES", "SHOW TABLES", "SHOW PROCESSLIST"],
+      "question": "Which SQL constraint ensures column cannot have NULL?",
+      "options": ["UNIQUE", "NOT NULL", "CHECK", "DEFAULT"],
       "answer": 1
     },
     {
       "id": 9,
-      "question": "Which is stored in the data dictionary?",
-      "options": ["User tables only", "Metadata about schemas", "Only indexes", "Only stored procedures"],
-      "answer": 1
+      "question": "Which MySQL engine is optimized for in-memory operations?",
+      "options": ["InnoDB", "MyISAM", "MEMORY", "ARCHIVE"],
+      "answer": 2
     },
     {
       "id": 10,
-      "question": "Which isolation level allows non-repeatable reads?",
-      "options": ["Serializable", "Repeatable Read", "Read Committed", "Read Uncommitted"],
-      "answer": 2
+      "question": "CAP theorem says a distributed DB can guarantee at most?",
+      "options": ["Consistency + Partition tolerance", "Availability + Consistency", "Partition tolerance + Availability", "All three simultaneously"],
+      "answer": 3
     },
     {
       "id": 11,
-      "question": "Column-family NoSQL databases are BEST suited for?",
-      "options": ["Graph traversal", "Sparse data storage", "Document search", "Social network relationships"],
-      "answer": 1
+      "question": "Which isolation level permits dirty reads?",
+      "options": ["Read Committed", "Repeatable Read", "Read Uncommitted", "Serializable"],
+      "answer": 2
     },
     {
       "id": 12,
-      "question": "Which SQL clause is applied before GROUP BY?",
-      "options": ["ORDER BY", "SELECT", "WHERE", "HAVING"],
-      "answer": 2
-    },
-    {
-      "id": 13,
-      "question": "A foreign key enforces which constraint?",
-      "options": ["Domain", "Entity Integrity", "Referential Integrity", "Functional Dependency"],
-      "answer": 2
-    },
-    {
-      "id": 14,
-      "question": "Which term refers to transforming high-level queries into low-level execution plans?",
-      "options": ["Normalization", "Optimization", "Compilation", "Indexing"],
+      "question": "Which term refers to minimum number of attributes needed to uniquely identify tuples?",
+      "options": ["Super key", "Candidate key", "Foreign key", "Prime attribute"],
       "answer": 1
     },
     {
+      "id": 13,
+      "question": "Which SQL keyword is used for pattern matching?",
+      "options": ["BETWEEN", "LIKE", "IN", "EXISTS"],
+      "answer": 1
+    },
+    {
+      "id": 14,
+      "question": "Which component converts SQL into relational algebra?",
+      "options": ["Query Parser", "Optimizer", "Transaction Manager", "Executor"],
+      "answer": 0
+    },
+    {
       "id": 15,
-      "question": "Which MySQL engine is MOST suitable for read-heavy analytics?",
-      "options": ["InnoDB", "MyISAM", "Memory", "BLACKHOLE"],
+      "question": "In a distributed DB, fragmentation refers to?",
+      "options": ["Copying data to multiple sites", "Breaking a relation into pieces", "Combining multiple databases", "Encrypting data"],
       "answer": 1
     },
     {
       "id": 16,
-      "question": "Which NoSQL DB is BEST for storing JSON-like semi-structured data?",
-      "options": ["Graph DB", "Key-Value DB", "Document DB", "Column-Family DB"],
+      "question": "Which database model stores data in parent-child tree form?",
+      "options": ["Relational", "Graph", "Hierarchical", "Network"],
       "answer": 2
     },
     {
       "id": 17,
-      "question": "Which normalization form eliminates partial dependency?",
-      "options": ["1NF", "2NF", "3NF", "BCNF"],
-      "answer": 1
+      "question": "Which MySQL statement analyzes index distribution for optimizer?",
+      "options": ["ANALYZE TABLE", "CHECK TABLE", "SHOW INDEX", "EXPLAIN"],
+      "answer": 0
     },
     {
       "id": 18,
-      "question": "Transactional logs are essential for which property?",
-      "options": ["Atomicity", "Isolation", "Durability", "Consistency"],
+      "question": "Which kind of join returns all tuples from left table and matching ones from right?",
+      "options": ["Inner Join", "Right Join", "Left Join", "Full Outer Join"],
       "answer": 2
     },
     {
       "id": 19,
-      "question": "Which SQL keyword removes duplicate rows?",
-      "options": ["DISTINCT", "UNIQUE", "FILTER", "NODUP"],
+      "question": "Which ACID property ensures all operations complete or none do?",
+      "options": ["Atomicity", "Isolation", "Durability", "Consistency"],
       "answer": 0
     },
     {
       "id": 20,
-      "question": "In DBMS architecture, physical data independence allows changes to?",
-      "options": ["External schema", "Logical schema", "Storage structure", "User views"],
+      "question": "Which indexing structure is most commonly used in DBMS?",
+      "options": ["Binary Tree", "Hash Table", "B+ Tree", "AVL Tree"],
       "answer": 2
+    },
+    {
+      "id": 21,
+      "question": "Which SQL command removes a table and its data permanently?",
+      "options": ["DROP", "DELETE", "TRUNCATE", "REMOVE"],
+      "answer": 0
+    },
+    {
+      "id": 22,
+      "question": "Which of the following is NOT a valid type of data independence?",
+      "options": ["Physical", "Logical", "Functional", "Both A and B"],
+      "answer": 2
+    },
+    {
+      "id": 23,
+      "question": "Which NoSQL DB excels in distributed, high-write workloads such as time-series?",
+      "options": ["Graph DB", "Column Family DB", "Document DB", "Key-Value DB"],
+      "answer": 1
+    },
+    {
+      "id": 24,
+      "question": "Which normalization form removes transitive dependencies?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "answer": 2
+    },
+    {
+      "id": 25,
+      "question": "Which SQL clause is applied after GROUP BY?",
+      "options": ["WHERE", "HAVING", "ORDER BY", "DISTINCT"],
+      "answer": 1
+    },
+    {
+      "id": 26,
+      "question": "Which term refers to multiple users accessing DB at same time safely?",
+      "options": ["Deadlock", "Concurrency Control", "Consistency Check", "Indexing"],
+      "answer": 1
+    },
+    {
+      "id": 27,
+      "question": "Which storage structure allows O(1) search on exact keys?",
+      "options": ["B+ Tree", "Hash Index", "Clustered Index", "Bitmap Index"],
+      "answer": 1
+    },
+    {
+      "id": 28,
+      "question": "Which part of DBMS assigns locks to transactions?",
+      "options": ["Optimizer", "Parser", "Lock Manager", "Scheduler"],
+      "answer": 2
+    },
+    {
+      "id": 29,
+      "question": "Which SQL operator merges results of two queries and removes duplicates?",
+      "options": ["UNION ALL", "INTERSECT", "UNION", "JOIN"],
+      "answer": 2
+    },
+    {
+      "id": 30,
+      "question": "Which MySQL feature enables point-in-time recovery?",
+      "options": ["Undo Logs", "Binary Logs", "Buffer Pool", "Redo Logs"],
+      "answer": 1
     }
   ]
 }
