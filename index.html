@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Exam-style Quiz App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app" id="app">
+  <!-- Left: question pane -->
+  <div class="left" id="left">
+    <div class="header-row">
+      <div class="brand">
+        <div class="logo">DB</div>
+        <div>
+          <div class="title">DBMS Quiz</div>
+          <div class="sub">Session 1 — One question at a time</div>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div class="sub">Question</div>
+        <div id="qcount" style="font-weight:900;font-size:18px">1 / 20</div>
+      </div>
+    </div>
+
+    <div class="question-number" id="qn-number">Question 1</div>
+    <div class="question-text" id="question-text">Loading...</div>
+
+    <div class="options" id="options"></div>
+
+    <div class="controls">
+      <div>
+        <button class="btn ghost" id="prevBtn" onclick="prevQuestion()">Prev</button>
+        <button class="btn ghost" id="skipBtn" onclick="skipQuestion()">Skip</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:18px;">
+        <div style="text-align:right">
+          <div class="sub">Time left</div>
+          <div class="timer" id="timer">00:00</div>
+        </div>
+
+        <button class="btn" id="nextBtn" onclick="nextQuestion()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: stats -->
+  <div class="right" id="right">
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-title">Solved</div>
+        <div class="stat-value" id="solved">0</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-title">Remaining</div>
+        <div class="stat-value" id="remaining">0</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-title">Progress</div>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+        <div style="margin-top:8px;color:var(--muted);font-weight:700" id="progressText">0%</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-title">Total Time</div>
+        <div class="stat-value" id="totalTime">00:00</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-title">Per-question time</div>
+        <div class="stat-value" id="perTime">01:00</div>
+      </div>
+
+      <div style="text-align:center;margin-top:8px;color:var(--muted);font-size:13px">
+        Auto-advances when question time runs out
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Result / Review modal area (hidden until end) -->
+<div id="resultModal" style="max-width:1100px;margin:30px auto;display:none">
+  <div style="background:linear-gradient(180deg,#fff,#f8fbff);padding:22px;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,0.08)">
+    <h2 style="margin:6px 0 0 0">Results</h2>
+    <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1;min-width:320px">
+        <div id="scoreSummary" style="font-size:18px;font-weight:900;margin-top:6px">You scored 0 / 0</div>
+        <div style="margin-top:8px;color:var(--muted)">Detailed review below</div>
+
+        <div class="review" id="reviewList" style="margin-top:14px"></div>
+      </div>
+
+      <div style="min-width:320px">
+        <div class="gauge-wrap">
+          <div class="semi-gauge" id="semiGauge">
+            <!-- SVG semicircle background + foreground will be injected -->
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:10px">
+          <div id="gcs-text" class="gauge-sub" style="font-weight:700"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;text-align:right">
+      <button class="btn" onclick="restart()">Restart</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/*
+  Quiz app logic
+  - loads questions.json (0-based answer indices)
+  - shows one question at a time
+  - per-question timer (default 60s each)
+  - auto-advance on timeout
+  - final review with half-circle gauge (SVG arc)
+*/
+
+let questions = [];
+let current = 0;
+let chosen = []; // stores user's chosen index (null/unanswered)
+let correctCount = 0;
+let perQuestionSeconds = 60; // default 60 sec per question
+let timerInterval = null;
+let timeLeft = 0;
+
+// fetch questions
+fetch('questions.json').then(r => r.json()).then(data => {
+  questions = data.questions || [];
+  // initialize chosen with nulls
+  chosen = Array(questions.length).fill(null);
+
+  // set times: 1 minute per question (you can change if needed)
+  perQuestionSeconds = 60; // 60 seconds each; if you want 30s change here
+  const totalSeconds = perQuestionSeconds * questions.length;
+
+  document.getElementById('remaining').innerText = questions.length;
+  document.getElementById('solved').innerText = 0;
+  document.getElementById('qcount').innerText = `1 / ${questions.length}`;
+
+  document.getElementById('totalTime').innerText = formatTime(totalSeconds);
+  document.getElementById('perTime').innerText = formatTime(perQuestionSeconds);
+
+  loadQuestion();
+  startTimer();
+});
+
+// helpers
+function formatTime(sec){
+  const m = Math.floor(sec/60).toString().padStart(2,'0');
+  const s = (sec%60).toString().padStart(2,'0');
+  return `${m}:${s}`;
+}
+
+// load question UI
+function loadQuestion(){
+  const q = questions[current];
+  document.getElementById('qn-number').innerText = `Question ${current+1}`;
+  document.getElementById('question-text').innerText = q.question;
+  document.getElementById('qcount').innerText = `${current+1} / ${questions.length}`;
+
+  // options
+  const opts = q.options.map((opt,i) => {
+    const chosenIndex = chosen[current];
+    const cls = (chosenIndex === i) ? 'option selected' : 'option';
+    return `<div class="${cls}" data-idx="${i}" onclick="selectOption(${i})">
+      <div class="option-number">${String.fromCharCode(65+i)}</div>
+      <div class="option-text">${opt}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('options').innerHTML = opts;
+
+  // update remaining/solved/progress
+  updateStats();
+  // reset timer for this question
+  resetTimer();
+}
+
+function selectOption(i){
+  chosen[current] = i;
+  // visual update
+  document.querySelectorAll('.option').forEach(el => el.classList.remove('selected'));
+  const optEls = document.querySelectorAll('.option');
+  optEls.forEach(el=>{
+    if (Number(el.getAttribute('data-idx')) === i) el.classList.add('selected');
+  });
+  updateStats();
+}
+
+function updateStats(){
+  const solved = chosen.filter(x => x !== null).length;
+  const remaining = questions.length - solved;
+  const percent = Math.round((solved / questions.length) * 100);
+
+  document.getElementById('solved').innerText = solved;
+  document.getElementById('remaining').innerText = remaining;
+  document.getElementById('progressFill').style.width = percent + '%';
+  document.getElementById('progressText').innerText = percent + '%';
+}
+
+function prevQuestion(){
+  if (current === 0) return;
+  current--;
+  loadQuestion();
+}
+
+function skipQuestion(){
+  // leave chosen as null, go next
+  nextQuestion(true);
+}
+
+function nextQuestion(skipped = false){
+  // if user hasn't selected and not skipped: consider as unanswered (null) but still advance
+  // stop timer for this question and move on
+  clearInterval(timerInterval);
+
+  // if answered, no extra action (we stored chosen)
+  // move to next or show results
+  if (current < questions.length - 1){
+    current++;
+    loadQuestion();
+    startTimer();
+  } else {
+    // all questions visited => finish
+    finishQuiz();
+  }
+}
+
+// timer
+function startTimer(){
+  timeLeft = perQuestionSeconds;
+  document.getElementById('timer').innerText = formatTime(timeLeft);
+  clearInterval(timerInterval);
+  timerInterval = setInterval(()=>{
+    timeLeft--;
+    document.getElementById('timer').innerText = formatTime(timeLeft);
+    if (timeLeft <= 0){
+      // time up for current question — auto next
+      clearInterval(timerInterval);
+      // mark unanswered as null (already null)
+      if (current < questions.length - 1){
+        current++;
+        loadQuestion();
+        startTimer();
+      } else {
+        finishQuiz();
+      }
+    }
+  },1000);
+}
+
+function resetTimer(){
+  clearInterval(timerInterval);
+  timeLeft = perQuestionSeconds;
+  document.getElementById('timer').innerText = formatTime(timeLeft);
+  startTimer();
+}
+
+// finish quiz and show review + gauge
+function finishQuiz(){
+  clearInterval(timerInterval);
+
+  // compute score
+  correctCount = 0;
+  for (let i=0;i<questions.length;i++){
+    if (chosen[i] !== null && chosen[i] === questions[i].answer) correctCount++;
+  }
+
+  // hide app, show result modal
+  document.getElementById('app').style.display = 'none';
+  const modal = document.getElementById('resultModal');
+  modal.style.display = 'block';
+
+  // fill review list
+  const review = document.getElementById('reviewList');
+  review.innerHTML = '';
+
+  questions.forEach((q, idx) => {
+    const your = chosen[idx];
+    const correct = q.answer;
+    const isCorrect = (your !== null && your === correct);
+
+    const row = document.createElement('div');
+    row.className = 'row';
+
+    const left = document.createElement('div');
+    left.style.flex = '1';
+    left.innerHTML = `<div class="qtext">${idx+1}. ${q.question}</div>
+      <div style="margin-top:6px;color:var(--muted)">${q.options.map((op,i)=> `<div style="margin-top:4px">
+         <strong>${String.fromCharCode(65+i)}.</strong> ${op}
+      </div>`).join('')}</div>`;
+
+    const right = document.createElement('div');
+    right.style.minWidth='140px';
+    right.style.textAlign='right';
+
+    const chosenText = your===null ? '<em style="color:var(--muted)">No answer</em>' : `<div style="font-weight:800">${String.fromCharCode(65+your)}. ${q.options[your]}</div>`;
+    const correctText = `<div style="margin-top:8px;font-weight:700;color:${isCorrect? 'var(--good)': 'var(--muted)'}">${String.fromCharCode(65+correct)}. ${q.options[correct]}</div>`;
+
+    right.innerHTML = `<div style="font-size:13px">Your answer</div>${chosenText}${correctText}<div style="margin-top:8px">${isCorrect ? '<span class="badge" style="background:rgba(22,163,74,0.12);color:var(--good)">Correct</span>' : '<span class="badge" style="background:rgba(239,68,68,0.08);color:var(--bad)">Wrong</span>'}</div>`;
+
+    row.appendChild(left);
+    row.appendChild(right);
+    review.appendChild(row);
+  });
+
+  // score summary
+  document.getElementById('scoreSummary').innerText = `You scored ${correctCount} / ${questions.length}`;
+  document.getElementById('gcs-text').innerText = `${Math.round((correctCount/questions.length)*100)}%`;
+
+  // draw semicircle gauge
+  drawGauge(correctCount, questions.length);
+}
+
+// restart quiz
+function restart(){
+  // reset
+  current = 0;
+  chosen = Array(questions.length).fill(null);
+  correctCount = 0;
+  document.getElementById('resultModal').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  loadQuestion();
+  startTimer();
+}
+
+// ---------- SVG semicircle gauge ----------
+// We'll draw a semicircular arc from left (0deg) to right (180deg).
+function drawGauge(score, total){
+  const percent = (score/total); // 0..1
+  const svgNS = "http://www.w3.org/2000/svg";
+  const wrap = document.getElementById('semiGauge');
+  wrap.innerHTML = '';
+
+  const width = 260, height = 140;
+  const cx = width/2, cy = height; // center at bottom middle
+  const r = 110;
+
+  // background arc (light)
+  const svg = document.createElementNS(svgNS,'svg');
+  svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+  svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+
+  // draw background semicircle path
+  const startX = cx - r, startY = cy;
+  const endX = cx + r, endY = cy;
+  const dBG = `M ${startX} ${startY} A ${r} ${r} 0 0 1 ${endX} ${endY}`;
+  const pathBG = document.createElementNS(svgNS,'path');
+  pathBG.setAttribute('d', dBG);
+  pathBG.setAttribute('fill','none');
+  pathBG.setAttribute('stroke','#e6eef8');
+  pathBG.setAttribute('stroke-width','20');
+  pathBG.setAttribute('stroke-linecap','round');
+
+  svg.appendChild(pathBG);
+
+  // foreground path length = percent * PI * r (semi circumference)
+  // To animate, we create a full foreground path and use stroke-dasharray
+  const pathFG = document.createElementNS(svgNS,'path');
+  pathFG.setAttribute('d', dBG);
+  pathFG.setAttribute('fill','none');
+  pathFG.setAttribute('stroke','url(#grad1)');
+  pathFG.setAttribute('stroke-width','20');
+  pathFG.setAttribute('stroke-linecap','round');
+  pathFG.setAttribute('stroke-linejoin','round');
+  pathFG.setAttribute('transform','translate(0,0)');
+
+  // gradient
+  const defs = document.createElementNS(svgNS,'defs');
+  const grad = document.createElementNS(svgNS,'linearGradient');
+  grad.setAttribute('id','grad1');
+  grad.setAttribute('x1','0%');
+  grad.setAttribute('x2','100%');
+  grad.setAttribute('y1','0%');
+  grad.setAttribute('y2','0%');
+  const stop1 = document.createElementNS(svgNS,'stop');
+  stop1.setAttribute('offset','0%');
+  stop1.setAttribute('stop-color','#06b6d4');
+  const stop2 = document.createElementNS(svgNS,'stop');
+  stop2.setAttribute('offset','100%');
+  stop2.setAttribute('stop-color','#3b82f6');
+  grad.appendChild(stop1);
+  grad.appendChild(stop2);
+  defs.appendChild(grad);
+  svg.appendChild(defs);
+
+  svg.appendChild(pathFG);
+  wrap.appendChild(svg);
+
+  // compute path length
+  // approximate semicircumference = PI * r
+  const semiLen = Math.PI * r;
+  const showLen = semiLen * percent;
+  pathFG.setAttribute('stroke-dasharray', `${showLen} ${semiLen}`);
+  pathFG.setAttribute('stroke-dashoffset', semiLen);
+
+  // animate using JS: transition dashoffset from semiLen -> semiLen - showLen
+  pathFG.style.transition = 'stroke-dashoffset 1.2s ease-out';
+  // small timeout to trigger
+  setTimeout(()=>{
+    pathFG.setAttribute('stroke-dashoffset', semiLen - showLen);
+  },50);
+
+  // add center text
+  const centerDiv = document.createElement('div');
+  centerDiv.className = 'gauge-center';
+  centerDiv.innerHTML = `<div class="gauge-score">${Math.round(percent*100)}%</div>
+                         <div class="gauge-sub">Score</div>`;
+  wrap.appendChild(centerDiv);
+}
+</script>
+
+</body>
+</html>

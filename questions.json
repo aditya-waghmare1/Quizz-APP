@@ -1,0 +1,125 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which of the following BEST distinguishes schema from instance?",
+        "options": ["Schema changes frequently", "Schema is the structure; instance is data", "Both store physical data", "Instance defines constraints"],
+        "answer": 1
+      },
+      {
+        "id": 2,
+        "question": "Which component maps conceptual level to internal level?",
+        "options": ["View Manager", "Storage Engine", "Query Processor", "Physical Data Independence"],
+        "answer": 3
+      },
+      {
+        "id": 3,
+        "question": "Which database type offers flexible schema?",
+        "options": ["RDBMS", "Object-Relational DBMS", "NoSQL Document Store", "Graph DB"],
+        "answer": 2
+      },
+      {
+        "id": 4,
+        "question": "Which MySQL engine does NOT support foreign keys?",
+        "options": ["InnoDB", "MyISAM", "TokuDB", "InMemory"],
+        "answer": 1
+      },
+      {
+        "id": 5,
+        "question": "A Domain in relational model refers to?",
+        "options": ["Relationship", "Allowed values", "Primary key", "Row identifier"],
+        "answer": 1
+      },
+      {
+        "id": 6,
+        "question": "Which statement about metadata is TRUE?",
+        "options": ["Same as table content", "Describes structure of data", "Stored only in external schema", "Cannot be modified"],
+        "answer": 1
+      },
+      {
+        "id": 7,
+        "question": "Which abstraction level hides physical storage?",
+        "options": ["External", "Conceptual", "Internal", "View"],
+        "answer": 2
+      },
+      {
+        "id": 8,
+        "question": "Eventual consistency means?",
+        "options": ["Consistent instantly", "Never consistent", "Becomes consistent after delay", "Prevents replication"],
+        "answer": 2
+      },
+      {
+        "id": 9,
+        "question": "Best NoSQL for fraud detection?",
+        "options": ["Key-value", "Document", "Graph", "Column-family"],
+        "answer": 2
+      },
+      {
+        "id": 10,
+        "question": "Which MySQL client supports Python + JS?",
+        "options": ["MySQL Monitor", "MySQL Workbench", "MySQL Shell", "mysqladmin"],
+        "answer": 2
+      },
+      {
+        "id": 11,
+        "question": "Which is TRUE about MySQL Workbench?",
+        "options": ["CLI only", "Creates ER diagrams", "Runs Python scripts", "Used only for backup"],
+        "answer": 1
+      },
+      {
+        "id": 12,
+        "question": "A virtual table from a SELECT is called?",
+        "options": ["Index", "View", "Relation", "Snapshot"],
+        "answer": 1
+      },
+      {
+        "id": 13,
+        "question": "Which ACID property prevents interference between transactions?",
+        "options": ["Durability", "Consistency", "Isolation", "Atomicity"],
+        "answer": 2
+      },
+      {
+        "id": 14,
+        "question": "Optimizer chooses plans based on?",
+        "options": ["User privileges", "Estimated execution cost", "RAM size", "SQL version"],
+        "answer": 1
+      },
+      {
+        "id": 15,
+        "question": "Which storage engine supports transactions?",
+        "options": ["MyISAM", "InnoDB", "BLACKHOLE", "ARCHIVE"],
+        "answer": 1
+      },
+      {
+        "id": 16,
+        "question": "Which is NOT an RDBMS characteristic?",
+        "options": ["Fixed schema", "Uses SQL", "No support for joins", "Tabular format"],
+        "answer": 2
+      },
+      {
+        "id": 17,
+        "question": "Which NoSQL resembles Excel column layout?",
+        "options": ["Key-value", "Document", "Column-family", "Graph"],
+        "answer": 2
+      },
+      {
+        "id": 18,
+        "question": "Which ACID property ensures crash-safe data?",
+        "options": ["Atomicity", "Consistency", "Isolation", "Durability"],
+        "answer": 3
+      },
+      {
+        "id": 19,
+        "question": "Which abstraction level defines what data is stored?",
+        "options": ["Internal", "Conceptual", "External", "Physical"],
+        "answer": 1
+      },
+      {
+        "id": 20,
+        "question": "Best definition of data independence?",
+        "options": ["Change values but not schema", "Change storage without schema change", "Change schema without affecting apps", "Change SQL without affecting DB"],
+        "answer": 2
+      }
+    ]
+  }
+  
