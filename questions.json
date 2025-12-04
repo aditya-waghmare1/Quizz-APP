@@ -2,243 +2,343 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which of the following best defines a DBMS?",
-      "options": ["A programming language", "A system to store and manage data", "A compiler", "A hardware device"],
+      "question": "Which statement about physical data independence is TRUE?",
+      "options": [
+        "Changes to indexes require application changes",
+        "Changes in file organization do not affect logical schema",
+        "Applications break when storage changes",
+        "It ensures logical schema remains unchanged forever"
+      ],
       "answer": 1
     },
     {
       "id": 2,
-      "question": "Which MySQL client is command-line based?",
-      "options": ["MySQL Shell", "MySQL Monitor", "MySQL Workbench", "phpMyAdmin"],
-      "answer": 1
+      "question": "In a weak entity, the primary key is formed using:",
+      "options": [
+        "Only partial key",
+        "Only strong entity's primary key",
+        "Combination of foreign key and partial key",
+        "Combination of two partial keys"
+      ],
+      "answer": 2
     },
     {
       "id": 3,
-      "question": "Conceptual data model focuses on:",
-      "options": ["Storage engines", "Business-level entities & relationships", "Indexes", "Data types"],
+      "question": "Which of the following violates 2NF?",
+      "options": [
+        "Non-key attribute depends on entire composite key",
+        "Non-key attribute depends on part of composite key",
+        "Repeated groups in a table",
+        "Primary key with single attribute"
+      ],
       "answer": 1
     },
     {
       "id": 4,
-      "question": "Logical model includes:",
-      "options": ["Tables, PK/FK, normalization", "ERD only", "Physical storage details", "User interfaces"],
+      "question": "A table is in BCNF only if:",
+      "options": [
+        "Every determinant is a candidate key",
+        "Every non-key depends on primary key",
+        "No multivalued dependencies exist",
+        "No partial dependencies exist"
+      ],
       "answer": 0
     },
     {
       "id": 5,
-      "question": "Which rule states NULLs must be treated uniformly?",
-      "options": ["Rule 2", "Rule 3", "Rule 7", "Rule 10"],
+      "question": "Which relational algebra expression returns rows where A exists but not in B?",
+      "options": ["A ⋃ B", "A − B", "A × B", "A ⋂ B"],
       "answer": 1
     },
     {
       "id": 6,
-      "question": "Which SQL category modifies table structure?",
-      "options": ["DML", "DDL", "DCL", "TCL"],
+      "question": "Which operation in relational algebra increases both number of columns and rows?",
+      "options": ["Projection", "Cartesian Product", "Selection", "Intersection"],
       "answer": 1
     },
     {
       "id": 7,
-      "question": "Which command deletes all rows but keeps table structure?",
-      "options": ["DROP", "DELETE", "TRUNCATE", "CLEAR"],
-      "answer": 2
+      "question": "Which join condition may accidentally drop matching rows if column names differ?",
+      "options": ["Inner Join", "Natural Join", "Cross Join", "Using Join"],
+      "answer": 1
     },
     {
       "id": 8,
-      "question": "Data redundancy leads to:",
-      "options": ["Optimized storage", "Increased anomalies", "Better performance", "Better normalization"],
+      "question": "In MySQL, TRUNCATE fails when:",
+      "options": [
+        "Table has a primary key",
+        "Table has a foreign key referencing it",
+        "Table size is large",
+        "Auto_increment is disabled"
+      ],
       "answer": 1
     },
     {
       "id": 9,
-      "question": "Partial dependencies are removed in which normal form?",
-      "options": ["1NF", "2NF", "3NF", "BCNF"],
-      "answer": 1
+      "question": "Which constraint cannot be enforced at column level in MySQL?",
+      "options": ["NOT NULL", "UNIQUE", "CHECK with multiple columns", "DEFAULT"],
+      "answer": 2
     },
     {
       "id": 10,
-      "question": "Which SQL keyword is used to remove duplicate rows?",
-      "options": ["DISTINCT", "UNIQUE", "FILTER", "GROUP BY"],
+      "question": "AUTO_INCREMENT in MySQL increments even if:",
+      "options": ["INSERT fails due to duplicate key", "Table is empty", "UPDATE is executed", "DELETE removes last row"],
       "answer": 0
     },
     {
       "id": 11,
-      "question": "Which constraint ensures a column cannot be empty?",
-      "options": ["PRIMARY KEY", "NOT NULL", "FOREIGN KEY", "DEFAULT"],
-      "answer": 1
+      "question": "Which MySQL client supports JavaScript execution and AdminAPI?",
+      "options": ["MySQL Monitor", "MySQL Workbench", "MySQL Shell", "phpMyAdmin"],
+      "answer": 2
     },
     {
       "id": 12,
-      "question": "Which aggregate function returns the highest value?",
-      "options": ["SUM()", "MAX()", "AVG()", "COUNT()"],
+      "question": "Which SQL query correctly finds departments with more than 3 employees AND avg salary > 50000?",
+      "options": [
+        "SELECT dept_id FROM emp WHERE COUNT(*)>3 AND AVG(sal)>50000;",
+        "SELECT dept_id FROM emp GROUP BY dept_id HAVING COUNT(*)>3 AND AVG(sal)>50000;",
+        "SELECT dept_id FROM emp HAVING COUNT(*)>3;",
+        "SELECT dept_id FROM emp GROUP BY dept_id WHERE AVG(sal)>50000;"
+      ],
       "answer": 1
     },
     {
       "id": 13,
-      "question": "Which operator is used for pattern matching?",
-      "options": ["IN", "LIKE", "IS", "BETWEEN"],
+      "question": "Which of the following subqueries MUST be correlated?",
+      "options": [
+        "Subquery returning MAX(salary)",
+        "Subquery comparing row values of outer query",
+        "Subquery used in IN operator",
+        "Subquery used in SELECT list"
+      ],
       "answer": 1
     },
     {
       "id": 14,
-      "question": "Which clause filters groups after aggregation?",
-      "options": ["WHERE", "GROUP BY", "HAVING", "ORDER BY"],
+      "question": "EXISTS differs from IN because:",
+      "options": [
+        "EXISTS compares values, IN compares rows",
+        "IN stops after first match, EXISTS checks all rows",
+        "EXISTS stops after first match, IN compares all values",
+        "Both behave identically"
+      ],
       "answer": 2
     },
     {
       "id": 15,
-      "question": "Selection in relational algebra filters:",
-      "options": ["Columns", "Rows", "Both", "Indexes"],
-      "answer": 1
+      "question": "Which SQL clause is executed first when GROUP BY and WHERE exist?",
+      "options": ["SELECT", "GROUP BY", "WHERE", "HAVING"],
+      "answer": 2
     },
     {
       "id": 16,
-      "question": "Projection in relational algebra filters:",
-      "options": ["Rows", "Columns", "Tables", "Keys"],
-      "answer": 1
+      "question": "Which normal form prevents dependency A → B when A is not a key?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "answer": 3
     },
     {
       "id": 17,
-      "question": "INNER JOIN returns:",
-      "options": ["Only matching rows", "All left rows", "All right rows", "All rows from both tables"],
-      "answer": 0
+      "question": "Which is TRUE about OUTER JOIN behavior?",
+      "options": [
+        "Left join removes unmatched left rows",
+        "Right join includes unmatched right rows with NULLs",
+        "Full join removes unmatched rows entirely",
+        "Inner join behaves same as full join"
+      ],
+      "answer": 1
     },
     {
       "id": 18,
-      "question": "LEFT JOIN returns:",
-      "options": ["Only matching rows", "All rows from left table", "All rows from right table", "None"],
+      "question": "Which relational algebra operation is used to implement DISTINCT?",
+      "options": ["Selection", "Projection", "Union", "Difference"],
       "answer": 1
     },
     {
       "id": 19,
-      "question": "CROSS JOIN produces:",
-      "options": ["Difference of tables", "All combinations of rows", "Only matched rows", "Only unmatched rows"],
+      "question": "A multivalued dependency X →→ Y exists when:",
+      "options": [
+        "Y depends only on primary key",
+        "Y is independent of other attributes but depends on X",
+        "X partially determines Y",
+        "X transitively determines Y"
+      ],
       "answer": 1
     },
     {
       "id": 20,
-      "question": "Which keyword is used to auto-generate numbering in MySQL?",
-      "options": ["SEQUENCE", "SERIAL", "AUTO_INCREMENT", "NEXTVAL"],
+      "question": "Which MySQL datatype is best for storing monetary values?",
+      "options": ["FLOAT", "DOUBLE", "DECIMAL(p,s)", "INT"],
       "answer": 2
     },
     {
       "id": 21,
-      "question": "Which operator checks for NULL values?",
-      "options": ["= NULL", "IS NULL", "IN NULL", "BETWEEN NULL"],
-      "answer": 1
-    },
-    {
-      "id": 22,
-      "question": "Which corresponds to SQL's SELECT * FROM A UNION SELECT * FROM B?",
-      "options": ["A ⋃ B", "A - B", "A × B", "A ⋂ B"],
-      "answer": 0
-    },
-    {
-      "id": 23,
-      "question": "CHECK constraint ensures:",
-      "options": ["Referential integrity", "Uniqueness", "Validation of values", "Auto increment"],
+      "question": "Which SQL statement is guaranteed to copy indexes as well?",
+      "options": [
+        "CREATE TABLE new AS SELECT * FROM old",
+        "INSERT INTO new SELECT * FROM old",
+        "CREATE TABLE new LIKE old",
+        "COPY TABLE old TO new"
+      ],
       "answer": 2
     },
     {
-      "id": 24,
-      "question": "BETWEEN operator is:",
-      "options": ["Exclusive", "Inclusive", "Only upper bound inclusive", "Only lower bound inclusive"],
+      "id": 22,
+      "question": "Which command produces empty table with structure only but WITHOUT indexes?",
+      "options": [
+        "CREATE TABLE new LIKE old",
+        "CREATE TABLE new AS SELECT * FROM old WHERE 1=0",
+        "INSERT INTO new SELECT * FROM old WHERE 1=0",
+        "ALTER TABLE old COPY"
+      ],
       "answer": 1
     },
     {
+      "id": 23,
+      "question": "Which operator cannot be used directly with aggregate functions?",
+      "options": ["HAVING", "WHERE", "ORDER BY", "GROUP BY"],
+      "answer": 1
+    },
+    {
+      "id": 24,
+      "question": "Which SQL result occurs when comparing NULL with any value using = ?",
+      "options": ["TRUE", "FALSE", "UNKNOWN", "ERROR"],
+      "answer": 2
+    },
+    {
       "id": 25,
-      "question": "Which join automatically matches columns with same names?",
-      "options": ["Equi Join", "Natural Join", "Left Join", "Cross Join"],
+      "question": "Which join may produce duplicate columns in result?",
+      "options": ["Natural Join", "Equi Join", "Inner Join", "Cross Join"],
       "answer": 1
     },
     {
       "id": 26,
-      "question": "TRUNCATE internally:",
-      "options": ["Deletes row by row", "Resets table pages", "Drops table", "Removes structure"],
-      "answer": 1
-    },
-    {
-      "id": 27,
-      "question": "Which command copies structure only?",
-      "options": ["CREATE TABLE new AS SELECT * FROM old", "INSERT INTO new SELECT * FROM old", "CREATE TABLE new LIKE old", "COPY STRUCT old TO new"],
+      "question": "Which type of ERD constraint guarantees that a weak entity cannot exist without strong entity?",
+      "options": ["Single line relationship", "Partial participation", "Total participation (double line)", "Redundant relationship"],
       "answer": 2
     },
     {
+      "id": 27,
+      "question": "A relation with repeating groups violates:",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "answer": 0
+    },
+    {
       "id": 28,
-      "question": "A correlated subquery runs:",
-      "options": ["Once", "Multiple times, once per row", "Never", "Only at commit"],
+      "question": "Which SQL fragment is least efficient on large datasets?",
+      "options": ["EXISTS", "IN", "JOIN", "WHERE column IS NOT NULL"],
       "answer": 1
     },
     {
       "id": 29,
-      "question": "EXISTS returns TRUE when:",
-      "options": ["All rows match", "At least one row exists", "No rows exist", "Only unique rows exist"],
+      "question": "Which of the following makes a view non-updatable?",
+      "options": [
+        "View contains a single table",
+        "View contains aggregated columns",
+        "View has no WHERE clause",
+        "View excludes primary key"
+      ],
       "answer": 1
     },
     {
       "id": 30,
-      "question": "Which normal form removes transitive dependencies?",
+      "question": "Which relational algebra operator cannot be implemented using SQL DISTINCT?",
+      "options": ["Projection", "Difference", "Union", "Intersection"],
+      "answer": 1
+    },
+    {
+      "id": 31,
+      "question": "A table with a transitive dependency violates:",
       "options": ["1NF", "2NF", "3NF", "BCNF"],
       "answer": 2
     },
     {
-      "id": 31,
-      "question": "MySQL Workbench is mainly used for:",
-      "options": ["CLI queries only", "ER modeling + GUI DB management", "Backup only", "Indexing only"],
-      "answer": 1
-    },
-    {
       "id": 32,
-      "question": "NOT IN fails when list contains:",
-      "options": ["Zero", "NULL", "Negative numbers", "Duplicate values"],
+      "question": "Which MySQL engine supports foreign key constraints?",
+      "options": ["MyISAM", "InnoDB", "CSV", "Memory"],
       "answer": 1
     },
     {
       "id": 33,
-      "question": "Which relational algebra operation cannot remove duplicates?",
-      "options": ["Projection", "Union", "Intersection", "Difference"],
-      "answer": 0
-    },
-    {
-      "id": 34,
-      "question": "Which SQL clause sorts data?",
-      "options": ["WHERE", "GROUP BY", "ORDER BY", "HAVING"],
-      "answer": 2
-    },
-    {
-      "id": 35,
-      "question": "Foreign key enforces:",
-      "options": ["Entity integrity", "Referential integrity", "Domain integrity", "All"],
+      "question": "Which combination is allowed in DCL?",
+      "options": [
+        "CREATE USER, DROP TABLE",
+        "GRANT, REVOKE",
+        "INSERT, UPDATE",
+        "COMMIT, ROLLBACK"
+      ],
       "answer": 1
     },
     {
+      "id": 34,
+      "question": "Which SQL statement finds employees whose salary is greater than ALL salaries in dept 10?",
+      "options": [
+        "SELECT * FROM emp WHERE sal > ANY (SELECT sal FROM emp WHERE dept=10);",
+        "SELECT * FROM emp WHERE sal > ALL (SELECT sal FROM emp WHERE dept=10);",
+        "SELECT * FROM emp WHERE sal = ALL (SELECT sal FROM emp WHERE dept=10);",
+        "SELECT * FROM emp WHERE sal NOT IN (SELECT sal FROM emp WHERE dept=10);"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 35,
+      "question": "MINUS in relational algebra is equivalent to which SQL logic?",
+      "options": [
+        "LEFT JOIN + IS NULL",
+        "RIGHT JOIN + IS NOT NULL",
+        "FULL JOIN + WHERE condition",
+        "UNION ALL + GROUP BY"
+      ],
+      "answer": 0
+    },
+    {
       "id": 36,
-      "question": "INSERT command belongs to:",
-      "options": ["DDL", "DML", "DCL", "TCL"],
+      "question": "Which changes occur when TRUNCATE is executed?",
+      "options": [
+        "Table structure removed",
+        "Auto_increment is reset",
+        "Only selective rows deleted",
+        "Foreign keys are automatically enforced"
+      ],
       "answer": 1
     },
     {
       "id": 37,
-      "question": "Which MySQL data type stores large text?",
-      "options": ["VARCHAR", "TEXT", "CHAR", "INT"],
+      "question": "Which join returns unmatched rows from both tables?",
+      "options": [
+        "Inner Join",
+        "Full Outer Join",
+        "Cross Join",
+        "Natural Join"
+      ],
       "answer": 1
     },
     {
       "id": 38,
-      "question": "BCNF is stricter than:",
-      "options": ["1NF", "2NF", "3NF", "All of them"],
-      "answer": 3
+      "question": "Which SQL statement detects employees who do NOT belong to any department?",
+      "options": [
+        "SELECT * FROM emp e WHERE dept_id IN dept;",
+        "SELECT * FROM emp e WHERE dept_id NOT EXISTS;",
+        "SELECT * FROM emp e WHERE NOT EXISTS (SELECT 1 FROM dept d WHERE d.id = e.dept_id);",
+        "SELECT * FROM emp e WHERE dept_id = NULL;"
+      ],
+      "answer": 2
     },
     {
       "id": 39,
-      "question": "Cross join of table A(3 rows) and B(4 rows) results in:",
-      "options": ["4 rows", "3 rows", "12 rows", "7 rows"],
+      "question": "Which feature does NOT belong to conceptual data model?",
+      "options": ["Entities", "Relationships", "Primary keys", "Attributes"],
       "answer": 2
     },
     {
       "id": 40,
-      "question": "AUTO_INCREMENT value resets automatically after:",
-      "options": ["DELETE", "DROP", "TRUNCATE", "UPDATE"],
-      "answer": 2
+      "question": "Which approach ensures both constraints and data are copied when duplicating a table?",
+      "options": [
+        "CREATE TABLE new AS SELECT * FROM old;",
+        "CREATE TABLE new LIKE old; INSERT INTO new SELECT * FROM old;",
+        "INSERT INTO new SELECT * FROM old;",
+        "ALTER TABLE old RENAME TO new;"
+      ],
+      "answer": 1
     }
   ]
 }
