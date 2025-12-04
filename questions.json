@@ -1,125 +1,124 @@
 {
-    "questions": [
-      {
-        "id": 1,
-        "question": "Which of the following BEST distinguishes schema from instance?",
-        "options": ["Schema changes frequently", "Schema is the structure; instance is data", "Both store physical data", "Instance defines constraints"],
-        "answer": 1
-      },
-      {
-        "id": 2,
-        "question": "Which component maps conceptual level to internal level?",
-        "options": ["View Manager", "Storage Engine", "Query Processor", "Physical Data Independence"],
-        "answer": 3
-      },
-      {
-        "id": 3,
-        "question": "Which database type offers flexible schema?",
-        "options": ["RDBMS", "Object-Relational DBMS", "NoSQL Document Store", "Graph DB"],
-        "answer": 2
-      },
-      {
-        "id": 4,
-        "question": "Which MySQL engine does NOT support foreign keys?",
-        "options": ["InnoDB", "MyISAM", "TokuDB", "InMemory"],
-        "answer": 1
-      },
-      {
-        "id": 5,
-        "question": "A Domain in relational model refers to?",
-        "options": ["Relationship", "Allowed values", "Primary key", "Row identifier"],
-        "answer": 1
-      },
-      {
-        "id": 6,
-        "question": "Which statement about metadata is TRUE?",
-        "options": ["Same as table content", "Describes structure of data", "Stored only in external schema", "Cannot be modified"],
-        "answer": 1
-      },
-      {
-        "id": 7,
-        "question": "Which abstraction level hides physical storage?",
-        "options": ["External", "Conceptual", "Internal", "View"],
-        "answer": 2
-      },
-      {
-        "id": 8,
-        "question": "Eventual consistency means?",
-        "options": ["Consistent instantly", "Never consistent", "Becomes consistent after delay", "Prevents replication"],
-        "answer": 2
-      },
-      {
-        "id": 9,
-        "question": "Best NoSQL for fraud detection?",
-        "options": ["Key-value", "Document", "Graph", "Column-family"],
-        "answer": 2
-      },
-      {
-        "id": 10,
-        "question": "Which MySQL client supports Python + JS?",
-        "options": ["MySQL Monitor", "MySQL Workbench", "MySQL Shell", "mysqladmin"],
-        "answer": 2
-      },
-      {
-        "id": 11,
-        "question": "Which is TRUE about MySQL Workbench?",
-        "options": ["CLI only", "Creates ER diagrams", "Runs Python scripts", "Used only for backup"],
-        "answer": 1
-      },
-      {
-        "id": 12,
-        "question": "A virtual table from a SELECT is called?",
-        "options": ["Index", "View", "Relation", "Snapshot"],
-        "answer": 1
-      },
-      {
-        "id": 13,
-        "question": "Which ACID property prevents interference between transactions?",
-        "options": ["Durability", "Consistency", "Isolation", "Atomicity"],
-        "answer": 2
-      },
-      {
-        "id": 14,
-        "question": "Optimizer chooses plans based on?",
-        "options": ["User privileges", "Estimated execution cost", "RAM size", "SQL version"],
-        "answer": 1
-      },
-      {
-        "id": 15,
-        "question": "Which storage engine supports transactions?",
-        "options": ["MyISAM", "InnoDB", "BLACKHOLE", "ARCHIVE"],
-        "answer": 1
-      },
-      {
-        "id": 16,
-        "question": "Which is NOT an RDBMS characteristic?",
-        "options": ["Fixed schema", "Uses SQL", "No support for joins", "Tabular format"],
-        "answer": 2
-      },
-      {
-        "id": 17,
-        "question": "Which NoSQL resembles Excel column layout?",
-        "options": ["Key-value", "Document", "Column-family", "Graph"],
-        "answer": 2
-      },
-      {
-        "id": 18,
-        "question": "Which ACID property ensures crash-safe data?",
-        "options": ["Atomicity", "Consistency", "Isolation", "Durability"],
-        "answer": 3
-      },
-      {
-        "id": 19,
-        "question": "Which abstraction level defines what data is stored?",
-        "options": ["Internal", "Conceptual", "External", "Physical"],
-        "answer": 1
-      },
-      {
-        "id": 20,
-        "question": "Best definition of data independence?",
-        "options": ["Change values but not schema", "Change storage without schema change", "Change schema without affecting apps", "Change SQL without affecting DB"],
-        "answer": 2
-      }
-    ]
-  }
-  
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following ensures external schemas remain unchanged when logical schema changes?",
+      "options": ["Logical Data Independence", "Physical Data Independence", "Concurrency Control", "Durability"],
+      "answer": 0
+    },
+    {
+      "id": 2,
+      "question": "Which layer primarily deals with file organization and indexing?",
+      "options": ["Conceptual Level", "External Level", "Internal Level", "Application Level"],
+      "answer": 2
+    },
+    {
+      "id": 3,
+      "question": "Which NoSQL model uses edges and nodes to represent relationships?",
+      "options": ["Document Store", "Column Family Store", "Graph Database", "Key-Value Store"],
+      "answer": 2
+    },
+    {
+      "id": 4,
+      "question": "Which MySQL component optimizes SELECT queries?",
+      "options": ["Query Optimizer", "Storage Engine", "View Manager", "Metadata Manager"],
+      "answer": 0
+    },
+    {
+      "id": 5,
+      "question": "In relational algebra, projection operation returns?",
+      "options": ["Specific rows", "Specific columns", "Joined tables", "Sorted data"],
+      "answer": 1
+    },
+    {
+      "id": 6,
+      "question": "Which term refers to a property that uniquely identifies tuples?",
+      "options": ["Foreign Key", "Primary Key", "Domain", "Constraint"],
+      "answer": 1
+    },
+    {
+      "id": 7,
+      "question": "Which consistency model ensures reads return the most recent write?",
+      "options": ["Eventual Consistency", "Strong Consistency", "Weak Consistency", "Causal Consistency"],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "Which MySQL command provides info about storage engines?",
+      "options": ["SHOW STATUS", "SHOW ENGINES", "SHOW TABLES", "SHOW PROCESSLIST"],
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "question": "Which is stored in the data dictionary?",
+      "options": ["User tables only", "Metadata about schemas", "Only indexes", "Only stored procedures"],
+      "answer": 1
+    },
+    {
+      "id": 10,
+      "question": "Which isolation level allows non-repeatable reads?",
+      "options": ["Serializable", "Repeatable Read", "Read Committed", "Read Uncommitted"],
+      "answer": 2
+    },
+    {
+      "id": 11,
+      "question": "Column-family NoSQL databases are BEST suited for?",
+      "options": ["Graph traversal", "Sparse data storage", "Document search", "Social network relationships"],
+      "answer": 1
+    },
+    {
+      "id": 12,
+      "question": "Which SQL clause is applied before GROUP BY?",
+      "options": ["ORDER BY", "SELECT", "WHERE", "HAVING"],
+      "answer": 2
+    },
+    {
+      "id": 13,
+      "question": "A foreign key enforces which constraint?",
+      "options": ["Domain", "Entity Integrity", "Referential Integrity", "Functional Dependency"],
+      "answer": 2
+    },
+    {
+      "id": 14,
+      "question": "Which term refers to transforming high-level queries into low-level execution plans?",
+      "options": ["Normalization", "Optimization", "Compilation", "Indexing"],
+      "answer": 1
+    },
+    {
+      "id": 15,
+      "question": "Which MySQL engine is MOST suitable for read-heavy analytics?",
+      "options": ["InnoDB", "MyISAM", "Memory", "BLACKHOLE"],
+      "answer": 1
+    },
+    {
+      "id": 16,
+      "question": "Which NoSQL DB is BEST for storing JSON-like semi-structured data?",
+      "options": ["Graph DB", "Key-Value DB", "Document DB", "Column-Family DB"],
+      "answer": 2
+    },
+    {
+      "id": 17,
+      "question": "Which normalization form eliminates partial dependency?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "answer": 1
+    },
+    {
+      "id": 18,
+      "question": "Transactional logs are essential for which property?",
+      "options": ["Atomicity", "Isolation", "Durability", "Consistency"],
+      "answer": 2
+    },
+    {
+      "id": 19,
+      "question": "Which SQL keyword removes duplicate rows?",
+      "options": ["DISTINCT", "UNIQUE", "FILTER", "NODUP"],
+      "answer": 0
+    },
+    {
+      "id": 20,
+      "question": "In DBMS architecture, physical data independence allows changes to?",
+      "options": ["External schema", "Logical schema", "Storage structure", "User views"],
+      "answer": 2
+    }
+  ]
+}
