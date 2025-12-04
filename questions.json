@@ -2,183 +2,243 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which term refers to the description of data types and constraints of attributes?",
-      "options": ["Instance", "Schema", "Tuple", "Relation"],
+      "question": "Which of the following best defines a DBMS?",
+      "options": ["A programming language", "A system to store and manage data", "A compiler", "A hardware device"],
       "answer": 1
     },
     {
       "id": 2,
-      "question": "Which SQL operation combines tuples from two relations based on a matching attribute?",
-      "options": ["Projection", "Selection", "Join", "Union"],
-      "answer": 2
+      "question": "Which MySQL client is command-line based?",
+      "options": ["MySQL Shell", "MySQL Monitor", "MySQL Workbench", "phpMyAdmin"],
+      "answer": 1
     },
     {
       "id": 3,
-      "question": "Which type of NoSQL is best used for full-text search?",
-      "options": ["Key-Value Store", "Document Store", "Graph Store", "Column Family Store"],
+      "question": "Conceptual data model focuses on:",
+      "options": ["Storage engines", "Business-level entities & relationships", "Indexes", "Data types"],
       "answer": 1
     },
     {
       "id": 4,
-      "question": "Which DBMS component manages buffer pages between disk and memory?",
-      "options": ["Lock Manager", "Buffer Manager", "Query Compiler", "Index Manager"],
-      "answer": 1
-    },
-    {
-      "id": 5,
-      "question": "BCNF removes anomalies caused by?",
-      "options": ["Partial dependencies", "Multi-valued dependencies", "Trivial dependencies", "Non-key attribute determining key"],
-      "answer": 3
-    },
-    {
-      "id": 6,
-      "question": "Which index type stores both key and data in the leaf nodes?",
-      "options": ["Dense Index", "Sparse Index", "Primary Index", "Clustered Index"],
+      "question": "Logical model includes:",
+      "options": ["Tables, PK/FK, normalization", "ERD only", "Physical storage details", "User interfaces"],
       "answer": 0
     },
     {
+      "id": 5,
+      "question": "Which rule states NULLs must be treated uniformly?",
+      "options": ["Rule 2", "Rule 3", "Rule 7", "Rule 10"],
+      "answer": 1
+    },
+    {
+      "id": 6,
+      "question": "Which SQL category modifies table structure?",
+      "options": ["DML", "DDL", "DCL", "TCL"],
+      "answer": 1
+    },
+    {
       "id": 7,
-      "question": "Stored procedures primarily help improve?",
-      "options": ["Schema design", "Network latency", "Modularity and performance", "Physical storage"],
+      "question": "Which command deletes all rows but keeps table structure?",
+      "options": ["DROP", "DELETE", "TRUNCATE", "CLEAR"],
       "answer": 2
     },
     {
       "id": 8,
-      "question": "Which SQL constraint ensures column cannot have NULL?",
-      "options": ["UNIQUE", "NOT NULL", "CHECK", "DEFAULT"],
+      "question": "Data redundancy leads to:",
+      "options": ["Optimized storage", "Increased anomalies", "Better performance", "Better normalization"],
       "answer": 1
     },
     {
       "id": 9,
-      "question": "Which MySQL engine is optimized for in-memory operations?",
-      "options": ["InnoDB", "MyISAM", "MEMORY", "ARCHIVE"],
-      "answer": 2
+      "question": "Partial dependencies are removed in which normal form?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "answer": 1
     },
     {
       "id": 10,
-      "question": "CAP theorem says a distributed DB can guarantee at most?",
-      "options": ["Consistency + Partition tolerance", "Availability + Consistency", "Partition tolerance + Availability", "All three simultaneously"],
-      "answer": 3
+      "question": "Which SQL keyword is used to remove duplicate rows?",
+      "options": ["DISTINCT", "UNIQUE", "FILTER", "GROUP BY"],
+      "answer": 0
     },
     {
       "id": 11,
-      "question": "Which isolation level permits dirty reads?",
-      "options": ["Read Committed", "Repeatable Read", "Read Uncommitted", "Serializable"],
-      "answer": 2
+      "question": "Which constraint ensures a column cannot be empty?",
+      "options": ["PRIMARY KEY", "NOT NULL", "FOREIGN KEY", "DEFAULT"],
+      "answer": 1
     },
     {
       "id": 12,
-      "question": "Which term refers to minimum number of attributes needed to uniquely identify tuples?",
-      "options": ["Super key", "Candidate key", "Foreign key", "Prime attribute"],
+      "question": "Which aggregate function returns the highest value?",
+      "options": ["SUM()", "MAX()", "AVG()", "COUNT()"],
       "answer": 1
     },
     {
       "id": 13,
-      "question": "Which SQL keyword is used for pattern matching?",
-      "options": ["BETWEEN", "LIKE", "IN", "EXISTS"],
+      "question": "Which operator is used for pattern matching?",
+      "options": ["IN", "LIKE", "IS", "BETWEEN"],
       "answer": 1
     },
     {
       "id": 14,
-      "question": "Which component converts SQL into relational algebra?",
-      "options": ["Query Parser", "Optimizer", "Transaction Manager", "Executor"],
-      "answer": 0
+      "question": "Which clause filters groups after aggregation?",
+      "options": ["WHERE", "GROUP BY", "HAVING", "ORDER BY"],
+      "answer": 2
     },
     {
       "id": 15,
-      "question": "In a distributed DB, fragmentation refers to?",
-      "options": ["Copying data to multiple sites", "Breaking a relation into pieces", "Combining multiple databases", "Encrypting data"],
+      "question": "Selection in relational algebra filters:",
+      "options": ["Columns", "Rows", "Both", "Indexes"],
       "answer": 1
     },
     {
       "id": 16,
-      "question": "Which database model stores data in parent-child tree form?",
-      "options": ["Relational", "Graph", "Hierarchical", "Network"],
-      "answer": 2
+      "question": "Projection in relational algebra filters:",
+      "options": ["Rows", "Columns", "Tables", "Keys"],
+      "answer": 1
     },
     {
       "id": 17,
-      "question": "Which MySQL statement analyzes index distribution for optimizer?",
-      "options": ["ANALYZE TABLE", "CHECK TABLE", "SHOW INDEX", "EXPLAIN"],
+      "question": "INNER JOIN returns:",
+      "options": ["Only matching rows", "All left rows", "All right rows", "All rows from both tables"],
       "answer": 0
     },
     {
       "id": 18,
-      "question": "Which kind of join returns all tuples from left table and matching ones from right?",
-      "options": ["Inner Join", "Right Join", "Left Join", "Full Outer Join"],
-      "answer": 2
+      "question": "LEFT JOIN returns:",
+      "options": ["Only matching rows", "All rows from left table", "All rows from right table", "None"],
+      "answer": 1
     },
     {
       "id": 19,
-      "question": "Which ACID property ensures all operations complete or none do?",
-      "options": ["Atomicity", "Isolation", "Durability", "Consistency"],
-      "answer": 0
+      "question": "CROSS JOIN produces:",
+      "options": ["Difference of tables", "All combinations of rows", "Only matched rows", "Only unmatched rows"],
+      "answer": 1
     },
     {
       "id": 20,
-      "question": "Which indexing structure is most commonly used in DBMS?",
-      "options": ["Binary Tree", "Hash Table", "B+ Tree", "AVL Tree"],
+      "question": "Which keyword is used to auto-generate numbering in MySQL?",
+      "options": ["SEQUENCE", "SERIAL", "AUTO_INCREMENT", "NEXTVAL"],
       "answer": 2
     },
     {
       "id": 21,
-      "question": "Which SQL command removes a table and its data permanently?",
-      "options": ["DROP", "DELETE", "TRUNCATE", "REMOVE"],
-      "answer": 0
-    },
-    {
-      "id": 22,
-      "question": "Which of the following is NOT a valid type of data independence?",
-      "options": ["Physical", "Logical", "Functional", "Both A and B"],
-      "answer": 2
-    },
-    {
-      "id": 23,
-      "question": "Which NoSQL DB excels in distributed, high-write workloads such as time-series?",
-      "options": ["Graph DB", "Column Family DB", "Document DB", "Key-Value DB"],
+      "question": "Which operator checks for NULL values?",
+      "options": ["= NULL", "IS NULL", "IN NULL", "BETWEEN NULL"],
       "answer": 1
     },
     {
-      "id": 24,
-      "question": "Which normalization form removes transitive dependencies?",
-      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "id": 22,
+      "question": "Which corresponds to SQL's SELECT * FROM A UNION SELECT * FROM B?",
+      "options": ["A ⋃ B", "A - B", "A × B", "A ⋂ B"],
+      "answer": 0
+    },
+    {
+      "id": 23,
+      "question": "CHECK constraint ensures:",
+      "options": ["Referential integrity", "Uniqueness", "Validation of values", "Auto increment"],
       "answer": 2
     },
     {
+      "id": 24,
+      "question": "BETWEEN operator is:",
+      "options": ["Exclusive", "Inclusive", "Only upper bound inclusive", "Only lower bound inclusive"],
+      "answer": 1
+    },
+    {
       "id": 25,
-      "question": "Which SQL clause is applied after GROUP BY?",
-      "options": ["WHERE", "HAVING", "ORDER BY", "DISTINCT"],
+      "question": "Which join automatically matches columns with same names?",
+      "options": ["Equi Join", "Natural Join", "Left Join", "Cross Join"],
       "answer": 1
     },
     {
       "id": 26,
-      "question": "Which term refers to multiple users accessing DB at same time safely?",
-      "options": ["Deadlock", "Concurrency Control", "Consistency Check", "Indexing"],
+      "question": "TRUNCATE internally:",
+      "options": ["Deletes row by row", "Resets table pages", "Drops table", "Removes structure"],
       "answer": 1
     },
     {
       "id": 27,
-      "question": "Which storage structure allows O(1) search on exact keys?",
-      "options": ["B+ Tree", "Hash Index", "Clustered Index", "Bitmap Index"],
-      "answer": 1
+      "question": "Which command copies structure only?",
+      "options": ["CREATE TABLE new AS SELECT * FROM old", "INSERT INTO new SELECT * FROM old", "CREATE TABLE new LIKE old", "COPY STRUCT old TO new"],
+      "answer": 2
     },
     {
       "id": 28,
-      "question": "Which part of DBMS assigns locks to transactions?",
-      "options": ["Optimizer", "Parser", "Lock Manager", "Scheduler"],
-      "answer": 2
+      "question": "A correlated subquery runs:",
+      "options": ["Once", "Multiple times, once per row", "Never", "Only at commit"],
+      "answer": 1
     },
     {
       "id": 29,
-      "question": "Which SQL operator merges results of two queries and removes duplicates?",
-      "options": ["UNION ALL", "INTERSECT", "UNION", "JOIN"],
-      "answer": 2
+      "question": "EXISTS returns TRUE when:",
+      "options": ["All rows match", "At least one row exists", "No rows exist", "Only unique rows exist"],
+      "answer": 1
     },
     {
       "id": 30,
-      "question": "Which MySQL feature enables point-in-time recovery?",
-      "options": ["Undo Logs", "Binary Logs", "Buffer Pool", "Redo Logs"],
+      "question": "Which normal form removes transitive dependencies?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "answer": 2
+    },
+    {
+      "id": 31,
+      "question": "MySQL Workbench is mainly used for:",
+      "options": ["CLI queries only", "ER modeling + GUI DB management", "Backup only", "Indexing only"],
       "answer": 1
+    },
+    {
+      "id": 32,
+      "question": "NOT IN fails when list contains:",
+      "options": ["Zero", "NULL", "Negative numbers", "Duplicate values"],
+      "answer": 1
+    },
+    {
+      "id": 33,
+      "question": "Which relational algebra operation cannot remove duplicates?",
+      "options": ["Projection", "Union", "Intersection", "Difference"],
+      "answer": 0
+    },
+    {
+      "id": 34,
+      "question": "Which SQL clause sorts data?",
+      "options": ["WHERE", "GROUP BY", "ORDER BY", "HAVING"],
+      "answer": 2
+    },
+    {
+      "id": 35,
+      "question": "Foreign key enforces:",
+      "options": ["Entity integrity", "Referential integrity", "Domain integrity", "All"],
+      "answer": 1
+    },
+    {
+      "id": 36,
+      "question": "INSERT command belongs to:",
+      "options": ["DDL", "DML", "DCL", "TCL"],
+      "answer": 1
+    },
+    {
+      "id": 37,
+      "question": "Which MySQL data type stores large text?",
+      "options": ["VARCHAR", "TEXT", "CHAR", "INT"],
+      "answer": 1
+    },
+    {
+      "id": 38,
+      "question": "BCNF is stricter than:",
+      "options": ["1NF", "2NF", "3NF", "All of them"],
+      "answer": 3
+    },
+    {
+      "id": 39,
+      "question": "Cross join of table A(3 rows) and B(4 rows) results in:",
+      "options": ["4 rows", "3 rows", "12 rows", "7 rows"],
+      "answer": 2
+    },
+    {
+      "id": 40,
+      "question": "AUTO_INCREMENT value resets automatically after:",
+      "options": ["DELETE", "DROP", "TRUNCATE", "UPDATE"],
+      "answer": 2
     }
   ]
 }
