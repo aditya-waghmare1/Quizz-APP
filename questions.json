@@ -2,242 +2,302 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which of the following best defines a DBMS?",
-      "options": ["A programming language", "A system to store and manage data", "A compiler", "A hardware device"],
+      "question": "Which statement best differentiates a database schema from a database instance?",
+      "options": ["Schema changes frequently, instance rarely changes", "Schema describes structure, instance describes current data", "Both store only data", "Instance describes constraints, schema stores values"],
       "answer": 1
     },
     {
       "id": 2,
-      "question": "Which DBMS type allows flexible schema and horizontal scaling?",
-      "options": ["Relational DBMS", "Hierarchical DBMS", "NoSQL Document DB", "Network DBMS"],
-      "answer": 2
+      "question": "In a conceptual ER model, which of the following is TRUE about relationship cardinality?",
+      "options": ["It is determined only by primary keys", "It describes how many entities participate on each side of a relationship", "It appears only in physical models", "It replaces foreign keys"],
+      "answer": 1
     },
     {
       "id": 3,
-      "question": "In an ERD, a weak entity is identified by:",
-      "options": ["Its own primary key", "A foreign key + partial key", "Only attributes", "Relationship name"],
+      "question": "Which of the following queries demonstrates a projection in relational algebra?",
+      "options": [
+        "SELECT * FROM student;",
+        "SELECT name, dept FROM student;",
+        "SELECT * FROM student WHERE dept = 'CS';",
+        "SELECT COUNT(*) FROM student;"
+      ],
       "answer": 1
     },
     {
       "id": 4,
-      "question": "Which of the following is TRUE about a conceptual model?",
-      "options": ["It contains table names and columns", "It is technology-independent and shows entities and relationships", "It is used to define physical storage", "It includes SQL constraints"],
+      "question": "Which Codd rule ensures metadata must be accessible using the same query language as data?",
+      "options": ["Rule 2", "Rule 4", "Rule 7", "Rule 12"],
       "answer": 1
     },
     {
       "id": 5,
-      "question": "Which SQL command belongs to DDL?",
-      "options": ["INSERT", "UPDATE", "CREATE", "SELECT"],
-      "answer": 2
+      "question": "What will the following SQL do? CREATE TABLE emp AS SELECT id, name FROM staff;",
+      "options": ["Create table with schema only", "Copy structure and data", "Copy only constraints", "Throws an error without PRIMARY KEY"],
+      "answer": 1
     },
     {
       "id": 6,
-      "question": "What will the following query do? SELECT DISTINCT dept_id FROM employee;",
-      "options": ["Return all rows", "Return unique department IDs", "Delete duplicates permanently", "Group departments"],
-      "answer": 1
+      "question": "Which dependency prevents a relation from being in BCNF?",
+      "options": [
+        "A non-key attribute determines another non-key attribute",
+        "A part of composite key determines a non-key attribute",
+        "A non-key attribute determines a candidate key",
+        "Every attribute depends on whole key"
+      ],
+      "answer": 2
     },
     {
       "id": 7,
-      "question": "Which anomaly occurs when deleting a row unintentionally removes important data?",
-      "options": ["Insertion anomaly", "Deletion anomaly", "Update anomaly", "Redundancy anomaly"],
-      "answer": 1
+      "question": "Which of the following violates 3NF but satisfies 2NF?",
+      "options": [
+        "Partial dependency exists",
+        "Multi-valued attributes exist",
+        "A non-key attribute depends on another non-key attribute",
+        "Candidate key is missing"
+      ],
+      "answer": 2
     },
     {
       "id": 8,
-      "question": "A relation is in 1NF if:",
-      "options": ["All values are atomic", "There is no partial dependency", "There is no transitive dependency", "Every determinant is a key"],
-      "answer": 0
-    },
-    {
-      "id": 9,
-      "question": "Which of the following violates 2NF?",
-      "options": ["Table without primary key", "Non-key attribute depends only on part of composite key", "Repeating groups", "Transitive dependency exists"],
+      "question": "Which join type can be rewritten using UNION of a LEFT and RIGHT join?",
+      "options": ["INNER JOIN", "FULL OUTER JOIN", "CROSS JOIN", "NATURAL JOIN"],
       "answer": 1
     },
     {
-      "id": 10,
-      "question": "Which normal form removes transitive dependency?",
-      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "id": 9,
+      "question": "What is the output of the query: SELECT NULL = NULL;",
+      "options": ["TRUE", "FALSE", "NULL", "1"],
       "answer": 2
+    },
+    {
+      "id": 10,
+      "question": "Which MySQL constraint enforces that two rows cannot have identical values across multiple columns?",
+      "options": ["UNIQUE", "PRIMARY KEY", "CHECK", "FOREIGN KEY"],
+      "answer": 0
     },
     {
       "id": 11,
-      "question": "Which join returns all rows from both tables including unmatched rows?",
-      "options": ["INNER JOIN", "LEFT JOIN", "FULL OUTER JOIN", "CROSS JOIN"],
-      "answer": 2
+      "question": "Which aggregate function counts only non-null values?",
+      "options": ["COUNT(*)", "COUNT(column)", "COUNT ALL", "COUNT(NULL)"],
+      "answer": 1
     },
     {
       "id": 12,
-      "question": "What is the result of: SELECT 10/0;",
-      "options": ["10", "0", "NULL or error", "Infinity"],
-      "answer": 2
+      "question": "Which relational algebra operation is equivalent to SQL DISTINCT?",
+      "options": ["Selection", "Projection", "Union", "Rename"],
+      "answer": 1
     },
     {
       "id": 13,
-      "question": "Which clause filters groups created by GROUP BY?",
-      "options": ["WHERE", "HAVING", "ORDER BY", "LIMIT"],
+      "question": "What is the result of: SELECT 3 IN (NULL, 3, 5);",
+      "options": ["NULL", "TRUE", "FALSE", "Error"],
       "answer": 1
     },
     {
       "id": 14,
-      "question": "Which MySQL engine supports transactions and foreign keys?",
-      "options": ["MyISAM", "InnoDB", "CSV", "Archive"],
+      "question": "Which operation will produce a Cartesian product in SQL?",
+      "options": ["SELECT * FROM A JOIN B ON A.id = B.id;", "SELECT * FROM A, B;", "SELECT * FROM A RIGHT JOIN B;", "SELECT * FROM A NATURAL JOIN B;"],
       "answer": 1
     },
     {
       "id": 15,
-      "question": "In the query: SELECT * FROM emp WHERE salary BETWEEN 20000 AND 40000; which values are included?",
-      "options": ["Only >20000 and <40000", "Only >20000", "Both boundaries included", "None of the above"],
-      "answer": 2
-    },
-    {
-      "id": 16,
-      "question": "Which of the following will return employees with NULL department?",
-      "options": ["WHERE dept_id = NULL", "WHERE dept_id IS NULL", "WHERE dept_id == NULL", "WHERE dept_id != NULL"],
+      "question": "In correlated subqueries, the inner query:",
+      "options": [
+        "Runs once before the outer query",
+        "Runs for every row of outer query",
+        "Runs only if EXISTS is used",
+        "Returns multiple unrelated rows"
+      ],
       "answer": 1
     },
     {
+      "id": 16,
+      "question": "Which of the following will prevent phantom reads?",
+      "options": ["READ UNCOMMITTED", "READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE"],
+      "answer": 3
+    },
+    {
       "id": 17,
-      "question": "Projection in relational algebra means:",
-      "options": ["Filtering rows", "Selecting specific columns", "Joining tables", "Grouping rows"],
+      "question": "Which storage engine ignores foreign keys even if declared?",
+      "options": ["InnoDB", "MyISAM", "Memory", "Archive"],
       "answer": 1
     },
     {
       "id": 18,
-      "question": "Which SQL query performs a Cartesian product?",
-      "options": ["SELECT * FROM A JOIN B;", "SELECT * FROM A, B;", "SELECT * FROM A NATURAL JOIN B;", "SELECT * FROM A UNION B;"],
-      "answer": 1
+      "question": "Which MySQL command displays all available triggers on a table?",
+      "options": ["SHOW TRIGGERS;", "DESCRIBE TRIGGERS;", "SELECT * FROM triggers;", "SHOW TABLE TRIGGERS;"],
+      "answer": 0
     },
     {
       "id": 19,
-      "question": "AUTO_INCREMENT applies to which type of column?",
-      "options": ["VARCHAR", "INT", "DATE", "FLOAT"],
+      "question": "In a BEFORE INSERT trigger, which of the following is TRUE?",
+      "options": ["OLD can be modified", "NEW can be modified", "Both NEW and OLD can be modified", "Neither NEW nor OLD can be modified"],
       "answer": 1
     },
     {
       "id": 20,
-      "question": "Which is TRUE about correlated subqueries?",
-      "options": ["Executed once", "Runs for each row of outer query", "Does not depend on outer query", "Same as nested join"],
-      "answer": 1
-    },
-    {
-      "id": 21,
-      "question": "Which command undoes only the last portion of a transaction?",
-      "options": ["COMMIT", "ROLLBACK TO SAVEPOINT", "DELETE", "REVOKE"],
-      "answer": 1
-    },
-    {
-      "id": 22,
-      "question": "A view that contains joins and aggregations is called:",
-      "options": ["Simple view", "Complex view", "Materialized entity", "Base table"],
-      "answer": 1
-    },
-    {
-      "id": 23,
-      "question": "Which privilege allows a user to create objects in a database?",
-      "options": ["REVOKE", "GRANT OPTION", "CREATE", "EXECUTE"],
+      "question": "Which scenario requires a cursor?",
+      "options": [
+        "Insert all rows from table A into table B",
+        "Update salary with same increment for all rows",
+        "Perform row-by-row custom logic based on multiple conditions",
+        "Select only distinct departments"
+      ],
       "answer": 2
     },
     {
+      "id": 21,
+      "question": "Which type of cursor always reads the most recent committed row?",
+      "options": ["Asensitive", "Insensitive", "Scrollable", "Read-write"],
+      "answer": 0
+    },
+    {
+      "id": 22,
+      "question": "Which flow control statement always executes at least once?",
+      "options": ["WHILE", "LOOP", "REPEAT", "CASE"],
+      "answer": 2
+    },
+    {
+      "id": 23,
+      "question": "Which SQL statement is valid for creating a function?",
+      "options": [
+        "CREATE FUNCTION f(x) RETURNS INT BEGIN RETURN x*2; END",
+        "CREATE FUNC f RETURNS INT AS RETURN x;",
+        "MAKE FUNCTION f RETURNS INT BEGIN END;",
+        "DEFINE FUNCTION f(x) AS RETURN x;"
+      ],
+      "answer": 0
+    },
+    {
       "id": 24,
-      "question": "Which index type improves range queries the most?",
-      "options": ["Hash Index", "B-Tree Index", "Full-text Index", "Spatial Index"],
+      "question": "Which of the following is NOT allowed inside a stored function?",
+      "options": ["SELECT from another table", "Updating a table", "Mathematical expressions", "Declaring variables"],
       "answer": 1
     },
     {
       "id": 25,
-      "question": "Which ACID property ensures data persists after commit?",
-      "options": ["Atomicity", "Consistency", "Isolation", "Durability"],
-      "answer": 3
+      "question": "Which of the following views is updatable?",
+      "options": [
+        "A view created using JOIN",
+        "A view containing GROUP BY",
+        "A view selecting from one table without aggregations",
+        "A view containing DISTINCT"
+      ],
+      "answer": 2
     },
     {
       "id": 26,
-      "question": "Instance of a database means:",
-      "options": ["Schema definition", "Actual stored data at a moment", "ER diagram", "Storage engine"],
-      "answer": 1
+      "question": "Which SQL query copies structure + data + indexes?",
+      "options": [
+        "CREATE TABLE t2 LIKE t1;",
+        "CREATE TABLE t2 AS SELECT * FROM t1;",
+        "CLONE TABLE t1 TO t2;",
+        "INSERT INTO t2 SELECT * FROM t1;"
+      ],
+      "answer": 0
     },
     {
       "id": 27,
-      "question": "Which statement is used to create a stored procedure?",
-      "options": ["CREATE PROC", "CREATE PROCEDURE", "MAKE PROCEDURE", "PROCEDURE NEW"],
-      "answer": 1
+      "question": "Which index is most efficient for equality searches?",
+      "options": ["Hash index", "B-Tree index", "Full-text index", "Bitmap index"],
+      "answer": 0
     },
     {
       "id": 28,
-      "question": "OUT parameter in a stored procedure is used to:",
-      "options": ["Pass input", "Return a value", "Modify table", "Define cursor"],
+      "question": "Which command saves the current transaction and ends it?",
+      "options": ["SAVEPOINT", "COMMIT", "ROLLBACK", "GRANT"],
       "answer": 1
     },
     {
       "id": 29,
-      "question": "Which loop runs at least once in MySQL stored routines?",
-      "options": ["WHILE", "LOOP", "REPEAT", "FOR"],
+      "question": "Which query returns employees whose salary is NOT NULL and above 30000?",
+      "options": [
+        "SELECT * FROM emp WHERE salary > 30000;",
+        "SELECT * FROM emp WHERE salary != NULL AND salary > 30000;",
+        "SELECT * FROM emp WHERE salary IS NOT NULL AND salary > 30000;",
+        "SELECT * FROM emp WHERE NOT salary = NULL;"
+      ],
       "answer": 2
     },
     {
       "id": 30,
-      "question": "ITERATE keyword in MySQL is similar to:",
-      "options": ["BREAK", "CONTINUE", "RETURN", "STOP"],
+      "question": "Which SQL command removes all rows but keeps table structure?",
+      "options": ["DELETE", "TRUNCATE", "DROP", "REMOVE"],
       "answer": 1
     },
     {
       "id": 31,
-      "question": "Which built-in function returns the current date?",
-      "options": ["NOW()", "CURDATE()", "DATE()", "SYSDATE"],
+      "question": "Which MySQL program is used for database backups?",
+      "options": ["mysqladmin", "mysqldump", "mysqlshow", "mysqlimport"],
       "answer": 1
     },
     {
       "id": 32,
-      "question": "A cursor in MySQL is:",
-      "options": ["A table", "A SQL join", "A pointer to row-by-row result processing", "A view"],
+      "question": "Which operator performs pattern matching?",
+      "options": ["BETWEEN", "IN", "LIKE", "EXISTS"],
       "answer": 2
     },
     {
       "id": 33,
-      "question": "Which trigger fires after a row is inserted?",
-      "options": ["BEFORE INSERT", "AFTER INSERT", "BEFORE UPDATE", "INSTEAD OF"],
-      "answer": 1
+      "question": "Which set operator removes duplicates automatically?",
+      "options": ["UNION", "UNION ALL", "INTERSECT ALL", "CROSS"],
+      "answer": 0
     },
     {
       "id": 34,
-      "question": "OLD values are accessible in which trigger?",
-      "options": ["BEFORE INSERT", "AFTER INSERT", "BEFORE UPDATE", "Both UPDATE and DELETE"],
-      "answer": 3
-    },
-    {
-      "id": 35,
-      "question": "Which of the following is NOT allowed inside a function?",
-      "options": ["Return a value", "Use SELECT query", "Modify a table", "Use mathematical operations"],
-      "answer": 2
-    },
-    {
-      "id": 36,
-      "question": "Cross join between 5-row table A and 3-row table B returns:",
-      "options": ["2 rows", "8 rows", "15 rows", "5 rows"],
-      "answer": 2
-    },
-    {
-      "id": 37,
-      "question": "Which constraint ensures uniqueness but allows NULL values?",
-      "options": ["PRIMARY KEY", "UNIQUE", "NOT NULL", "CHECK"],
+      "question": "Which table type is automatically deleted when the session ends?",
+      "options": ["Permanent table", "Temporary table", "Indexed table", "Archived table"],
       "answer": 1
     },
     {
+      "id": 35,
+      "question": "Which of the following is TRUE about NATURAL JOIN?",
+      "options": [
+        "Joins using explicitly defined columns",
+        "Joins all columns with identical names",
+        "Joins only primary keys",
+        "Equivalent to FULL OUTER JOIN"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 36,
+      "question": "Which SQL statement will fetch 3rd highest salary?",
+      "options": [
+        "SELECT MAX(salary) FROM emp LIMIT 3;",
+        "SELECT salary FROM emp ORDER BY salary DESC LIMIT 2,1;",
+        "SELECT salary FROM emp GROUP BY salary DESC LIMIT 3;",
+        "SELECT salary FROM emp WHERE ROWNUM=3;"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 37,
+      "question": "Which trigger has access only to OLD values?",
+      "options": ["BEFORE INSERT", "AFTER INSERT", "BEFORE DELETE", "BEFORE UPDATE"],
+      "answer": 2
+    },
+    {
       "id": 38,
-      "question": "Which SQL query copies table structure only?",
-      "options": ["CREATE TABLE new AS SELECT * FROM old;", "CREATE TABLE new LIKE old;", "INSERT INTO new SELECT * FROM old;", "CLONE TABLE old TO new;"],
+      "question": "Which cursor attribute signals that no more rows are available?",
+      "options": [
+        "Cursor.EOF = TRUE",
+        "Handler for NOT FOUND sets flag",
+        "Cursor returns NULL row",
+        "MySQL automatically closes cursor"
+      ],
       "answer": 1
     },
     {
       "id": 39,
-      "question": "Which of the following is TRUE about EXISTS?",
-      "options": ["Returns number of rows", "Returns TRUE if subquery returns at least one row", "Works only with DELETE", "Returns actual row values"],
-      "answer": 1
+      "question": "Which view type stores data physically?",
+      "options": ["Simple view", "Complex view", "Materialized view (not native in MySQL)", "Virtual view"],
+      "answer": 2
     },
     {
       "id": 40,
-      "question": "Which of the following best describes BCNF?",
-      "options": ["No repeating groups", "Every determinant must be a candidate key", "No partial dependency", "No multi-valued dependency"],
+      "question": "Which relational algebra operation corresponds to SQL WHERE clause?",
+      "options": ["Projection", "Selection", "Union", "Natural Join"],
       "answer": 1
     }
   ]
