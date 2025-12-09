@@ -2,183 +2,148 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which statement best explains the role of a constructor in C++?",
-      "options": [
-        "It allocates memory on heap",
-        "It initializes object state during creation",
-        "It destroys temporary objects",
-        "It is called only for static objects"
-      ],
+      "question": "Which of the following guarantees object destruction when it goes out of scope?",
+      "options": ["Manual delete", "Smart pointers", "Garbage collection", "Runtime linker"],
       "answer": 1
     },
     {
       "id": 2,
-      "question": "Which of the following expressions results in undefined behavior?",
+      "question": "Which of the following statements about copy constructors is TRUE?",
       "options": [
-        "Accessing array out of bounds",
-        "Using a pointer to dynamically allocated memory",
-        "Calling a destructor explicitly",
-        "Using inline functions"
-      ],
-      "answer": 0
-    },
-    {
-      "id": 3,
-      "question": "What does the 'this' pointer represent inside a member function?",
-      "options": [
-        "Address of class",
-        "Address of current object",
-        "Address of base class",
-        "Address of vtable"
+        "They are invoked when passing objects by reference",
+        "They are invoked when returning objects by value",
+        "They cannot be overloaded",
+        "They cannot take arguments"
       ],
       "answer": 1
     },
     {
+      "id": 3,
+      "question": "Which keyword is used to prevent accidental modification of variables inside functions?",
+      "options": ["register", "volatile", "mutable", "const"],
+      "answer": 3
+    },
+    {
       "id": 4,
-      "question": "Which feature of C++ enables compile-time polymorphism?",
-      "options": [
-        "Function overloading",
-        "Virtual functions",
-        "Dynamic_cast",
-        "Destructors"
-      ],
-      "answer": 0
+      "question": "Which C++ feature supports multiple functions with same name but different signatures?",
+      "options": ["Overriding", "Overloading", "Encapsulation", "Slicing"],
+      "answer": 1
     },
     {
       "id": 5,
-      "question": "Which operator cannot be overloaded in C++?",
-      "options": ["=", "()", "?:", "[]"],
+      "question": "What does the delete[] operator specifically ensure?",
+      "options": [
+        "Memory is reset to zero",
+        "Destructor called once",
+        "Destructor called for each array element",
+        "Only shallow copy is done"
+      ],
       "answer": 2
     },
     {
       "id": 6,
-      "question": "Which of the following is TRUE about virtual destructors?",
-      "options": [
-        "They prevent object slicing",
-        "They ensure correct destructor chaining during polymorphic deletion",
-        "They disable inheritance",
-        "They cannot be pure virtual"
-      ],
+      "question": "What is the size of an empty class in C++?",
+      "options": ["0 bytes", "1 byte", "Depends on compiler", "Undefined"],
       "answer": 1
     },
     {
       "id": 7,
-      "question": "Which memory region stores local variables inside a function?",
-      "options": ["Stack", "Heap", "Static area", "Code segment"],
+      "question": "Which of the following causes polymorphism to occur at runtime?",
+      "options": ["Virtual functions", "Inline functions", "Function templates", "Overloaded operators"],
       "answer": 0
     },
     {
       "id": 8,
-      "question": "Which C++ cast performs runtime type checking for polymorphic classes?",
-      "options": ["static_cast", "reinterpret_cast", "dynamic_cast", "const_cast"],
-      "answer": 2
+      "question": "Which pointer correctly refers to the base class part of a derived object?",
+      "options": ["Upcasting", "Downcasting", "Rebinding", "Overriding"],
+      "answer": 0
     },
     {
       "id": 9,
-      "question": "Which situation requires a deep copy constructor?",
+      "question": "Which scenario leads to memory leak?",
       "options": [
-        "Object contains primitive variables",
-        "Object contains references or raw pointers",
-        "Object uses static members",
-        "Object uses inline functions"
+        "Deleting the same pointer twice",
+        "Not deleting dynamically allocated memory",
+        "Using references instead of pointers",
+        "Using stack variables"
       ],
       "answer": 1
     },
     {
       "id": 10,
-      "question": "Which statement about inline functions is TRUE?",
-      "options": [
-        "Inline is guaranteed by compiler",
-        "Inline reduces function call overhead",
-        "Inline can be applied to recursive functions",
-        "Inline requires virtual keyword"
-      ],
-      "answer": 1
+      "question": "Which C++ cast is most dangerous and should be avoided unless necessary?",
+      "options": ["static_cast", "dynamic_cast", "reinterpret_cast", "const_cast"],
+      "answer": 2
     },
     {
       "id": 11,
-      "question": "What happens when delete[] is used on memory allocated using new?",
+      "question": "Which expression invokes undefined behavior?",
       "options": [
-        "Destructor is not called",
-        "Only first element is destroyed",
-        "All array elements' destructors are called",
-        "It behaves same as delete"
+        "int x = 10; cout << x;",
+        "int *p = NULL; cout << p;",
+        "int a = 5; int b = a++ + ++a;",
+        "float f = 3.2; int x = f;"
       ],
       "answer": 2
     },
     {
       "id": 12,
-      "question": "Which keyword prevents a function from being overridden in derived classes?",
-      "options": ["virtual", "override", "sealed", "final"],
-      "answer": 3
-    },
-    {
-      "id": 13,
-      "question": "Which of the following is a correct statement about abstract classes?",
-      "options": [
-        "They cannot have constructors",
-        "They must contain at least one pure virtual function",
-        "They cannot contain non-virtual functions",
-        "They cannot have data members"
-      ],
+      "question": "Which concept allows a base pointer to call derived class functions?",
+      "options": ["Upcasting", "Late binding", "Name hiding", "Constant folding"],
       "answer": 1
     },
     {
+      "id": 13,
+      "question": "Which C++ feature is violated when a derived class method hides a base class method?",
+      "options": ["Encapsulation", "Object slicing", "Name hiding", "Polymorphism"],
+      "answer": 2
+    },
+    {
       "id": 14,
-      "question": "Which OOP concept is violated by the friend keyword?",
-      "options": ["Abstraction", "Encapsulation", "Polymorphism", "Inheritance"],
+      "question": "Which of the following classes cannot be instantiated?",
+      "options": ["Class with only static members", "Class containing pure virtual function", "Class without constructors", "Class without destructor"],
       "answer": 1
     },
     {
       "id": 15,
-      "question": "What does the following code produce?\nint x = 10;\ncout << (x >> 1);",
-      "options": ["5", "20", "2", "Compilation error"],
-      "answer": 0
+      "question": "Which statement about exception handling is TRUE?",
+      "options": [
+        "catch(...) must appear before all catch blocks",
+        "throw must be followed by a constant only",
+        "Only class types can be thrown",
+        "Unhandled exceptions terminate the program"
+      ],
+      "answer": 3
     },
     {
       "id": 16,
-      "question": "Which of the following is TRUE for static class members?",
-      "options": [
-        "They belong to each object separately",
-        "They are allocated on stack",
-        "They are shared across all objects",
-        "They must be initialized inside constructor"
-      ],
+      "question": "Which memory allocation mechanism supports constructors?",
+      "options": ["malloc", "calloc", "new", "realloc"],
       "answer": 2
     },
     {
       "id": 17,
-      "question": "Which situation leads to object slicing?",
-      "options": [
-        "Passing derived object by reference",
-        "Passing derived object by value to base class parameter",
-        "Using pointers to derived class",
-        "Using dynamic_cast on base pointer"
-      ],
+      "question": "Which function executes automatically when an object is copied into another?",
+      "options": ["Assignment operator", "Copy constructor", "Move constructor", "Destructor"],
       "answer": 1
     },
     {
       "id": 18,
-      "question": "Which line causes UB (undefined behavior)?\nint *p = new int(5);\ndelete p;\ncout << *p;",
-      "options": [
-        "Only allocation",
-        "Only deletion",
-        "Accessing p after deletion",
-        "None of these"
-      ],
+      "question": "Which access specifier makes a class member accessible only within the class and its friends?",
+      "options": ["public", "protected", "private", "internal"],
       "answer": 2
     },
     {
       "id": 19,
-      "question": "Which STL container maintains elements in sorted order automatically?",
-      "options": ["vector", "list", "map", "unordered_map"],
-      "answer": 2
+      "question": "Which STL container provides the fastest traversal when accessing elements sequentially?",
+      "options": ["vector", "list", "map", "stack"],
+      "answer": 1
     },
     {
       "id": 20,
-      "question": "Which feature of C++ enables late binding?",
-      "options": ["Function overloading", "Default arguments", "Virtual functions", "Operator overloading"],
-      "answer": 2
+      "question": "Which feature of C++ does NOT support polymorphism?",
+      "options": ["Operator overloading", "Templates", "Function overloading", "Friend functions"],
+      "answer": 3
     }
   ]
 }
