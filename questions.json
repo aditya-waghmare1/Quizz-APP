@@ -2,303 +2,183 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which statement best differentiates a database schema from a database instance?",
-      "options": ["Schema changes frequently, instance rarely changes", "Schema describes structure, instance describes current data", "Both store only data", "Instance describes constraints, schema stores values"],
+      "question": "Which statement best explains the role of a constructor in C++?",
+      "options": [
+        "It allocates memory on heap",
+        "It initializes object state during creation",
+        "It destroys temporary objects",
+        "It is called only for static objects"
+      ],
       "answer": 1
     },
     {
       "id": 2,
-      "question": "In a conceptual ER model, which of the following is TRUE about relationship cardinality?",
-      "options": ["It is determined only by primary keys", "It describes how many entities participate on each side of a relationship", "It appears only in physical models", "It replaces foreign keys"],
-      "answer": 1
+      "question": "Which of the following expressions results in undefined behavior?",
+      "options": [
+        "Accessing array out of bounds",
+        "Using a pointer to dynamically allocated memory",
+        "Calling a destructor explicitly",
+        "Using inline functions"
+      ],
+      "answer": 0
     },
     {
       "id": 3,
-      "question": "Which of the following queries demonstrates a projection in relational algebra?",
+      "question": "What does the 'this' pointer represent inside a member function?",
       "options": [
-        "SELECT * FROM student;",
-        "SELECT name, dept FROM student;",
-        "SELECT * FROM student WHERE dept = 'CS';",
-        "SELECT COUNT(*) FROM student;"
+        "Address of class",
+        "Address of current object",
+        "Address of base class",
+        "Address of vtable"
       ],
       "answer": 1
     },
     {
       "id": 4,
-      "question": "Which Codd rule ensures metadata must be accessible using the same query language as data?",
-      "options": ["Rule 2", "Rule 4", "Rule 7", "Rule 12"],
-      "answer": 1
-    },
-    {
-      "id": 5,
-      "question": "What will the following SQL do? CREATE TABLE emp AS SELECT id, name FROM staff;",
-      "options": ["Create table with schema only", "Copy structure and data", "Copy only constraints", "Throws an error without PRIMARY KEY"],
-      "answer": 1
-    },
-    {
-      "id": 6,
-      "question": "Which dependency prevents a relation from being in BCNF?",
+      "question": "Which feature of C++ enables compile-time polymorphism?",
       "options": [
-        "A non-key attribute determines another non-key attribute",
-        "A part of composite key determines a non-key attribute",
-        "A non-key attribute determines a candidate key",
-        "Every attribute depends on whole key"
+        "Function overloading",
+        "Virtual functions",
+        "Dynamic_cast",
+        "Destructors"
       ],
-      "answer": 2
-    },
-    {
-      "id": 7,
-      "question": "Which of the following violates 3NF but satisfies 2NF?",
-      "options": [
-        "Partial dependency exists",
-        "Multi-valued attributes exist",
-        "A non-key attribute depends on another non-key attribute",
-        "Candidate key is missing"
-      ],
-      "answer": 2
-    },
-    {
-      "id": 8,
-      "question": "Which join type can be rewritten using UNION of a LEFT and RIGHT join?",
-      "options": ["INNER JOIN", "FULL OUTER JOIN", "CROSS JOIN", "NATURAL JOIN"],
-      "answer": 1
-    },
-    {
-      "id": 9,
-      "question": "What is the output of the query: SELECT NULL = NULL;",
-      "options": ["TRUE", "FALSE", "NULL", "1"],
-      "answer": 2
-    },
-    {
-      "id": 10,
-      "question": "Which MySQL constraint enforces that two rows cannot have identical values across multiple columns?",
-      "options": ["UNIQUE", "PRIMARY KEY", "CHECK", "FOREIGN KEY"],
       "answer": 0
     },
     {
-      "id": 11,
-      "question": "Which aggregate function counts only non-null values?",
-      "options": ["COUNT(*)", "COUNT(column)", "COUNT ALL", "COUNT(NULL)"],
+      "id": 5,
+      "question": "Which operator cannot be overloaded in C++?",
+      "options": ["=", "()", "?:", "[]"],
+      "answer": 2
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is TRUE about virtual destructors?",
+      "options": [
+        "They prevent object slicing",
+        "They ensure correct destructor chaining during polymorphic deletion",
+        "They disable inheritance",
+        "They cannot be pure virtual"
+      ],
       "answer": 1
+    },
+    {
+      "id": 7,
+      "question": "Which memory region stores local variables inside a function?",
+      "options": ["Stack", "Heap", "Static area", "Code segment"],
+      "answer": 0
+    },
+    {
+      "id": 8,
+      "question": "Which C++ cast performs runtime type checking for polymorphic classes?",
+      "options": ["static_cast", "reinterpret_cast", "dynamic_cast", "const_cast"],
+      "answer": 2
+    },
+    {
+      "id": 9,
+      "question": "Which situation requires a deep copy constructor?",
+      "options": [
+        "Object contains primitive variables",
+        "Object contains references or raw pointers",
+        "Object uses static members",
+        "Object uses inline functions"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 10,
+      "question": "Which statement about inline functions is TRUE?",
+      "options": [
+        "Inline is guaranteed by compiler",
+        "Inline reduces function call overhead",
+        "Inline can be applied to recursive functions",
+        "Inline requires virtual keyword"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 11,
+      "question": "What happens when delete[] is used on memory allocated using new?",
+      "options": [
+        "Destructor is not called",
+        "Only first element is destroyed",
+        "All array elements' destructors are called",
+        "It behaves same as delete"
+      ],
+      "answer": 2
     },
     {
       "id": 12,
-      "question": "Which relational algebra operation is equivalent to SQL DISTINCT?",
-      "options": ["Selection", "Projection", "Union", "Rename"],
-      "answer": 1
+      "question": "Which keyword prevents a function from being overridden in derived classes?",
+      "options": ["virtual", "override", "sealed", "final"],
+      "answer": 3
     },
     {
       "id": 13,
-      "question": "What is the result of: SELECT 3 IN (NULL, 3, 5);",
-      "options": ["NULL", "TRUE", "FALSE", "Error"],
+      "question": "Which of the following is a correct statement about abstract classes?",
+      "options": [
+        "They cannot have constructors",
+        "They must contain at least one pure virtual function",
+        "They cannot contain non-virtual functions",
+        "They cannot have data members"
+      ],
       "answer": 1
     },
     {
       "id": 14,
-      "question": "Which operation will produce a Cartesian product in SQL?",
-      "options": ["SELECT * FROM A JOIN B ON A.id = B.id;", "SELECT * FROM A, B;", "SELECT * FROM A RIGHT JOIN B;", "SELECT * FROM A NATURAL JOIN B;"],
+      "question": "Which OOP concept is violated by the friend keyword?",
+      "options": ["Abstraction", "Encapsulation", "Polymorphism", "Inheritance"],
       "answer": 1
     },
     {
       "id": 15,
-      "question": "In correlated subqueries, the inner query:",
-      "options": [
-        "Runs once before the outer query",
-        "Runs for every row of outer query",
-        "Runs only if EXISTS is used",
-        "Returns multiple unrelated rows"
-      ],
-      "answer": 1
+      "question": "What does the following code produce?\nint x = 10;\ncout << (x >> 1);",
+      "options": ["5", "20", "2", "Compilation error"],
+      "answer": 0
     },
     {
       "id": 16,
-      "question": "Which of the following will prevent phantom reads?",
-      "options": ["READ UNCOMMITTED", "READ COMMITTED", "REPEATABLE READ", "SERIALIZABLE"],
-      "answer": 3
+      "question": "Which of the following is TRUE for static class members?",
+      "options": [
+        "They belong to each object separately",
+        "They are allocated on stack",
+        "They are shared across all objects",
+        "They must be initialized inside constructor"
+      ],
+      "answer": 2
     },
     {
       "id": 17,
-      "question": "Which storage engine ignores foreign keys even if declared?",
-      "options": ["InnoDB", "MyISAM", "Memory", "Archive"],
+      "question": "Which situation leads to object slicing?",
+      "options": [
+        "Passing derived object by reference",
+        "Passing derived object by value to base class parameter",
+        "Using pointers to derived class",
+        "Using dynamic_cast on base pointer"
+      ],
       "answer": 1
     },
     {
       "id": 18,
-      "question": "Which MySQL command displays all available triggers on a table?",
-      "options": ["SHOW TRIGGERS;", "DESCRIBE TRIGGERS;", "SELECT * FROM triggers;", "SHOW TABLE TRIGGERS;"],
-      "answer": 0
+      "question": "Which line causes UB (undefined behavior)?\nint *p = new int(5);\ndelete p;\ncout << *p;",
+      "options": [
+        "Only allocation",
+        "Only deletion",
+        "Accessing p after deletion",
+        "None of these"
+      ],
+      "answer": 2
     },
     {
       "id": 19,
-      "question": "In a BEFORE INSERT trigger, which of the following is TRUE?",
-      "options": ["OLD can be modified", "NEW can be modified", "Both NEW and OLD can be modified", "Neither NEW nor OLD can be modified"],
-      "answer": 1
+      "question": "Which STL container maintains elements in sorted order automatically?",
+      "options": ["vector", "list", "map", "unordered_map"],
+      "answer": 2
     },
     {
       "id": 20,
-      "question": "Which scenario requires a cursor?",
-      "options": [
-        "Insert all rows from table A into table B",
-        "Update salary with same increment for all rows",
-        "Perform row-by-row custom logic based on multiple conditions",
-        "Select only distinct departments"
-      ],
+      "question": "Which feature of C++ enables late binding?",
+      "options": ["Function overloading", "Default arguments", "Virtual functions", "Operator overloading"],
       "answer": 2
-    },
-    {
-      "id": 21,
-      "question": "Which type of cursor always reads the most recent committed row?",
-      "options": ["Asensitive", "Insensitive", "Scrollable", "Read-write"],
-      "answer": 0
-    },
-    {
-      "id": 22,
-      "question": "Which flow control statement always executes at least once?",
-      "options": ["WHILE", "LOOP", "REPEAT", "CASE"],
-      "answer": 2
-    },
-    {
-      "id": 23,
-      "question": "Which SQL statement is valid for creating a function?",
-      "options": [
-        "CREATE FUNCTION f(x) RETURNS INT BEGIN RETURN x*2; END",
-        "CREATE FUNC f RETURNS INT AS RETURN x;",
-        "MAKE FUNCTION f RETURNS INT BEGIN END;",
-        "DEFINE FUNCTION f(x) AS RETURN x;"
-      ],
-      "answer": 0
-    },
-    {
-      "id": 24,
-      "question": "Which of the following is NOT allowed inside a stored function?",
-      "options": ["SELECT from another table", "Updating a table", "Mathematical expressions", "Declaring variables"],
-      "answer": 1
-    },
-    {
-      "id": 25,
-      "question": "Which of the following views is updatable?",
-      "options": [
-        "A view created using JOIN",
-        "A view containing GROUP BY",
-        "A view selecting from one table without aggregations",
-        "A view containing DISTINCT"
-      ],
-      "answer": 2
-    },
-    {
-      "id": 26,
-      "question": "Which SQL query copies structure + data + indexes?",
-      "options": [
-        "CREATE TABLE t2 LIKE t1;",
-        "CREATE TABLE t2 AS SELECT * FROM t1;",
-        "CLONE TABLE t1 TO t2;",
-        "INSERT INTO t2 SELECT * FROM t1;"
-      ],
-      "answer": 0
-    },
-    {
-      "id": 27,
-      "question": "Which index is most efficient for equality searches?",
-      "options": ["Hash index", "B-Tree index", "Full-text index", "Bitmap index"],
-      "answer": 0
-    },
-    {
-      "id": 28,
-      "question": "Which command saves the current transaction and ends it?",
-      "options": ["SAVEPOINT", "COMMIT", "ROLLBACK", "GRANT"],
-      "answer": 1
-    },
-    {
-      "id": 29,
-      "question": "Which query returns employees whose salary is NOT NULL and above 30000?",
-      "options": [
-        "SELECT * FROM emp WHERE salary > 30000;",
-        "SELECT * FROM emp WHERE salary != NULL AND salary > 30000;",
-        "SELECT * FROM emp WHERE salary IS NOT NULL AND salary > 30000;",
-        "SELECT * FROM emp WHERE NOT salary = NULL;"
-      ],
-      "answer": 2
-    },
-    {
-      "id": 30,
-      "question": "Which SQL command removes all rows but keeps table structure?",
-      "options": ["DELETE", "TRUNCATE", "DROP", "REMOVE"],
-      "answer": 1
-    },
-    {
-      "id": 31,
-      "question": "Which MySQL program is used for database backups?",
-      "options": ["mysqladmin", "mysqldump", "mysqlshow", "mysqlimport"],
-      "answer": 1
-    },
-    {
-      "id": 32,
-      "question": "Which operator performs pattern matching?",
-      "options": ["BETWEEN", "IN", "LIKE", "EXISTS"],
-      "answer": 2
-    },
-    {
-      "id": 33,
-      "question": "Which set operator removes duplicates automatically?",
-      "options": ["UNION", "UNION ALL", "INTERSECT ALL", "CROSS"],
-      "answer": 0
-    },
-    {
-      "id": 34,
-      "question": "Which table type is automatically deleted when the session ends?",
-      "options": ["Permanent table", "Temporary table", "Indexed table", "Archived table"],
-      "answer": 1
-    },
-    {
-      "id": 35,
-      "question": "Which of the following is TRUE about NATURAL JOIN?",
-      "options": [
-        "Joins using explicitly defined columns",
-        "Joins all columns with identical names",
-        "Joins only primary keys",
-        "Equivalent to FULL OUTER JOIN"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 36,
-      "question": "Which SQL statement will fetch 3rd highest salary?",
-      "options": [
-        "SELECT MAX(salary) FROM emp LIMIT 3;",
-        "SELECT salary FROM emp ORDER BY salary DESC LIMIT 2,1;",
-        "SELECT salary FROM emp GROUP BY salary DESC LIMIT 3;",
-        "SELECT salary FROM emp WHERE ROWNUM=3;"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 37,
-      "question": "Which trigger has access only to OLD values?",
-      "options": ["BEFORE INSERT", "AFTER INSERT", "BEFORE DELETE", "BEFORE UPDATE"],
-      "answer": 2
-    },
-    {
-      "id": 38,
-      "question": "Which cursor attribute signals that no more rows are available?",
-      "options": [
-        "Cursor.EOF = TRUE",
-        "Handler for NOT FOUND sets flag",
-        "Cursor returns NULL row",
-        "MySQL automatically closes cursor"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 39,
-      "question": "Which view type stores data physically?",
-      "options": ["Simple view", "Complex view", "Materialized view (not native in MySQL)", "Virtual view"],
-      "answer": 2
-    },
-    {
-      "id": 40,
-      "question": "Which relational algebra operation corresponds to SQL WHERE clause?",
-      "options": ["Projection", "Selection", "Union", "Natural Join"],
-      "answer": 1
     }
   ]
 }
