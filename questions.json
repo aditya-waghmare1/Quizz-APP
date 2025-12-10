@@ -2,123 +2,168 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which C++ feature allows binding of function call to function definition at runtime?",
-      "options": ["Function overloading", "Static binding", "Virtual functions", "Inline functions"],
+      "question": "Which statement about default arguments in functions is TRUE?",
+      "options": [
+        "Default values must be on the leftmost parameters",
+        "Default values must be provided in function definition only",
+        "Default values must be on the rightmost parameters",
+        "Default values can only be used with inline functions"
+      ],
       "answer": 2
     },
     {
       "id": 2,
-      "question": "Which member of a class is shared by all objects?",
-      "options": ["Non-static data members", "Static data members", "Virtual functions", "Constructors"],
-      "answer": 1
+      "question": "Which property makes arrays and pointers closely related in C++?",
+      "options": [
+        "Array name acts as a constant pointer",
+        "Arrays are allocated on heap automatically",
+        "Arrays store pointer values",
+        "Pointers cannot access array elements"
+      ],
+      "answer": 0
     },
     {
       "id": 3,
-      "question": "Which constructor is invoked during object creation with another object of same type?",
-      "options": ["Default constructor", "Copy constructor", "Parameterized constructor", "Move constructor"],
-      "answer": 1
+      "question": "Which keyword stops a class from being used as a base class?",
+      "options": ["final", "sealed", "static", "override"],
+      "answer": 0
     },
     {
       "id": 4,
-      "question": "Which operator is used to free memory allocated by new?",
-      "options": ["free()", "delete", "dispose", "release"],
-      "answer": 1
+      "question": "Which object-oriented principle ensures only essential details are exposed?",
+      "options": ["Polymorphism", "Encapsulation", "Abstraction", "Inheritance"],
+      "answer": 2
     },
     {
       "id": 5,
-      "question": "What happens if a base class has a non-virtual destructor and object is deleted through base pointer?",
-      "options": ["Derived destructor is still called", "Only base destructor is called", "Destructor is skipped", "Program crashes always"],
-      "answer": 1
+      "question": "Which C++ mechanism resolves function calls when signatures are same but classes differ?",
+      "options": ["Templates", "RTTI", "Function overriding", "Name hiding"],
+      "answer": 2
     },
     {
       "id": 6,
-      "question": "Which access specifier allows access everywhere in program?",
-      "options": ["private", "protected", "public", "friend"],
+      "question": "Which memory allocation method fails to call constructors?",
+      "options": ["new", "new[]", "malloc", "Placement new"],
       "answer": 2
     },
     {
       "id": 7,
-      "question": "Which OOP concept allows hiding implementation details?",
-      "options": ["Abstraction", "Polymorphism", "Inheritance", "Overloading"],
+      "question": "Which function is called when an exception is thrown but not caught?",
+      "options": ["terminate()", "abort()", "exit()", "cleanup()"],
       "answer": 0
     },
     {
       "id": 8,
-      "question": "Which pointer is automatically passed to non-static member functions?",
-      "options": ["self", "current", "this", "object"],
-      "answer": 2
+      "question": "Which statement about virtual base classes is TRUE?",
+      "options": [
+        "They avoid duplicate base class sub-objects",
+        "They disable polymorphism",
+        "They prevent overriding",
+        "They work only with private inheritance"
+      ],
+      "answer": 0
     },
     {
       "id": 9,
-      "question": "Which inheritance type involves a class being derived from two or more base classes?",
-      "options": ["Multilevel inheritance", "Hierarchical inheritance", "Multiple inheritance", "Hybrid inheritance"],
+      "question": "Which of the following ensures type safety during inheritance casting?",
+      "options": ["reinterpret_cast", "static_cast", "dynamic_cast", "const_cast"],
       "answer": 2
     },
     {
       "id": 10,
-      "question": "Which keyword prevents class members from being modified?",
-      "options": ["static", "const", "mutable", "volatile"],
+      "question": "Why should operator= be overloaded in a class that uses dynamic memory?",
+      "options": [
+        "To allow shallow copying only",
+        "To handle deep copy and avoid double delete",
+        "To disable assignment between objects",
+        "To prevent default constructor from being called"
+      ],
       "answer": 1
     },
     {
       "id": 11,
-      "question": "Which operator is typically overloaded to compare two objects?",
-      "options": ["=", "==", "<<", "->"],
-      "answer": 1
+      "question": "Which statement about exception handling is TRUE?",
+      "options": [
+        "throw must always throw integers",
+        "catch blocks must appear before try block",
+        "catch(...) catches all exception types",
+        "Multiple try blocks are not allowed"
+      ],
+      "answer": 2
     },
     {
       "id": 12,
-      "question": "Which C++ feature allows a function to be defined once but work with different data types?",
-      "options": ["Overloading", "Templates", "Virtual functions", "Inheritance"],
+      "question": "Which C++ feature checks type of object at runtime?",
+      "options": ["Polymorphism", "RTTI", "Templates", "Encapsulation"],
       "answer": 1
     },
     {
       "id": 13,
-      "question": "Which function is automatically invoked during object destruction?",
-      "options": ["Constructor", "Destructor", "Copy constructor", "Finalize"],
-      "answer": 1
+      "question": "Which statement about constructor overloading is TRUE?",
+      "options": [
+        "Constructors cannot be overloaded",
+        "Constructors must differ by return type",
+        "Constructors must differ by parameter list",
+        "Constructor overloading requires virtual keyword"
+      ],
+      "answer": 2
     },
     {
       "id": 14,
-      "question": "Which statement is TRUE about pure virtual functions?",
-      "options": ["They cannot have a body", "They make the class abstract", "They must be private", "They must return int"],
+      "question": "Which STL container gives the fastest insertion at both ends?",
+      "options": ["vector", "deque", "map", "stack"],
       "answer": 1
     },
     {
       "id": 15,
-      "question": "Which operator accesses members of object through pointer?",
-      "options": [".", "&", "->", "::"],
-      "answer": 2
+      "question": "Which file handling method moves the file pointer to a specific location?",
+      "options": ["seekg()", "getline()", "put()", "read()"],
+      "answer": 0
     },
     {
       "id": 16,
-      "question": "Which STL container behaves like FIFO structure?",
-      "options": ["stack", "queue", "vector", "map"],
+      "question": "What is the primary purpose of templates?",
+      "options": [
+        "Runtime polymorphism",
+        "Compile-time code generation for multiple types",
+        "Memory management",
+        "Encapsulation of data"
+      ],
       "answer": 1
     },
     {
       "id": 17,
-      "question": "Which keyword is used to generate a user-defined exception?",
-      "options": ["throw", "raise", "panic", "except"],
-      "answer": 0
-    },
-    {
-      "id": 18,
-      "question": "Which file open mode appends new data to end without overwriting?",
-      "options": ["ios::in", "ios::app", "ios::trunc", "ios::binary"],
+      "question": "Which form of inheritance allows a class to inherit from a class that is already derived?",
+      "options": ["Multiple", "Multilevel", "Hierarchical", "Hybrid"],
       "answer": 1
     },
     {
-      "id": 19,
-      "question": "Which pointer arithmetic is valid?",
-      "options": ["p = p + 1", "p = p * p", "p = p / 2", "p = p % 3"],
+      "id": 18,
+      "question": "Which expression leads to undefined behavior?",
+      "options": [
+        "++i + ++i",
+        "i + 1",
+        "i * (i+1)",
+        "i - 1"
+      ],
       "answer": 0
     },
     {
+      "id": 19,
+      "question": "Which of the following is TRUE for friend functions?",
+      "options": [
+        "They are member functions",
+        "They access private members of a class",
+        "They follow inheritance rules",
+        "They require virtual keyword"
+      ],
+      "answer": 1
+    },
+    {
       "id": 20,
-      "question": "Which of the following is stored in the stack memory?",
-      "options": ["Static variables", "Objects created using new", "Local variables", "Global variables"],
-      "answer": 2
+      "question": "Which operator gives direct access to members of an object using a pointer?",
+      "options": [".", "->", "::", "&"],
+      "answer": 1
     }
   ]
 }
