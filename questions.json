@@ -2,123 +2,123 @@
   "questions": [
     {
       "id": 1,
-      "question": "What is the primary purpose of a copy constructor?",
-      "options": ["To destroy objects", "To initialize an object using another object", "To allocate dynamic memory", "To overload operators"],
-      "answer": 1
+      "question": "Which C++ feature allows binding of function call to function definition at runtime?",
+      "options": ["Function overloading", "Static binding", "Virtual functions", "Inline functions"],
+      "answer": 2
     },
     {
       "id": 2,
-      "question": "Which statement about inline functions is TRUE?",
-      "options": ["Compiler must inline them", "They reduce function call overhead", "They cannot return values", "They must be virtual"],
+      "question": "Which member of a class is shared by all objects?",
+      "options": ["Non-static data members", "Static data members", "Virtual functions", "Constructors"],
       "answer": 1
     },
     {
       "id": 3,
-      "question": "Which operator is used for dynamic memory allocation in C++?",
-      "options": ["malloc", "new", "allocate()", "reserve"],
+      "question": "Which constructor is invoked during object creation with another object of same type?",
+      "options": ["Default constructor", "Copy constructor", "Parameterized constructor", "Move constructor"],
       "answer": 1
     },
     {
       "id": 4,
-      "question": "Which feature allows multiple functions with the same name but different parameters?",
-      "options": ["Function overriding", "Function overloading", "Virtual functions", "Templates"],
+      "question": "Which operator is used to free memory allocated by new?",
+      "options": ["free()", "delete", "dispose", "release"],
       "answer": 1
     },
     {
       "id": 5,
-      "question": "Which of the following causes undefined behavior?",
-      "options": ["Using reference as function argument", "Accessing array out of bounds", "Calling inline functions", "Using local variables"],
+      "question": "What happens if a base class has a non-virtual destructor and object is deleted through base pointer?",
+      "options": ["Derived destructor is still called", "Only base destructor is called", "Destructor is skipped", "Program crashes always"],
       "answer": 1
     },
     {
       "id": 6,
-      "question": "Which access specifier allows access inside class and derived class?",
+      "question": "Which access specifier allows access everywhere in program?",
       "options": ["private", "protected", "public", "friend"],
-      "answer": 1
+      "answer": 2
     },
     {
       "id": 7,
-      "question": "What does the 'this' pointer represent?",
-      "options": ["Address of base class", "Address of current object", "Address of derived class", "Address of static members"],
-      "answer": 1
+      "question": "Which OOP concept allows hiding implementation details?",
+      "options": ["Abstraction", "Polymorphism", "Inheritance", "Overloading"],
+      "answer": 0
     },
     {
       "id": 8,
-      "question": "Which operator must be overloaded to use objects with cout?",
-      "options": ["=", ">>", "<<", "->"],
+      "question": "Which pointer is automatically passed to non-static member functions?",
+      "options": ["self", "current", "this", "object"],
       "answer": 2
     },
     {
       "id": 9,
-      "question": "Which constructor is called when an object is created without arguments?",
-      "options": ["Copy constructor", "Parameterized constructor", "Default constructor", "Friend constructor"],
+      "question": "Which inheritance type involves a class being derived from two or more base classes?",
+      "options": ["Multilevel inheritance", "Hierarchical inheritance", "Multiple inheritance", "Hybrid inheritance"],
       "answer": 2
     },
     {
       "id": 10,
-      "question": "Which type of inheritance can lead to the diamond problem?",
-      "options": ["Multilevel", "Multiple", "Hierarchical", "Hybrid"],
+      "question": "Which keyword prevents class members from being modified?",
+      "options": ["static", "const", "mutable", "volatile"],
       "answer": 1
     },
     {
       "id": 11,
-      "question": "Which keyword ensures correct destructor call when using base pointers?",
-      "options": ["protected", "virtual", "friend", "override"],
+      "question": "Which operator is typically overloaded to compare two objects?",
+      "options": ["=", "==", "<<", "->"],
       "answer": 1
     },
     {
       "id": 12,
-      "question": "Which feature implements run-time polymorphism?",
-      "options": ["Function overloading", "Operator overloading", "Virtual functions", "Inline functions"],
-      "answer": 2
+      "question": "Which C++ feature allows a function to be defined once but work with different data types?",
+      "options": ["Overloading", "Templates", "Virtual functions", "Inheritance"],
+      "answer": 1
     },
     {
       "id": 13,
-      "question": "Which statement is TRUE about abstract classes?",
-      "options": ["They cannot have constructors", "They must contain at least one pure virtual function", "They cannot contain normal functions", "They cannot have data members"],
+      "question": "Which function is automatically invoked during object destruction?",
+      "options": ["Constructor", "Destructor", "Copy constructor", "Finalize"],
       "answer": 1
     },
     {
       "id": 14,
-      "question": "Which keyword begins an exception-handling block?",
-      "options": ["throw", "catch", "try", "handle"],
-      "answer": 2
+      "question": "Which statement is TRUE about pure virtual functions?",
+      "options": ["They cannot have a body", "They make the class abstract", "They must be private", "They must return int"],
+      "answer": 1
     },
     {
       "id": 15,
-      "question": "Which file opening mode allows both reading and writing?",
-      "options": ["ios::in", "ios::out", "ios::app", "ios::in | ios::out"],
-      "answer": 3
+      "question": "Which operator accesses members of object through pointer?",
+      "options": [".", "&", "->", "::"],
+      "answer": 2
     },
     {
       "id": 16,
-      "question": "Which STL container stores key-value pairs in sorted order?",
-      "options": ["vector", "map", "queue", "stack"],
+      "question": "Which STL container behaves like FIFO structure?",
+      "options": ["stack", "queue", "vector", "map"],
       "answer": 1
     },
     {
       "id": 17,
-      "question": "Which pointer operation is valid?",
-      "options": ["p = p * 2;", "p++;", "p = p / 2;", "p = p % 3;"],
-      "answer": 1
+      "question": "Which keyword is used to generate a user-defined exception?",
+      "options": ["throw", "raise", "panic", "except"],
+      "answer": 0
     },
     {
       "id": 18,
-      "question": "Which function is automatically called when an object goes out of scope?",
-      "options": ["operator()", "finalize()", "destructor", "free()"],
-      "answer": 2
+      "question": "Which file open mode appends new data to end without overwriting?",
+      "options": ["ios::in", "ios::app", "ios::trunc", "ios::binary"],
+      "answer": 1
     },
     {
       "id": 19,
-      "question": "What does typedef do?",
-      "options": ["Allocate memory", "Create alias for a data type", "Define a class", "Declare constructors"],
-      "answer": 1
+      "question": "Which pointer arithmetic is valid?",
+      "options": ["p = p + 1", "p = p * p", "p = p / 2", "p = p % 3"],
+      "answer": 0
     },
     {
       "id": 20,
-      "question": "Templates enable which type of polymorphism?",
-      "options": ["Run-time polymorphism", "Compile-time polymorphism", "Constructor polymorphism", "Destructor polymorphism"],
-      "answer": 1
+      "question": "Which of the following is stored in the stack memory?",
+      "options": ["Static variables", "Objects created using new", "Local variables", "Global variables"],
+      "answer": 2
     }
   ]
 }
