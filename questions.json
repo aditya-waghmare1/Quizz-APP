@@ -2,243 +2,123 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which statement about parameterized constructors is TRUE?",
-      "options": ["They cannot be overloaded", "They cannot have default values", "They allow initializing objects with specific values", "They must be defined inside class"],
-      "answer": 2
+      "question": "What is the primary purpose of a copy constructor?",
+      "options": ["To destroy objects", "To initialize an object using another object", "To allocate dynamic memory", "To overload operators"],
+      "answer": 1
     },
     {
       "id": 2,
-      "question": "Which of the following is NOT a valid type of inheritance?",
-      "options": ["Multiple", "Multilevel", "Parallel", "Hybrid"],
-      "answer": 2
+      "question": "Which statement about inline functions is TRUE?",
+      "options": ["Compiler must inline them", "They reduce function call overhead", "They cannot return values", "They must be virtual"],
+      "answer": 1
     },
     {
       "id": 3,
-      "question": "What is the output of: sizeof('A');",
-      "options": ["1", "2", "4", "Depends on compiler"],
-      "answer": 2
+      "question": "Which operator is used for dynamic memory allocation in C++?",
+      "options": ["malloc", "new", "allocate()", "reserve"],
+      "answer": 1
     },
     {
       "id": 4,
-      "question": "Which feature allows classes to define methods with same name but different signatures?",
-      "options": ["Overriding", "Overloading", "Encapsulation", "Template specialization"],
+      "question": "Which feature allows multiple functions with the same name but different parameters?",
+      "options": ["Function overriding", "Function overloading", "Virtual functions", "Templates"],
       "answer": 1
     },
     {
       "id": 5,
-      "question": "Which destructor type is required for polymorphic deletion?",
-      "options": ["Inline destructor", "Static destructor", "Virtual destructor", "Pure static destructor"],
-      "answer": 2
+      "question": "Which of the following causes undefined behavior?",
+      "options": ["Using reference as function argument", "Accessing array out of bounds", "Calling inline functions", "Using local variables"],
+      "answer": 1
     },
     {
       "id": 6,
-      "question": "What happens when a reference variable is left uninitialized?",
-      "options": ["It becomes null", "It becomes a dangling reference", "Compiler error", "It defaults to zero"],
-      "answer": 2
+      "question": "Which access specifier allows access inside class and derived class?",
+      "options": ["private", "protected", "public", "friend"],
+      "answer": 1
     },
     {
       "id": 7,
-      "question": "Which operator must be overloaded to use objects with std::sort?",
-      "options": ["==", "!=", "<", "[]"],
-      "answer": 2
+      "question": "What does the 'this' pointer represent?",
+      "options": ["Address of base class", "Address of current object", "Address of derived class", "Address of static members"],
+      "answer": 1
     },
     {
       "id": 8,
-      "question": "Which type of cast is used to safely downcast base pointer to derived pointer?",
-      "options": ["static_cast", "reinterpret_cast", "dynamic_cast", "const_cast"],
+      "question": "Which operator must be overloaded to use objects with cout?",
+      "options": ["=", ">>", "<<", "->"],
       "answer": 2
     },
     {
       "id": 9,
-      "question": "What will cause undefined behavior in dynamic memory management?",
-      "options": ["Calling delete twice on same pointer", "Allocating memory with new[]", "Deleting null pointer", "Allocating memory inside function"],
-      "answer": 0
+      "question": "Which constructor is called when an object is created without arguments?",
+      "options": ["Copy constructor", "Parameterized constructor", "Default constructor", "Friend constructor"],
+      "answer": 2
     },
     {
       "id": 10,
-      "question": "Which function is called when an object goes out of scope?",
-      "options": ["Constructor", "Destructor", "Initializer", "Allocator"],
+      "question": "Which type of inheritance can lead to the diamond problem?",
+      "options": ["Multilevel", "Multiple", "Hierarchical", "Hybrid"],
       "answer": 1
     },
     {
       "id": 11,
-      "question": "Which of the following cannot be declared as virtual?",
-      "options": ["Destructor", "Constructor", "Member function", "Pure function"],
+      "question": "Which keyword ensures correct destructor call when using base pointers?",
+      "options": ["protected", "virtual", "friend", "override"],
       "answer": 1
     },
     {
       "id": 12,
-      "question": "Which C++ keyword disables automatic generation of copy constructor?",
-      "options": ["protected", "delete", "explicit", "mutable"],
-      "answer": 1
+      "question": "Which feature implements run-time polymorphism?",
+      "options": ["Function overloading", "Operator overloading", "Virtual functions", "Inline functions"],
+      "answer": 2
     },
     {
       "id": 13,
-      "question": "Which STL container provides random access in constant time?",
-      "options": ["vector", "list", "map", "set"],
-      "answer": 0
+      "question": "Which statement is TRUE about abstract classes?",
+      "options": ["They cannot have constructors", "They must contain at least one pure virtual function", "They cannot contain normal functions", "They cannot have data members"],
+      "answer": 1
     },
     {
       "id": 14,
-      "question": "Which memory region stores static variables?",
-      "options": ["Heap", "Stack", "Data segment", "Code segment"],
+      "question": "Which keyword begins an exception-handling block?",
+      "options": ["throw", "catch", "try", "handle"],
       "answer": 2
     },
     {
       "id": 15,
-      "question": "Which operation triggers the move constructor?",
-      "options": ["Passing object by reference", "Returning large temporary object", "Copying object into vector", "Assigning primitive types"],
-      "answer": 1
+      "question": "Which file opening mode allows both reading and writing?",
+      "options": ["ios::in", "ios::out", "ios::app", "ios::in | ios::out"],
+      "answer": 3
     },
     {
       "id": 16,
-      "question": "Which of the following is TRUE about friend classes?",
-      "options": ["They inherit members", "They break encapsulation partially", "They must be base classes", "They require virtual keyword"],
+      "question": "Which STL container stores key-value pairs in sorted order?",
+      "options": ["vector", "map", "queue", "stack"],
       "answer": 1
     },
     {
       "id": 17,
-      "question": "Which cast changes bit-pattern without validation?",
-      "options": ["reinterpret_cast", "static_cast", "const_cast", "dynamic_cast"],
-      "answer": 0
+      "question": "Which pointer operation is valid?",
+      "options": ["p = p * 2;", "p++;", "p = p / 2;", "p = p % 3;"],
+      "answer": 1
     },
     {
       "id": 18,
-      "question": "Which C++17 feature allows function return type deduction?",
-      "options": ["decltype(auto)", "auto()", "decltype()", "return_type"],
-      "answer": 0
+      "question": "Which function is automatically called when an object goes out of scope?",
+      "options": ["operator()", "finalize()", "destructor", "free()"],
+      "answer": 2
     },
     {
       "id": 19,
-      "question": "Which header defines std::unique_ptr?",
-      "options": ["<memory>", "<utility>", "<smartptr>", "<pointer>"],
-      "answer": 0
+      "question": "What does typedef do?",
+      "options": ["Allocate memory", "Create alias for a data type", "Define a class", "Declare constructors"],
+      "answer": 1
     },
     {
       "id": 20,
-      "question": "Which of the following cannot be used with templates?",
-      "options": ["Classes", "Functions", "Namespaces", "Variables"],
-      "answer": 2
-    },
-    {
-      "id": 21,
-      "question": "What is the output of: cout << (10 && 0);",
-      "options": ["true", "false", "1", "0"],
-      "answer": 3
-    },
-    {
-      "id": 22,
-      "question": "Which operator is invoked when using obj1 = obj2?",
-      "options": ["Copy constructor", "Assignment operator", "Move constructor", "Binary operator+"],
+      "question": "Templates enable which type of polymorphism?",
+      "options": ["Run-time polymorphism", "Compile-time polymorphism", "Constructor polymorphism", "Destructor polymorphism"],
       "answer": 1
-    },
-    {
-      "id": 23,
-      "question": "Which is the strongest type of polymorphism?",
-      "options": ["Compile-time", "Runtime", "Parametric", "Operator"],
-      "answer": 1
-    },
-    {
-      "id": 24,
-      "question": "Which pointer cannot be incremented?",
-      "options": ["Pointer to array", "Void pointer", "Null pointer", "Pointer to const"],
-      "answer": 1
-    },
-    {
-      "id": 25,
-      "question": "Which memory allocation supports constructor calls?",
-      "options": ["malloc", "calloc", "new", "realloc"],
-      "answer": 2
-    },
-    {
-      "id": 26,
-      "question": "Which C++17 feature prevents narrowing conversions?",
-      "options": ["constexpr", "explicit", "auto", "structured bindings"],
-      "answer": 1
-    },
-    {
-      "id": 27,
-      "question": "Which of the following is a property of abstract classes?",
-      "options": ["Cannot have constructors", "Must have all pure virtual functions", "Cannot be instantiated", "Cannot be inherited"],
-      "answer": 2
-    },
-    {
-      "id": 28,
-      "question": "Which STL container maintains insertion order and provides fast erase in middle?",
-      "options": ["vector", "deque", "list", "set"],
-      "answer": 2
-    },
-    {
-      "id": 29,
-      "question": "Which operator is automatically invoked when returning an object by value?",
-      "options": ["Assignment operator", "Copy constructor", "Move assignment", "Destructor"],
-      "answer": 1
-    },
-    {
-      "id": 30,
-      "question": "Which keyword is used to disallow function overriding?",
-      "options": ["static", "delete", "final", "explicit"],
-      "answer": 2
-    },
-    {
-      "id": 31,
-      "question": "Which of the following is NOT UB?",
-      "options": ["Dereferencing null pointer", "Modifying const object", "Deleting memory twice", "Reading uninitialized variable"],
-      "answer": 1
-    },
-    {
-      "id": 32,
-      "question": "Which concept ensures resource release even after exceptions?",
-      "options": ["RAII", "SFINAE", "RVO", "Type erasure"],
-      "answer": 0
-    },
-    {
-      "id": 33,
-      "question": "Which function is used to allocate aligned memory in C++17?",
-      "options": ["aligned_malloc", "std::aligned_new", "std::aligned_alloc", "std::allocate_align"],
-      "answer": 2
-    },
-    {
-      "id": 34,
-      "question": "Which storage class specifier keeps variable alive across function calls?",
-      "options": ["auto", "extern", "static", "register"],
-      "answer": 2
-    },
-    {
-      "id": 35,
-      "question": "Which keyword enforces compile-time constant?",
-      "options": ["final", "constexpr", "explicit", "mutable"],
-      "answer": 1
-    },
-    {
-      "id": 36,
-      "question": "Which of the following is NOT supported by C++ templates?",
-      "options": ["Type parameters", "Non-type parameters", "Template specialization", "Runtime selection of template type"],
-      "answer": 3
-    },
-    {
-      "id": 37,
-      "question": "Which of the following allows storing heterogeneous data?",
-      "options": ["std::vector", "std::array", "std::tuple", "std::stack"],
-      "answer": 2
-    },
-    {
-      "id": 38,
-      "question": "Which operator is invoked during dynamic_cast failure for references?",
-      "options": ["Returns null", "Throws exception", "Ends program", "Calls destructor"],
-      "answer": 1
-    },
-    {
-      "id": 39,
-      "question": "Which of the following containers does NOT store contiguous memory?",
-      "options": ["vector", "array", "deque", "string"],
-      "answer": 2
-    },
-    {
-      "id": 40,
-      "question": "Which C++ constructor executes only once for a static local variable?",
-      "options": ["Default constructor", "Static constructor", "Initializer list", "Local static constructor"],
-      "answer": 3
     }
   ]
 }
