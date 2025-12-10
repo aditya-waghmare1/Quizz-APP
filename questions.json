@@ -2,222 +2,122 @@
   "questions": [
     {
       "id": 1,
-      "question": "When a base class destructor is NOT virtual, and a derived object is deleted using a base pointer, what exactly happens?",
-      "options": [
-        "Only derived destructor runs",
-        "Only base destructor runs, causing partial destruction",
-        "Both destructors run in reverse order",
-        "Program always crashes"
-      ],
-      "answer": 1
+      "question": "What is the output?\nint x = 5;\nprintf(\"%d\", ++x + x++);",
+      "options": ["11", "12", "Undefined behavior", "10"],
+      "answer": 2
     },
     {
       "id": 2,
-      "question": "Which situation forces the compiler to perform a deep copy even without manually writing a copy constructor?",
-      "options": [
-        "When the class contains primitive members only",
-        "When class contains references",
-        "When class contains base class pointers",
-        "Compiler never creates deep copies automatically"
-      ],
+      "question": "What happens when this code runs?\nint *p = new int(10);\ndelete p;\ncout << *p;",
+      "options": ["10", "0", "Garbage value", "Undefined behavior"],
       "answer": 3
     },
     {
       "id": 3,
-      "question": "In multiple inheritance, what determines the order in which base class constructors execute?",
-      "options": [
-        "Order of declaration inside derived class header",
-        "Order of initializer list",
-        "Lexicographical order of class names",
-        "Order of private, protected, public inheritance"
-      ],
+      "question": "What is printed?\nclass A {\npublic: A(){cout<<\"A\";} ~A(){cout<<\"a\";} };\nint main(){A obj;}",
+      "options": ["Aa", "A only", "a only", "Compiler error"],
       "answer": 0
     },
     {
       "id": 4,
-      "question": "Which of the following expressions leads to undefined behavior specifically due to evaluation order?",
-      "options": [
-        "i = i++ + ++i",
-        "i + ++i",
-        "i * (i + 1)",
-        "++i * 3"
-      ],
-      "answer": 0
+      "question": "Which constructor is called?\nclass B{}; class A{A(B obj){ }};\nB b;\nA a = b;",
+      "options": ["Default constructor", "Copy constructor", "Conversion constructor", "Compiler error"],
+      "answer": 2
     },
     {
       "id": 5,
-      "question": "Why does calling a virtual function inside a constructor NOT yield polymorphic behavior?",
-      "options": [
-        "Vtable is not created yet",
-        "Vptr is reset to base type inside constructor",
-        "Derived class members are not accessible due to protection",
-        "Compiler disables virtual calls inside constructors"
-      ],
-      "answer": 1
+      "question": "Output?\nint arr[3] = {10,20,30};\nint *p = arr + 1;\ncout << *(p + 1);",
+      "options": ["10", "20", "30", "Garbage"],
+      "answer": 2
     },
     {
       "id": 6,
-      "question": "Which condition causes a memory leak even when delete is used?",
-      "options": [
-        "Deleting a null pointer",
-        "Deleting pointer to base with non-virtual destructor",
-        "Deleting same pointer twice",
-        "Deleting pointer to stack object"
-      ],
+      "question": "What is printed?\nclass A{public: virtual void fun(){cout<<\"A\";} };\nclass B:public A{public: void fun(){cout<<\"B\";} };\nA *ptr = new B();\nptr->fun();",
+      "options": ["A", "B", "AB", "Compiler error"],
       "answer": 1
     },
     {
       "id": 7,
-      "question": "What exactly happens when new operator fails to allocate memory?",
-      "options": [
-        "Returns NULL",
-        "Throws std::bad_alloc exception",
-        "Terminates program silently",
-        "Runs global handler and continues execution"
-      ],
-      "answer": 1
+      "question": "Result?\nfor(int i=0;i<3;i++){}\nprintf(\"%d\", i);",
+      "options": ["0", "3", "Garbage/undefined", "Compiler error: i not declared"],
+      "answer": 3
     },
     {
       "id": 8,
-      "question": "Which rule explains why inline functions are only a suggestion and not a command?",
-      "options": [
-        "One Definition Rule (ODR)",
-        "Compiler optimization freedom",
-        "Type erasure",
-        "Static binding requirement"
-      ],
-      "answer": 1
+      "question": "What does this print?\nclass A{public: A(){cout<<1;} ~A(){cout<<2;} };\nA *obj = new A();\ndelete obj;",
+      "options": ["1 then 2", "2 then 1", "Only 1", "Only 2"],
+      "answer": 0
     },
     {
       "id": 9,
-      "question": "What is the primary reason virtual base classes are used?",
-      "options": [
-        "To increase performance",
-        "To remove ambiguity caused by diamond inheritance",
-        "To prevent overriding",
-        "To allow private inheritance"
-      ],
+      "question": "Behavior?\nclass A{public: A(){throw 1;} ~A(){cout<<\"D\";} };\nA obj;",
+      "options": ["Displays D", "Does not display D", "Displays garbage", "Compiler error"],
       "answer": 1
     },
     {
       "id": 10,
-      "question": "What happens when an exception is thrown but no matching catch block is found?",
-      "options": [
-        "Program continues normally",
-        "Destructor of local objects still run, then program terminates",
-        "Destructor is skipped and program aborts immediately",
-        "Exception is ignored silently"
-      ],
-      "answer": 1
+      "question": "Output?\nint x = 10;\ncout << (x >> 1);",
+      "options": ["5", "10", "20", "Runtime error"],
+      "answer": 0
     },
     {
       "id": 11,
-      "question": "Which situation prevents operator overloading?",
-      "options": [
-        "Overloading new and delete",
-        "Changing operator precedence",
-        "Defining operator outside class",
-        "Returning user-defined types"
-      ],
-      "answer": 1
+      "question": "What is printed?\nclass A{public:int x; A(int a){x=a;} };\nA obj(5);\nprintf(\"%d\", obj.x);",
+      "options": ["5", "0", "Garbage", "Compiler error"],
+      "answer": 0
     },
     {
       "id": 12,
-      "question": "When is the 'this' pointer NOT available?",
-      "options": [
-        "Inside static member functions",
-        "Inside constructors",
-        "Inside destructors",
-        "Inside operator overloads"
-      ],
-      "answer": 0
+      "question": "What is the output?\nint a = 5;\nint &r = a;\nr = r + 5;\ncout << a;",
+      "options": ["5", "10", "0", "Garbage"],
+      "answer": 1
     },
     {
       "id": 13,
-      "question": "Which condition forces the use of virtual inheritance?",
-      "options": [
-        "Multilevel inheritance",
-        "Multiple inheritance where the same base class appears more than once",
-        "Single inheritance with overloaded constructors",
-        "Templates with inheritance"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 14,
-      "question": "What exactly happens when reading a file with eof() inside a loop?",
-      "options": [
-        "Loop ends exactly at last character",
-        "Last read attempt happens AFTER EOF is reached",
-        "File pointer stops before last character",
-        "eof() triggers an exception automatically"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 15,
-      "question": "Which C++ Template behavior is TRUE?",
-      "options": [
-        "Templates generate code only when instantiated",
-        "Templates generate code at program link time",
-        "Templates require class inheritance to work",
-        "Templates must be declared in .cpp files"
-      ],
+      "question": "Output?\nclass A{public: virtual void f(){cout<<\"A\";} };\nclass B:public A{public: void f(){cout<<\"B\";} };\nB b;\nA a = b;\na.f();",
+      "options": ["A", "B", "AB", "Undefined behavior"],
       "answer": 0
     },
     {
-      "id": 16,
-      "question": "Why does std::vector reallocation invalidate iterators?",
-      "options": [
-        "Vector uses linked list internally",
-        "Reallocation moves entire block of memory",
-        "Iterators store index, not pointer",
-        "Iterators are destroyed after push_back"
-      ],
+      "id": 14,
+      "question": "Result?\nint *p = NULL;\nprintf(\"%p\", p);\np++;",
+      "options": ["Compilation success, prints NULL then increments", "Runtime error", "Undefined behavior", "Segmentation fault guaranteed"],
+      "answer": 0
+    },
+    {
+      "id": 15,
+      "question": "Output?\nint a = 1, b = 2;\ncout << (++a, b++, ++b);",
+      "options": ["2", "3", "4", "Undefined behavior"],
       "answer": 1
+    },
+    {
+      "id": 16,
+      "question": "What is printed?\nclass A{\npublic: A(){cout<<\"C\";} ~A(){cout<<\"D\";} };\nvoid fun(){ A a; }\nint main(){ fun(); cout<<\"E\"; }",
+      "options": ["CDE", "CED", "ECD", "CD E"],
+      "answer": 0
     },
     {
       "id": 17,
-      "question": "Which form of inheritance allows base class constructors to run more than once?",
-      "options": [
-        "Hierarchical inheritance",
-        "Multiple inheritance (without virtual keyword)",
-        "Multilevel inheritance",
-        "Hybrid inheritance with templates"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 18,
-      "question": "Which expression gives the size of the entire file in file handling?",
-      "options": [
-        "tellg() at start",
-        "seekg(0, ios::end) then tellg()",
-        "seekg(0) repeatedly",
-        "counting bytes manually in loop"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 19,
-      "question": "Why must a class define its own copy constructor when using raw pointers?",
-      "options": [
-        "To allow shallow copy",
-        "To prevent slicing",
-        "To avoid copying the same memory address",
-        "To increase runtime speed"
-      ],
+      "question": "What happens?\nint *p = new int[5];\ndelete p;",
+      "options": ["Valid deletion", "Memory leak", "Undefined behavior", "Only first element deleted"],
       "answer": 2
     },
     {
+      "id": 18,
+      "question": "Output?\nclass A{public: void f(){cout<<\"A\";} };\nclass B:public A{public: void f(int x){cout<<\"B\";} };\nB obj;\nobj.f();",
+      "options": ["A", "B", "AB", "Compiler error"],
+      "answer": 3
+    },
+    {
+      "id": 19,
+      "question": "Behavior?\ntry{\n    throw 'x';\n}\ncatch(int){ cout<<1; }\ncatch(...){ cout<<2; }",
+      "options": ["1", "2", "Runtime error", "No output"],
+      "answer": 1
+    },
+    {
       "id": 20,
-      "question": "Which scenario disables run-time polymorphism even with virtual functions?",
-      "options": [
-        "Calling through object, not pointer/reference",
-        "Using public inheritance",
-        "Using virtual base classes",
-        "Overloading functions"
-      ],
+      "question": "Output in file handling?\nofstream f(\"a.txt\");\nf << \"Hello\";\nf.close();\nifstream g(\"a.txt\");\nstring s;\ng >> s;\ncout << s;",
+      "options": ["Hello", "H", "Error", "Empty string"],
       "answer": 0
     }
   ]
