@@ -2,168 +2,223 @@
   "questions": [
     {
       "id": 1,
-      "question": "Which statement about default arguments in functions is TRUE?",
+      "question": "When a base class destructor is NOT virtual, and a derived object is deleted using a base pointer, what exactly happens?",
       "options": [
-        "Default values must be on the leftmost parameters",
-        "Default values must be provided in function definition only",
-        "Default values must be on the rightmost parameters",
-        "Default values can only be used with inline functions"
+        "Only derived destructor runs",
+        "Only base destructor runs, causing partial destruction",
+        "Both destructors run in reverse order",
+        "Program always crashes"
       ],
-      "answer": 2
+      "answer": 1
     },
     {
       "id": 2,
-      "question": "Which property makes arrays and pointers closely related in C++?",
+      "question": "Which situation forces the compiler to perform a deep copy even without manually writing a copy constructor?",
       "options": [
-        "Array name acts as a constant pointer",
-        "Arrays are allocated on heap automatically",
-        "Arrays store pointer values",
-        "Pointers cannot access array elements"
+        "When the class contains primitive members only",
+        "When class contains references",
+        "When class contains base class pointers",
+        "Compiler never creates deep copies automatically"
       ],
-      "answer": 0
+      "answer": 3
     },
     {
       "id": 3,
-      "question": "Which keyword stops a class from being used as a base class?",
-      "options": ["final", "sealed", "static", "override"],
+      "question": "In multiple inheritance, what determines the order in which base class constructors execute?",
+      "options": [
+        "Order of declaration inside derived class header",
+        "Order of initializer list",
+        "Lexicographical order of class names",
+        "Order of private, protected, public inheritance"
+      ],
       "answer": 0
     },
     {
       "id": 4,
-      "question": "Which object-oriented principle ensures only essential details are exposed?",
-      "options": ["Polymorphism", "Encapsulation", "Abstraction", "Inheritance"],
-      "answer": 2
-    },
-    {
-      "id": 5,
-      "question": "Which C++ mechanism resolves function calls when signatures are same but classes differ?",
-      "options": ["Templates", "RTTI", "Function overriding", "Name hiding"],
-      "answer": 2
-    },
-    {
-      "id": 6,
-      "question": "Which memory allocation method fails to call constructors?",
-      "options": ["new", "new[]", "malloc", "Placement new"],
-      "answer": 2
-    },
-    {
-      "id": 7,
-      "question": "Which function is called when an exception is thrown but not caught?",
-      "options": ["terminate()", "abort()", "exit()", "cleanup()"],
-      "answer": 0
-    },
-    {
-      "id": 8,
-      "question": "Which statement about virtual base classes is TRUE?",
+      "question": "Which of the following expressions leads to undefined behavior specifically due to evaluation order?",
       "options": [
-        "They avoid duplicate base class sub-objects",
-        "They disable polymorphism",
-        "They prevent overriding",
-        "They work only with private inheritance"
+        "i = i++ + ++i",
+        "i + ++i",
+        "i * (i + 1)",
+        "++i * 3"
       ],
       "answer": 0
     },
     {
+      "id": 5,
+      "question": "Why does calling a virtual function inside a constructor NOT yield polymorphic behavior?",
+      "options": [
+        "Vtable is not created yet",
+        "Vptr is reset to base type inside constructor",
+        "Derived class members are not accessible due to protection",
+        "Compiler disables virtual calls inside constructors"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 6,
+      "question": "Which condition causes a memory leak even when delete is used?",
+      "options": [
+        "Deleting a null pointer",
+        "Deleting pointer to base with non-virtual destructor",
+        "Deleting same pointer twice",
+        "Deleting pointer to stack object"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 7,
+      "question": "What exactly happens when new operator fails to allocate memory?",
+      "options": [
+        "Returns NULL",
+        "Throws std::bad_alloc exception",
+        "Terminates program silently",
+        "Runs global handler and continues execution"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 8,
+      "question": "Which rule explains why inline functions are only a suggestion and not a command?",
+      "options": [
+        "One Definition Rule (ODR)",
+        "Compiler optimization freedom",
+        "Type erasure",
+        "Static binding requirement"
+      ],
+      "answer": 1
+    },
+    {
       "id": 9,
-      "question": "Which of the following ensures type safety during inheritance casting?",
-      "options": ["reinterpret_cast", "static_cast", "dynamic_cast", "const_cast"],
-      "answer": 2
+      "question": "What is the primary reason virtual base classes are used?",
+      "options": [
+        "To increase performance",
+        "To remove ambiguity caused by diamond inheritance",
+        "To prevent overriding",
+        "To allow private inheritance"
+      ],
+      "answer": 1
     },
     {
       "id": 10,
-      "question": "Why should operator= be overloaded in a class that uses dynamic memory?",
+      "question": "What happens when an exception is thrown but no matching catch block is found?",
       "options": [
-        "To allow shallow copying only",
-        "To handle deep copy and avoid double delete",
-        "To disable assignment between objects",
-        "To prevent default constructor from being called"
+        "Program continues normally",
+        "Destructor of local objects still run, then program terminates",
+        "Destructor is skipped and program aborts immediately",
+        "Exception is ignored silently"
       ],
       "answer": 1
     },
     {
       "id": 11,
-      "question": "Which statement about exception handling is TRUE?",
+      "question": "Which situation prevents operator overloading?",
       "options": [
-        "throw must always throw integers",
-        "catch blocks must appear before try block",
-        "catch(...) catches all exception types",
-        "Multiple try blocks are not allowed"
+        "Overloading new and delete",
+        "Changing operator precedence",
+        "Defining operator outside class",
+        "Returning user-defined types"
       ],
-      "answer": 2
-    },
-    {
-      "id": 12,
-      "question": "Which C++ feature checks type of object at runtime?",
-      "options": ["Polymorphism", "RTTI", "Templates", "Encapsulation"],
       "answer": 1
     },
     {
-      "id": 13,
-      "question": "Which statement about constructor overloading is TRUE?",
+      "id": 12,
+      "question": "When is the 'this' pointer NOT available?",
       "options": [
-        "Constructors cannot be overloaded",
-        "Constructors must differ by return type",
-        "Constructors must differ by parameter list",
-        "Constructor overloading requires virtual keyword"
+        "Inside static member functions",
+        "Inside constructors",
+        "Inside destructors",
+        "Inside operator overloads"
       ],
-      "answer": 2
+      "answer": 0
+    },
+    {
+      "id": 13,
+      "question": "Which condition forces the use of virtual inheritance?",
+      "options": [
+        "Multilevel inheritance",
+        "Multiple inheritance where the same base class appears more than once",
+        "Single inheritance with overloaded constructors",
+        "Templates with inheritance"
+      ],
+      "answer": 1
     },
     {
       "id": 14,
-      "question": "Which STL container gives the fastest insertion at both ends?",
-      "options": ["vector", "deque", "map", "stack"],
+      "question": "What exactly happens when reading a file with eof() inside a loop?",
+      "options": [
+        "Loop ends exactly at last character",
+        "Last read attempt happens AFTER EOF is reached",
+        "File pointer stops before last character",
+        "eof() triggers an exception automatically"
+      ],
       "answer": 1
     },
     {
       "id": 15,
-      "question": "Which file handling method moves the file pointer to a specific location?",
-      "options": ["seekg()", "getline()", "put()", "read()"],
+      "question": "Which C++ Template behavior is TRUE?",
+      "options": [
+        "Templates generate code only when instantiated",
+        "Templates generate code at program link time",
+        "Templates require class inheritance to work",
+        "Templates must be declared in .cpp files"
+      ],
       "answer": 0
     },
     {
       "id": 16,
-      "question": "What is the primary purpose of templates?",
+      "question": "Why does std::vector reallocation invalidate iterators?",
       "options": [
-        "Runtime polymorphism",
-        "Compile-time code generation for multiple types",
-        "Memory management",
-        "Encapsulation of data"
+        "Vector uses linked list internally",
+        "Reallocation moves entire block of memory",
+        "Iterators store index, not pointer",
+        "Iterators are destroyed after push_back"
       ],
       "answer": 1
     },
     {
       "id": 17,
-      "question": "Which form of inheritance allows a class to inherit from a class that is already derived?",
-      "options": ["Multiple", "Multilevel", "Hierarchical", "Hybrid"],
+      "question": "Which form of inheritance allows base class constructors to run more than once?",
+      "options": [
+        "Hierarchical inheritance",
+        "Multiple inheritance (without virtual keyword)",
+        "Multilevel inheritance",
+        "Hybrid inheritance with templates"
+      ],
       "answer": 1
     },
     {
       "id": 18,
-      "question": "Which expression leads to undefined behavior?",
+      "question": "Which expression gives the size of the entire file in file handling?",
       "options": [
-        "++i + ++i",
-        "i + 1",
-        "i * (i+1)",
-        "i - 1"
+        "tellg() at start",
+        "seekg(0, ios::end) then tellg()",
+        "seekg(0) repeatedly",
+        "counting bytes manually in loop"
       ],
-      "answer": 0
+      "answer": 1
     },
     {
       "id": 19,
-      "question": "Which of the following is TRUE for friend functions?",
+      "question": "Why must a class define its own copy constructor when using raw pointers?",
       "options": [
-        "They are member functions",
-        "They access private members of a class",
-        "They follow inheritance rules",
-        "They require virtual keyword"
+        "To allow shallow copy",
+        "To prevent slicing",
+        "To avoid copying the same memory address",
+        "To increase runtime speed"
       ],
-      "answer": 1
+      "answer": 2
     },
     {
       "id": 20,
-      "question": "Which operator gives direct access to members of an object using a pointer?",
-      "options": [".", "->", "::", "&"],
-      "answer": 1
+      "question": "Which scenario disables run-time polymorphism even with virtual functions?",
+      "options": [
+        "Calling through object, not pointer/reference",
+        "Using public inheritance",
+        "Using virtual base classes",
+        "Overloading functions"
+      ],
+      "answer": 0
     }
   ]
 }
