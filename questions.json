@@ -2,123 +2,341 @@
   "questions": [
     {
       "id": 1,
-      "question": "What is the output?\nint x = 5;\nprintf(\"%d\", ++x + x++);",
-      "options": ["11", "12", "Undefined behavior", "10"],
+      "type": "snippet",
+      "question": "What is the output?\nint x = 3;\ncout << (++x * x++);",
+      "options": ["12", "16", "Undefined behavior", "9"],
       "answer": 2
     },
     {
       "id": 2,
-      "question": "What happens when this code runs?\nint *p = new int(10);\ndelete p;\ncout << *p;",
-      "options": ["10", "0", "Garbage value", "Undefined behavior"],
-      "answer": 3
+      "type": "snippet",
+      "question": "Output?\nint a = 5, b = 10;\ncout << (a++, ++b, a + b);",
+      "options": ["15", "16", "17", "18"],
+      "answer": 2
     },
     {
       "id": 3,
-      "question": "What is printed?\nclass A {\npublic: A(){cout<<\"A\";} ~A(){cout<<\"a\";} };\nint main(){A obj;}",
-      "options": ["Aa", "A only", "a only", "Compiler error"],
-      "answer": 0
+      "type": "snippet",
+      "question": "What happens?\nint *p;\n*p = 10;\nprintf(\"%d\", *p);",
+      "options": ["10", "0", "Garbage", "Undefined behavior"],
+      "answer": 3
     },
     {
       "id": 4,
-      "question": "Which constructor is called?\nclass B{}; class A{A(B obj){ }};\nB b;\nA a = b;",
-      "options": ["Default constructor", "Copy constructor", "Conversion constructor", "Compiler error"],
+      "type": "snippet",
+      "question": "Output?\nclass A{public: A(){cout<<1;} ~A(){cout<<2;}};\nint main(){ A(); cout<<3; }",
+      "options": ["123", "132", "13", "312"],
       "answer": 2
     },
     {
       "id": 5,
-      "question": "Output?\nint arr[3] = {10,20,30};\nint *p = arr + 1;\ncout << *(p + 1);",
-      "options": ["10", "20", "30", "Garbage"],
-      "answer": 2
+      "type": "snippet",
+      "question": "What is printed?\nclass A{public: virtual void f(){cout<<\"A\";} };\nclass B:public A{public: void f(){cout<<\"B\";} };\nA a;\nB b;\na = b;\na.f();",
+      "options": ["A", "B", "AB", "Undefined"],
+      "answer": 0
     },
     {
       "id": 6,
-      "question": "What is printed?\nclass A{public: virtual void fun(){cout<<\"A\";} };\nclass B:public A{public: void fun(){cout<<\"B\";} };\nA *ptr = new B();\nptr->fun();",
-      "options": ["A", "B", "AB", "Compiler error"],
-      "answer": 1
+      "type": "snippet",
+      "question": "Output?\nint arr[] = {1,2,3};\nint *p = arr;\np += 2;\ncout << *p;",
+      "options": ["1", "2", "3", "Garbage"],
+      "answer": 2
     },
     {
       "id": 7,
-      "question": "Result?\nfor(int i=0;i<3;i++){}\nprintf(\"%d\", i);",
-      "options": ["0", "3", "Garbage/undefined", "Compiler error: i not declared"],
-      "answer": 3
+      "type": "snippet",
+      "question": "Output?\nclass Demo{\npublic:\n Demo(){cout<<\"C\";}\n ~Demo(){cout<<\"D\";}\n};\nvoid fun(){ static Demo d; }\nint main(){ fun(); cout<<\"X\"; }",
+      "options": ["CDX", "CXD", "CX", "Only C"],
+      "answer": 2
     },
     {
       "id": 8,
-      "question": "What does this print?\nclass A{public: A(){cout<<1;} ~A(){cout<<2;} };\nA *obj = new A();\ndelete obj;",
-      "options": ["1 then 2", "2 then 1", "Only 1", "Only 2"],
-      "answer": 0
+      "type": "snippet",
+      "question": "What is printed?\nint x = 10;\nint &r = x;\nr++;\ncout << x;",
+      "options": ["10", "11", "0", "Undefined"],
+      "answer": 1
     },
     {
       "id": 9,
-      "question": "Behavior?\nclass A{public: A(){throw 1;} ~A(){cout<<\"D\";} };\nA obj;",
-      "options": ["Displays D", "Does not display D", "Displays garbage", "Compiler error"],
-      "answer": 1
+      "type": "snippet",
+      "question": "Behavior?\ntry{ throw 3.14; }\ncatch(int){ cout<<1; }\ncatch(...){ cout<<2; }",
+      "options": ["1", "2", "Runtime error", "No output"],
+      "answer": 2
     },
     {
       "id": 10,
-      "question": "Output?\nint x = 10;\ncout << (x >> 1);",
-      "options": ["5", "10", "20", "Runtime error"],
-      "answer": 0
+      "type": "snippet",
+      "question": "Output?\nofstream f(\"t.txt\");\nf << \"abc\";\nf.close();\nifstream g(\"t.txt\");\nchar c;\ng >> c;\ncout << c;",
+      "options": ["abc", "a", "c", "Empty"],
+      "answer": 1
     },
+
+    //------------------ THEORY (30 QUESTIONS) ------------------//
+
     {
       "id": 11,
-      "question": "What is printed?\nclass A{public:int x; A(int a){x=a;} };\nA obj(5);\nprintf(\"%d\", obj.x);",
-      "options": ["5", "0", "Garbage", "Compiler error"],
-      "answer": 0
-    },
-    {
-      "id": 12,
-      "question": "What is the output?\nint a = 5;\nint &r = a;\nr = r + 5;\ncout << a;",
-      "options": ["5", "10", "0", "Garbage"],
+      "type": "theory",
+      "question": "Why is a virtual destructor important in polymorphism?",
+      "options": [
+        "Ensures correct overloaded function resolution",
+        "Ensures derived destructor runs when deleting via base pointer",
+        "Prevents slicing",
+        "Speeds up execution"
+      ],
       "answer": 1
     },
     {
+      "id": 12,
+      "type": "theory",
+      "question": "Which constructor is invoked when an object is passed by value to a function?",
+      "options": ["Default constructor", "Move constructor", "Copy constructor", "No constructor"],
+      "answer": 2
+    },
+    {
       "id": 13,
-      "question": "Output?\nclass A{public: virtual void f(){cout<<\"A\";} };\nclass B:public A{public: void f(){cout<<\"B\";} };\nB b;\nA a = b;\na.f();",
-      "options": ["A", "B", "AB", "Undefined behavior"],
-      "answer": 0
+      "type": "theory",
+      "question": "Which of the following BEST describes run-time polymorphism?",
+      "options": [
+        "Function overloading",
+        "Template instantiation",
+        "Virtual function overriding",
+        "Operator overloading"
+      ],
+      "answer": 2
     },
     {
       "id": 14,
-      "question": "Result?\nint *p = NULL;\nprintf(\"%p\", p);\np++;",
-      "options": ["Compilation success, prints NULL then increments", "Runtime error", "Undefined behavior", "Segmentation fault guaranteed"],
-      "answer": 0
+      "type": "theory",
+      "question": "Which scenario causes object slicing?",
+      "options": [
+        "Passing derived object by pointer",
+        "Assigning derived object to base object by value",
+        "Calling virtual function through reference",
+        "Using templates"
+      ],
+      "answer": 1
     },
     {
       "id": 15,
-      "question": "Output?\nint a = 1, b = 2;\ncout << (++a, b++, ++b);",
-      "options": ["2", "3", "4", "Undefined behavior"],
+      "type": "theory",
+      "question": "What does the 'this' pointer refer to?",
+      "options": [
+        "Address of class",
+        "Address of calling object",
+        "Address of base class",
+        "Address of static members"
+      ],
       "answer": 1
     },
     {
       "id": 16,
-      "question": "What is printed?\nclass A{\npublic: A(){cout<<\"C\";} ~A(){cout<<\"D\";} };\nvoid fun(){ A a; }\nint main(){ fun(); cout<<\"E\"; }",
-      "options": ["CDE", "CED", "ECD", "CD E"],
-      "answer": 0
-    },
-    {
-      "id": 17,
-      "question": "What happens?\nint *p = new int[5];\ndelete p;",
-      "options": ["Valid deletion", "Memory leak", "Undefined behavior", "Only first element deleted"],
+      "type": "theory",
+      "question": "Which type of inheritance creates the diamond problem?",
+      "options": ["Multilevel", "Hierarchical", "Multiple", "Hybrid"],
       "answer": 2
     },
     {
+      "id": 17,
+      "type": "theory",
+      "question": "Static members of a class:",
+      "options": [
+        "Belong to each object separately",
+        "Are shared across all objects",
+        "Cannot be public",
+        "Must be pointers only"
+      ],
+      "answer": 1
+    },
+    {
       "id": 18,
-      "question": "Output?\nclass A{public: void f(){cout<<\"A\";} };\nclass B:public A{public: void f(int x){cout<<\"B\";} };\nB obj;\nobj.f();",
-      "options": ["A", "B", "AB", "Compiler error"],
-      "answer": 3
+      "type": "theory",
+      "question": "Why are templates used?",
+      "options": [
+        "For run-time polymorphism",
+        "For code reusability with different data types",
+        "To avoid constructors",
+        "For exception handling"
+      ],
+      "answer": 1
     },
     {
       "id": 19,
-      "question": "Behavior?\ntry{\n    throw 'x';\n}\ncatch(int){ cout<<1; }\ncatch(...){ cout<<2; }",
-      "options": ["1", "2", "Runtime error", "No output"],
+      "type": "theory",
+      "question": "Which operator cannot be overloaded?",
+      "options": ["=", "?:", "()", "[]"],
       "answer": 1
     },
     {
       "id": 20,
-      "question": "Output in file handling?\nofstream f(\"a.txt\");\nf << \"Hello\";\nf.close();\nifstream g(\"a.txt\");\nstring s;\ng >> s;\ncout << s;",
-      "options": ["Hello", "H", "Error", "Empty string"],
+      "type": "theory",
+      "question": "What is the main purpose of an abstract class?",
+      "options": [
+        "To speed up execution",
+        "To provide partial implementation and enforce overriding",
+        "To disable inheritance",
+        "To store global constants"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 21,
+      "type": "theory",
+      "question": "When does a destructor run?",
+      "options": [
+        "When object goes out of scope",
+        "When object is copied",
+        "During constructor execution",
+        "During memory allocation"
+      ],
       "answer": 0
+    },
+    {
+      "id": 22,
+      "type": "theory",
+      "question": "Which of the following is TRUE about inline functions?",
+           "options": [
+        "Inlining is guaranteed by compiler",
+        "Inlining is only a request",
+        "Inline functions must be virtual",
+        "Inline can be used for recursion only"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 23,
+      "type": "theory",
+      "question": "Which situation requires a deep copy?",
+      "options": [
+        "Class contains primitive data types",
+        "Class contains raw pointers",
+        "Class uses static members",
+        "Class contains references"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 24,
+      "type": "theory",
+      "question": "Which memory region stores local variables?",
+      "options": ["Heap", "Stack", "Data segment", "ROM"],
+      "answer": 1
+    },
+    {
+      "id": 25,
+      "type": "theory",
+      "question": "What is TRUE about function overloading?",
+      "options": [
+        "Return type must differ",
+        "Parameter list must differ",
+        "Only number of arguments must differ",
+        "Only type of arguments must differ"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 26,
+      "type": "theory",
+      "question": "Dynamic memory in C++ is allocated using:",
+      "options": ["malloc", "calloc", "new", "create"],
+      "answer": 2
+    },
+    {
+      "id": 27,
+      "type": "theory",
+      "question": "Which of the following ensures no duplicate base class in diamond inheritance?",
+      "options": ["virtual inheritance", "private inheritance", "protected inheritance", "function overriding"],
+      "answer": 0
+    },
+    {
+      "id": 28,
+      "type": "theory",
+      "question": "Which STL container maintains sorted key-value pairs?",
+      "options": ["vector", "map", "queue", "stack"],
+      "answer": 1
+    },
+    {
+      "id": 29,
+      "type": "theory",
+      "question": "Which pointer arithmetic is valid?",
+      "options": ["p = p * 2;", "p++;", "p = p / 2;", "p = p % 5;"],
+      "answer": 1
+    },
+    {
+      "id": 30,
+      "type": "theory",
+      "question": "Which exception handler catches ANY type?",
+      "options": ["catch(int)", "catch(...)", "catch(float)", "catch(exception)"],
+      "answer": 1
+    },
+    {
+      "id": 31,
+      "type": "theory",
+      "question": "Which C++ feature enforces encapsulation?",
+      "options": ["Access specifiers", "Templates", "Inheritance", "Macros"],
+      "answer": 0
+    },
+    {
+      "id": 32,
+      "type": "theory",
+      "question": "Which file operation sets the get pointer to a specific position?",
+      "options": ["tellg()", "seekg()", "seekp()", "open()"],
+      "answer": 1
+    },
+    {
+      "id": 33,
+      "type": "theory",
+      "question": "Which constructor cannot be inherited?",
+      "options": ["Default constructor", "Copy constructor", "Parameterized constructor", "All constructors"],
+      "answer": 1
+    },
+    {
+      "id": 34,
+      "type": "theory",
+      "question": "Which keyword is used to prevent modification of function parameters?",
+      "options": ["volatile", "static", "const", "friend"],
+      "answer": 2
+    },
+    {
+      "id": 35,
+      "type": "theory",
+      "question": "Which of the following destroys all local automatic objects?",
+      "options": ["free()", "exit()", "terminate()", "return"],
+      "answer": 3
+    },
+    {
+      "id": 36,
+      "type": "theory",
+      "question": "Which class cannot be instantiated?",
+      "options": ["Normal class", "Abstract class", "Static class", "Friend class"],
+      "answer": 1
+    },
+    {
+      "id": 37,
+      "type": "theory",
+      "question": "A function becomes virtual when:",
+      "options": ["It is overloaded", "It is defined outside class", "It is preceded by 'virtual' keyword", "It returns a pointer"],
+      "answer": 2
+    },
+    {
+      "id": 38,
+      "type": "theory",
+      "question": "Which of the following BEST defines a pure virtual function?",
+      "options": ["A function with no parameters", "A function with no return type", "A function declared with = 0", "A function returning void only"],
+      "answer": 2
+    },
+    {
+      "id": 39,
+      "type": "theory",
+      "question": "Which members are inherited privately by default?",
+      "options": ["Struct members", "Class members", "Protected members only", "None"],
+      "answer": 1
+    },
+    {
+      "id": 40,
+      "type": "theory",
+      "question": "Which casting operator performs runtime checking?",
+      "options": ["reinterpret_cast", "dynamic_cast", "const_cast", "static_cast"],
+      "answer": 1
     }
   ]
 }
