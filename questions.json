@@ -3,482 +3,482 @@
     {
       "id": 1,
       "type": "theory",
-      "question": "Which of the following is a wrong statement?",
+      "question": "The header of main function which takes command line arguments looks like ___________",
       "options": [
-        "MySQL cursor is by default asensitive.",
-        "An insensitive cursor performs faster than an asensitive cursor.",
-        "MySQL cursor is read-only.",
-        "MySQL cursor is non-scrollable."
+        "int main(int argc, char *argv)",
+        "int main(char *argv, int argc)",
+        "int main(int argc, char *argv[])",
+        "int main(char *argv[], int argc)"
       ],
-      "answer": 1
+      "answer": 2
     },
     {
       "id": 2,
       "type": "theory",
-      "question": "Which index maintenance task discards the entire index and recreates it?",
+      "question": "Using which macro, we can display the argument from variable number of argument function?",
       "options": [
-        "Repair",
-        "Remake",
-        "Reorganize",
-        "Rebuild"
+        "va_arg",
+        "va_list",
+        "va_show",
+        "va_start"
       ],
-      "answer": 3
+      "answer": 0
     },
     {
       "id": 3,
       "type": "theory",
-      "question": "Which of the following is a wrong statement?",
+      "question": "What will be the output of the given program using sizeof on float array?",
       "options": [
-        "MySQL removes the temporary table automatically when the session ends or the connection is terminated.",
-        "A temporary table is only available and accessible to the client that creates it.",
-        "A temporary table can have the same name as a normal table in a database.",
-        "MySQL does not support Temporary Table."
+        "4",
+        "5",
+        "8",
+        "20"
       ],
-      "answer": 3
+      "answer": 1
     },
     {
       "id": 4,
       "type": "theory",
-      "question": "Which of the following is a wrong statement?",
+      "question": "What is the output of the given for-loop program?",
       "options": [
-        "WITH CHECK OPTION in view is applicable only for updatable views.",
-        "Different views can be created on the same table for different users.",
-        "A view can hide the complexity that exists in a multiple table join.",
-        "We cannot use WITH CHECK OPTION while creating a view."
+        "5",
+        "10",
+        "Compilation error",
+        "6"
       ],
-      "answer": 3
+      "answer": 0
     },
     {
       "id": 5,
       "type": "theory",
-      "question": "What is a complex view?",
+      "question": "Best way to store frequency of scores above 50 for 500 students?",
       "options": [
-        "A view that is created from only one table",
-        "A view that is created from more than one table",
-        "A view that does not contain groups of data",
-        "A view that is used to update the data in the tables used to create the view"
+        "An array of 50 numbers",
+        "An array of 100 numbers",
+        "An array of 500 numbers",
+        "A dynamically allocated array of 550 numbers"
       ],
-      "answer": 1
+      "answer": 0
     },
     {
       "id": 6,
       "type": "theory",
-      "question": "In MySQL, if you would like to throw your own exceptions, you can do so by changing SQLSTATE using ______ keyword.",
+      "question": "Which is true about reference variable?",
       "options": [
-        "SIGNAL",
-        "SQLEXCEPTION",
-        "DECLARE",
-        "END"
-      ],
-      "answer": 0
-    },
-    {
-      "id": 7,
-      "type": "theory",
-      "question": "What is the difference between a PRIMARY KEY and a UNIQUE KEY?",
-      "options": [
-        "Primary key can store null value, whereas a unique key cannot store null value.",
-        "Primary key has unique and not null values, whereas a unique key has only unique values.",
-        "Primary key cannot be a date variable whereas unique key can be.",
-        "Primary key has unique values whereas a unique key has unique and not null values."
-      ],
-      "answer": 1
-    },
-    {
-      "id": 8,
-      "type": "theory",
-      "question": "Which of the following function returns the current date and time?",
-      "options": [
-        "CURRENT_TIMESTAMP",
-        "TIMESTAMP",
-        "CURDATE",
-        "CURTS"
-      ],
-      "answer": 0
-    },
-    {
-      "id": 9,
-      "type": "theory",
-      "question": "Identify the correct statement from the following:",
-      "options": [
-        "LIKE clause can work with only one operator %.",
-        "LIKE clause cannot work with operator _.",
-        "LIKE clause can work with two operators % and _.",
-        "LIKE clause can work with two operators % and ?."
-      ],
-      "answer": 2
-    },
-    {
-      "id": 10,
-      "type": "theory",
-      "question": "The names of columns can be altered in a query’s results by using the ______ keyword.",
-      "options": [
-        "NAMED",
-        "RENAME",
-        "ALIAS",
-        "AS"
+        "A reference can never be null",
+        "A reference once established cannot be changed",
+        "Reference doesn’t need explicit dereferencing",
+        "All of the above"
       ],
       "answer": 3
     },
     {
-      "id": 11,
+      "id": 7,
       "type": "theory",
-      "question": "How many Primary keys can we have in a MySQL table?",
+      "question": "Dynamic objects are stored in",
       "options": [
-        "Only 1",
-        "Only 2",
-        "Depends on number of columns",
-        "Depends on DBA"
-      ],
-      "answer": 0
-    },
-    {
-      "id": 12,
-      "type": "theory",
-      "question": "Which of the following is the correct IF statement syntax?",
-      "options": [
-        "IF boolean_expression { statement_block } FI",
-        "IF boolean_expression START { statement_block } END",
-        "IF boolean_expression BEGIN { statement_block } END",
-        "IF boolean_expression START { statement_block } FI"
+        "Code segment",
+        "Data segment",
+        "Heap",
+        "Run time stack"
       ],
       "answer": 2
     },
     {
+      "id": 8,
+      "type": "theory",
+      "question": "What is the output of program returning const pointer?",
+      "options": [
+        "Warning",
+        "Compilation error",
+        "Output : 124",
+        "Garbage value"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 9,
+      "type": "theory",
+      "question": "What is the output of enum program?",
+      "options": [
+        "32, 32, 32",
+        "32, 33, 34",
+        "32, 31, 30",
+        "None of the above"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 10,
+      "type": "theory",
+      "question": "What is the size of pointer in C++ on 32-bit architecture?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "Depends on datatype"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 11,
+      "type": "theory",
+      "question": "Which are the main three features of OOP language?",
+      "options": [
+        "Encapsulation, Inheritance, Exception handling",
+        "Inheritance, Polymorphism, Exception handling",
+        "Encapsulation, Inheritance, Polymorphism",
+        "Overloading, Inheritance, Polymorphism"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 12,
+      "type": "theory",
+      "question": "Which function type cannot be declared virtual?",
+      "options": [
+        "Normal member functions",
+        "Constructor",
+        "Destructor",
+        "None of the above"
+      ],
+      "answer": 1
+    },
+    {
       "id": 13,
       "type": "theory",
-      "question": "To get all the rows that are common in both tables based on the condition specified, use:",
+      "question": "Size of Base and Derived class on 32-bit architecture?",
       "options": [
-        "Self Join",
-        "Inner Join",
-        "Outer Join",
-        "Full Join"
+        "12 , 12",
+        "12 , 16",
+        "12 , 24",
+        "4 , 16"
       ],
       "answer": 1
     },
     {
       "id": 14,
       "type": "theory",
-      "question": "Which of the following is a wrong statement?",
+      "question": "static_cast can be applied at",
       "options": [
-        "When compared to relational databases, NoSQL databases are more scalable and provide superior performance.",
-        "Non-relational databases require that schemas be defined before you can add data.",
-        "NoSQL databases are built to allow the insertion of data with a predefined schema.",
-        "SQL Server is a type of NoSQL Database."
-      ],
-      "answer": 3
-    },
-    {
-      "id": 15,
-      "type": "theory",
-      "question": "For which of the following MySQL triggers are not supported?",
-      "options": [
-        "DELETE",
-        "UPDATE",
-        "INSERT",
-        "VIEWS"
-      ],
-      "answer": 3
-    },
-    {
-      "id": 16,
-      "type": "theory",
-      "question": "Which of these tasks can you accomplish using SQL as a DML?",
-      "options": [
-        "Inserting a record into a table",
-        "Deleting the database",
-        "Allowing a new user access to read data from a table",
-        "Removing a column from a table"
+        "Compile time",
+        "Run time",
+        "Linking time",
+        "Both compile time and runtime"
       ],
       "answer": 0
     },
     {
+      "id": 15,
+      "type": "theory",
+      "question": "Which inheritance type is shown?",
+      "options": [
+        "Multi-level",
+        "Multiple",
+        "Hybrid",
+        "Hierarchical"
+      ],
+      "answer": 1
+    },
+    {
+      "id": 16,
+      "type": "theory",
+      "question": "Which operator cannot be overloaded?",
+      "options": [
+        "[]",
+        "->",
+        "?:",
+        "*"
+      ],
+      "answer": 2
+    },
+    {
       "id": 17,
       "type": "theory",
-      "question": "Which of the below is not a valid TCL command?",
+      "question": "Which STL container stores elements in adjacent memory?",
       "options": [
-        "SAVEPOINT",
-        "COMMIT",
-        "ROLLBACK",
-        "REVOKE"
+        "Vector",
+        "List",
+        "Set",
+        "Map"
       ],
-      "answer": 3
+      "answer": 0
     },
     {
       "id": 18,
       "type": "theory",
-      "question": "How can a constraint be placed on a table where a field will contain the value “Rohan” if nothing is provided?",
+      "question": "Incorrect statement regarding inline functions?",
       "options": [
-        "CREATE TABLE People (FirstName TEXT CONSTRAINT Rohan, address TEXT, city TEXT);",
-        "CREATE TABLE People (FirstName TEXT DEFAULT 'Rohan', address TEXT, city TEXT);",
-        "CREATE TABLE People (FirstName TEXT DEFAULT (Rohan), address TEXT, city TEXT);",
-        "CREATE TABLE People (FirstName TEXT DEFAULT = 'Rohan', address TEXT, city TEXT);"
+        "It speeds up execution",
+        "It slows down execution",
+        "It increases code size",
+        "Can be inline without inline specifier"
       ],
       "answer": 1
     },
     {
       "id": 19,
       "type": "theory",
-      "question": "Which syntax is followed by MySQL for stored routines?",
+      "question": "Which is not a member of class?",
       "options": [
-        "SQL 2000",
-        "SQL 2003",
-        "SQL 2005",
-        "SQL 2008"
+        "Static function",
+        "Friend function",
+        "Constructor",
+        "Virtual function"
       ],
       "answer": 1
     },
     {
       "id": 20,
       "type": "theory",
-      "question": "Which column attribute enables the generation of sequential numbers automatically for identification?",
+      "question": "Dummy integer argument is passed in which operator overloading?",
       "options": [
-        "AUTO_INCREMENT",
-        "UNSIGNED",
-        "IDENTIFY",
-        "DESCRIBE"
+        "Post increment/decrement",
+        "Pre increment/decrement",
+        "Both",
+        "None"
       ],
       "answer": 0
     },
     {
       "id": 21,
       "type": "theory",
-      "question": "Which of the following is a wrong statement?",
+      "question": "Correct statement regarding abstract class?",
       "options": [
-        "In MongoDB, field names cannot start with the dollar sign ($).",
-        "In MongoDB, field names cannot contain dot (.) character.",
-        "BSON documents cannot have more than one field with the same name.",
-        "BSON is a serialization format encoding for JSON."
+        "Object cannot be created",
+        "Pointer can be created",
+        "Reference can be created",
+        "All of the above"
       ],
-      "answer": 0
+      "answer": 3
     },
     {
       "id": 22,
       "type": "theory",
-      "question": "Identify the wrong statement from the following:",
+      "question": "Which is not inherited?",
       "options": [
-        "Primary Key cannot hold NULL values.",
-        "Unique Key can hold NULL values.",
-        "A Primary Key in a table can be referred to as a Foreign Key in another table.",
-        "One or more fields can be declared as a unique Key."
+        "Friend function",
+        "Constructor",
+        "Overloaded = operator",
+        "All of the above"
       ],
       "answer": 3
     },
     {
       "id": 23,
       "type": "theory",
-      "question": "Which of the below is not a MySQL Storage Engine?",
+      "question": "Output of static member without definition?",
       "options": [
-        "MyISAM",
-        "InnoDB",
-        "CSV",
-        "FEDERAL"
+        "0",
+        "Compilation error",
+        "Linking error",
+        "Garbage value"
       ],
-      "answer": 3
+      "answer": 2
     },
     {
       "id": 24,
       "type": "theory",
-      "question": "A query that is executed inside of another query is called a ______.",
+      "question": "Primary purpose of template function?",
       "options": [
-        "Embedded Query",
-        "Subquery",
-        "Secondary Query",
-        "Join Query"
+        "Use function with varying data types",
+        "Hide name from linker",
+        "Improve execution speed",
+        "Enable debugging"
       ],
-      "answer": 1
+      "answer": 0
     },
     {
       "id": 25,
       "type": "theory",
-      "question": "What does OPEN cursor_name statement do when working with cursors in MySQL?",
+      "question": "Which data structure may give overflow even when space exists?",
       "options": [
-        "Opens a previously declared cursor",
-        "Fetches the next row for the SELECT statement associated with the cursor",
-        "Declares a cursor",
-        "Closes a cursor"
+        "Simple queue",
+        "Circular queue",
+        "Primary queue",
+        "Stack"
       ],
       "answer": 0
     },
     {
       "id": 26,
       "type": "theory",
-      "question": "When you use SQL statements to create or modify the structure of a database, SQL is being used as:",
+      "question": "Correct time complexity matching?",
       "options": [
-        "Data Manipulation Language (DML)",
-        "Database Management Solution (DBMS)",
-        "Data Definition Language (DDL)",
-        "Data Control Language (DCL)"
+        "a=1 b=2 c=3",
+        "a=3 b=1 c=2",
+        "a=3 b=2 c=1",
+        "a=2 b=3 c=1"
       ],
       "answer": 2
     },
     {
       "id": 27,
       "type": "theory",
-      "question": "Which of the following command is used to insert data into collection in MongoDB?",
+      "question": "Special pointers in binary tree are called",
       "options": [
-        "db.COLLECTION_NAME.update(document)",
-        "db.COLLECTION_NAME.insert(document)",
-        "db.COLLECTION_NAME.create(document)",
-        "db.COLLECTION_NAME.insertOne(document)"
+        "Root",
+        "Node",
+        "Branch",
+        "Thread"
       ],
       "answer": 3
     },
     {
       "id": 28,
       "type": "theory",
-      "question": "When you use an aggregate function without a GROUP BY clause, how many results do you expect?",
+      "question": "Balanced binary search tree with height difference at most one?",
       "options": [
-        "One",
-        "Two",
-        "Zero",
-        "All the records in a table"
+        "AVL tree",
+        "Red-black tree",
+        "Lemma tree",
+        "None"
       ],
       "answer": 0
     },
     {
       "id": 29,
       "type": "theory",
-      "question": "What will be the output of the join query?",
+      "question": "Which is not divide and conquer algorithm?",
       "options": [
-        "upperbirth = S1, lowerbirth = B0",
-        "upperbirth = S0, lowerbirth = NULL",
-        "upperbirth = 0, lowerbirth = S0",
-        "upperbirth = S1, lowerbirth = B1"
+        "Quick sort",
+        "Bubble sort",
+        "Merge sort",
+        "Binary search"
       ],
       "answer": 1
     },
     {
       "id": 30,
       "type": "theory",
-      "question": "Which operator is used to test whether or not a value lies within a specified range?",
+      "question": "Stack underflow occurs in which operation?",
       "options": [
-        "LIKE",
-        "BETWEEN",
-        "IN",
-        "FOR"
+        "Push",
+        "Pop",
+        "Is_full",
+        "None"
       ],
       "answer": 1
     },
     {
       "id": 31,
       "type": "theory",
-      "question": "A relation is said to be in ______ if it is in 2NF and no transitive dependency exists.",
+      "question": "Sorting algorithm with worst case nlogn?",
       "options": [
-        "BCNF",
-        "3NF",
-        "1NF",
-        "5NF"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 32,
-      "type": "theory",
-      "question": "Which of the following is not a NoSQL database?",
-      "options": [
-        "SQL Server",
-        "MongoDB",
-        "Cassandra",
-        "HBase"
+        "Heap sort",
+        "Insertion sort",
+        "Selection sort",
+        "Bucket sort"
       ],
       "answer": 0
     },
     {
+      "id": 32,
+      "type": "theory",
+      "question": "Binary trees with postorder A,B,C?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answer": 1
+    },
+    {
       "id": 33,
       "type": "theory",
-      "question": "How are transactions handled within a database?",
+      "question": "Non-leaf nodes in full binary tree with n leaves?",
       "options": [
-        "Failed operations are ignored and the transaction continues.",
-        "Failed operations are flagged for review at the end of the transaction.",
-        "If any operation fails, the entire group of operations is deleted from the database.",
-        "If any operation fails, the entire group of operations fails."
+        "n-1",
+        "log(n)",
+        "2n",
+        "2n-1"
       ],
-      "answer": 3
+      "answer": 0
     },
     {
       "id": 34,
       "type": "theory",
-      "question": "To iterate the cursor and return more documents, which keyword in the Mongo shell is used?",
+      "question": "Queue can be used to implement",
       "options": [
-        "cursor",
-        "it",
-        "next",
-        "more"
+        "Recursion",
+        "Breadth-first search",
+        "Depth-first search",
+        "None"
       ],
       "answer": 1
     },
     {
       "id": 35,
       "type": "theory",
-      "question": "The standard user and application program interface (API) of a relational database is the:",
+      "question": "Design pattern used in exception handling?",
       "options": [
-        "Structured Query Language",
-        "Sequential Query Language",
-        "Relational Query Language",
-        "Standard Query Language"
+        "Chain of Responsibility",
+        "Interpreter",
+        "Builder",
+        "Adapter"
       ],
       "answer": 0
     },
     {
       "id": 36,
       "type": "theory",
-      "question": "Which of the following is a wrong statement?",
+      "question": "Pattern to limit instantiation to one object?",
       "options": [
-        "A subquery can be nested within another subquery.",
-        "We can use subquery in clauses such as SELECT, INSERT, UPDATE, DELETE.",
-        "A MySQL subquery is called an inner query while the query that contains the subquery is called an outer query.",
-        "A subquery cannot return more than one value."
+        "Factory",
+        "Builder",
+        "Prototype",
+        "Singleton"
       ],
       "answer": 3
     },
     {
       "id": 37,
       "type": "theory",
-      "question": "What is the purpose of a foreign key?",
+      "question": "Object that exists between executions?",
       "options": [
-        "Foreign keys are the unique identifier for a table.",
-        "Foreign keys refer to the primary key in another table to link the two tables together.",
-        "Foreign keys refer to a foreign key in another table to link the two tables together.",
-        "Foreign keys are used to update a row in a table."
+        "Global",
+        "Persistent",
+        "Transient",
+        "Delegate"
       ],
       "answer": 1
     },
     {
       "id": 38,
       "type": "theory",
-      "question": "What is the latest SQL Server version?",
+      "question": "Pattern to translate interface?",
       "options": [
-        "SQL Server 2021",
-        "SQL Server 2020",
-        "SQL Server 2022",
-        "SQL Server 2019"
+        "Proxy",
+        "Adapter",
+        "Facade",
+        "Bridge"
       ],
-      "answer": 2
+      "answer": 1
     },
     {
       "id": 39,
       "type": "theory",
-      "question": "Which code returns only the columns pgcode, pgdata, pgdesc from the data table?",
+      "question": "Adapter, bridge, composite belong to?",
       "options": [
-        "SELECT pgcode, pgdata, pgdesc FROM data;",
-        "SELECT pgdata, pgdesc FROM data;",
-        "SELECT * FROM data;",
-        "SELECT pgdata, pgcode, pgdesc FROM data;"
+        "Creational",
+        "Structural",
+        "Behavioural",
+        "Interaction"
       ],
-      "answer": 0
+      "answer": 1
     },
     {
       "id": 40,
       "type": "theory",
-      "question": "Identify the correct statement from the following:",
+      "question": "Sequence, communication and timing diagrams are",
       "options": [
-        "We cannot use WHERE clause with DELETE command.",
-        "TRUNCATE command deletes all rows of a table in one go.",
-        "DELETE command is comparatively faster than TRUNCATE command.",
-        "In case of DROP statement, we can restore the table using ROLLBACK."
+        "Behaviour",
+        "Structure",
+        "Activity",
+        "Interaction"
       ],
-      "answer": 1
+      "answer": 3
     }
   ]
 }
