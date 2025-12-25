@@ -2,341 +2,328 @@
   "questions": [
     {
       "id": 1,
-      "type": "snippet",
-      "question": "What is the output?\nint x = 3;\ncout << (++x * x++);",
-      "options": ["12", "16", "Undefined behavior", "9"],
-      "answer": 2
-    },
-    {
-      "id": 2,
-      "type": "snippet",
-      "question": "Output?\nint a = 5, b = 10;\ncout << (a++, ++b, a + b);",
-      "options": ["15", "16", "17", "18"],
-      "answer": 2
-    },
-    {
-      "id": 3,
-      "type": "snippet",
-      "question": "What happens?\nint *p;\n*p = 10;\nprintf(\"%d\", *p);",
-      "options": ["10", "0", "Garbage", "Undefined behavior"],
+      "type": "theory",
+      "question": "Which of the following is a Data Control Language (DCL) command?",
+      "options": ["COMMIT", "INSERT", "ROLLBACK", "GRANT"],
       "answer": 3
     },
     {
+      "id": 2,
+      "type": "theory",
+      "question": "Which of the following does NOT allow an attribute value to be multivalued or composite?",
+      "options": ["1NF", "2NF", "3NF", "4NF"],
+      "answer": 0
+    },
+    {
+      "id": 3,
+      "type": "theory",
+      "question": "The single-table hash cluster provides fast access to rows in a table. Essentially, there must be which mapping between hash keys and data rows?",
+      "options": ["Many-to-one mapping", "One-to-many mapping", "One-to-one mapping", "Both A and B"],
+      "answer": 2
+    },
+    {
       "id": 4,
-      "type": "snippet",
-      "question": "Output?\nclass A{public: A(){cout<<1;} ~A(){cout<<2;}};\nint main(){ A(); cout<<3; }",
-      "options": ["123", "132", "13", "312"],
+      "type": "theory",
+      "question": "Information stored in the database at a particular moment is called:",
+      "options": ["Schema", "View", "Instance", "Abstraction"],
       "answer": 2
     },
     {
       "id": 5,
-      "type": "snippet",
-      "question": "What is printed?\nclass A{public: virtual void f(){cout<<\"A\";} };\nclass B:public A{public: void f(){cout<<\"B\";} };\nA a;\nB b;\na = b;\na.f();",
-      "options": ["A", "B", "AB", "Undefined"],
-      "answer": 0
+      "type": "theory",
+      "question": "Consider relations R(A, B) and S(P, B) with A and P as primary keys respectively. R contains 300 tuples and S contains 200 tuples. What is the maximum number of tuples possible in the INNER JOIN of R and S?",
+      "options": ["200", "300", "500", "6000"],
+      "answer": 3
     },
     {
       "id": 6,
-      "type": "snippet",
-      "question": "Output?\nint arr[] = {1,2,3};\nint *p = arr;\np += 2;\ncout << *p;",
-      "options": ["1", "2", "3", "Garbage"],
-      "answer": 2
+      "type": "theory",
+      "question": "B is the primary key and A is a foreign key referencing B with ON DELETE CASCADE. Which set of tuples must be deleted when the tuple (1,3) is deleted?",
+      "options": ["(3,9), (3,8)", "(6,1), (9,6)", "(3,9), (3,8), (9,6)", "(3,9), (9,6)"],
+      "answer": 0
     },
     {
       "id": 7,
-      "type": "snippet",
-      "question": "Output?\nclass Demo{\npublic:\n Demo(){cout<<\"C\";}\n ~Demo(){cout<<\"D\";}\n};\nvoid fun(){ static Demo d; }\nint main(){ fun(); cout<<\"X\"; }",
-      "options": ["CDX", "CXD", "CX", "Only C"],
-      "answer": 2
+      "type": "theory",
+      "question": "Which operator is used to compare a specified value from a list of values?",
+      "options": ["BETWEEN", "IN", "ALL", "ANY"],
+      "answer": 1
     },
     {
       "id": 8,
-      "type": "snippet",
-      "question": "What is printed?\nint x = 10;\nint &r = x;\nr++;\ncout << x;",
-      "options": ["10", "11", "0", "Undefined"],
-      "answer": 1
+      "type": "theory",
+      "question": "The minimal subset of fields which identifies the row uniquely in a table is:",
+      "options": ["Candidate key", "Primary key", "Foreign key", "Alternate key"],
+      "answer": 0
     },
     {
       "id": 9,
-      "type": "snippet",
-      "question": "Behavior?\ntry{ throw 3.14; }\ncatch(int){ cout<<1; }\ncatch(...){ cout<<2; }",
-      "options": ["1", "2", "Runtime error", "No output"],
-      "answer": 2
+      "type": "theory",
+      "question": "The maximum size of a MongoDB document is:",
+      "options": ["12 MB", "16 MB", "2 MB", "Unlimited (depends on RAM)"],
+      "answer": 1
     },
     {
       "id": 10,
-      "type": "snippet",
-      "question": "Output?\nofstream f(\"t.txt\");\nf << \"abc\";\nf.close();\nifstream g(\"t.txt\");\nchar c;\ng >> c;\ncout << c;",
-      "options": ["abc", "a", "c", "Empty"],
-      "answer": 1
+      "type": "theory",
+      "question": "MongoDB documents are equivalent to ______ in MySQL.",
+      "options": ["Rows of tables", "Tables", "Primary keys", "Fields"],
+      "answer": 0
     },
-
-  
-
     {
       "id": 11,
       "type": "theory",
-      "question": "Why is a virtual destructor important in polymorphism?",
-      "options": [
-        "Ensures correct overloaded function resolution",
-        "Ensures derived destructor runs when deleting via base pointer",
-        "Prevents slicing",
-        "Speeds up execution"
-      ],
-      "answer": 1
+      "question": "Which of the following are DDL statements?",
+      "options": ["CREATE", "DROP", "ALTER", "All of the above"],
+      "answer": 3
     },
     {
       "id": 12,
       "type": "theory",
-      "question": "Which constructor is invoked when an object is passed by value to a function?",
-      "options": ["Default constructor", "Move constructor", "Copy constructor", "No constructor"],
-      "answer": 2
+      "question": "Which of the following statements are true for stored procedures in PL/SQL?",
+      "options": ["IN parameters are read-only", "OUT parameters are write-only", "IN OUT parameters are read and modified", "All of the above"],
+      "answer": 3
     },
     {
       "id": 13,
       "type": "theory",
-      "question": "Which of the following BEST describes run-time polymorphism?",
-      "options": [
-        "Function overloading",
-        "Template instantiation",
-        "Virtual function overriding",
-        "Operator overloading"
-      ],
+      "question": "What does the TRIM() function in SQL perform?",
+      "options": ["Removes leading spaces", "Removes trailing spaces", "Removes both leading and trailing spaces", "Deletes part of a string and inserts another"],
       "answer": 2
     },
     {
       "id": 14,
       "type": "theory",
-      "question": "Which scenario causes object slicing?",
-      "options": [
-        "Passing derived object by pointer",
-        "Assigning derived object to base object by value",
-        "Calling virtual function through reference",
-        "Using templates"
-      ],
+      "question": "Which function deletes the current database in MongoDB?",
+      "options": ["db.drop()", "db.dropDatabase()", "db.remove()", "db.flush()"],
       "answer": 1
     },
     {
       "id": 15,
       "type": "theory",
-      "question": "What does the 'this' pointer refer to?",
+      "question": "What does the given query return?",
       "options": [
-        "Address of class",
-        "Address of calling object",
-        "Address of base class",
-        "Address of static members"
+        "Students with at least one EXCELLENT grade",
+        "Students with at most one EXCELLENT grade",
+        "Students with all courses EXCELLENT",
+        "Students with no EXCELLENT grades"
       ],
-      "answer": 1
+      "answer": 3
     },
     {
       "id": 16,
       "type": "theory",
-      "question": "Which type of inheritance creates the diamond problem?",
-      "options": ["Multilevel", "Hierarchical", "Multiple", "Hybrid"],
+      "question": "If a relation is in 2NF and has no transitive dependency, it is in:",
+      "options": ["First Normal Form", "Second Normal Form", "Third Normal Form", "None of the above"],
       "answer": 2
     },
     {
       "id": 17,
       "type": "theory",
-      "question": "Static members of a class:",
+      "question": "Which MongoDB query finds all students with marks greater than 80?",
       "options": [
-        "Belong to each object separately",
-        "Are shared across all objects",
-        "Cannot be public",
-        "Must be pointers only"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 18,
-      "type": "theory",
-      "question": "Why are templates used?",
-      "options": [
-        "For run-time polymorphism",
-        "For code reusability with different data types",
-        "To avoid constructors",
-        "For exception handling"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 19,
-      "type": "theory",
-      "question": "Which operator cannot be overloaded?",
-      "options": ["=", "?:", "()", "[]"],
-      "answer": 1
-    },
-    {
-      "id": 20,
-      "type": "theory",
-      "question": "What is the main purpose of an abstract class?",
-      "options": [
-        "To speed up execution",
-        "To provide partial implementation and enforce overriding",
-        "To disable inheritance",
-        "To store global constants"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 21,
-      "type": "theory",
-      "question": "When does a destructor run?",
-      "options": [
-        "When object goes out of scope",
-        "When object is copied",
-        "During constructor execution",
-        "During memory allocation"
+        "db.student.find({marks:{$gt:80}})",
+        "db.student.find({marks:{$gte:80}})",
+        "db.student.find({marks:80})",
+        "Both A and B"
       ],
       "answer": 0
     },
     {
-      "id": 22,
+      "id": 18,
       "type": "theory",
-      "question": "Which of the following is TRUE about inline functions?",
-           "options": [
-        "Inlining is guaranteed by compiler",
-        "Inlining is only a request",
-        "Inline functions must be virtual",
-        "Inline can be used for recursion only"
+      "question": "Which query inserts a document into the employee collection in MongoDB?",
+      "options": [
+        "db.employee.insertData({...})",
+        "db.employee.add({...})",
+        "db.employee.insert({...})",
+        "None of the above"
+      ],
+      "answer": 2
+    },
+    {
+      "id": 19,
+      "type": "theory",
+      "question": "Which utility is used to import JSON data into MongoDB?",
+      "options": ["mongodump", "mongofiles", "mongosupport", "mongoimport"],
+      "answer": 3
+    },
+    {
+      "id": 20,
+      "type": "theory",
+      "question": "Which statement is TRUE with respect to MySQL GROUP BY?",
+      "options": [
+        "Aggregate functions can be used in WHERE clause",
+        "GROUP BY can include attributes not in SELECT",
+        "HAVING can be used without GROUP BY",
+        "SELECT must contain only grouped or aggregated columns"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 21,
+      "type": "theory",
+      "question": "Which of the following statements are true?",
+      "options": [
+        "A UNIQUE key allows only one NULL",
+        "UNIQUE key allows multiple NULLs",
+        "A table cannot have more than one UNIQUE constraint",
+        "Both B and C"
       ],
       "answer": 1
     },
     {
+      "id": 22,
+      "type": "theory",
+      "question": "MongoDB queries can return specific fields and include user-defined functions written in:",
+      "options": ["JavaScript", "C", "C++", "Java"],
+      "answer": 0
+    },
+    {
       "id": 23,
       "type": "theory",
-      "question": "Which situation requires a deep copy?",
+      "question": "Output of the given SQL query?",
       "options": [
-        "Class contains primitive data types",
-        "Class contains raw pointers",
-        "Class uses static members",
-        "Class contains references"
+        "Prateek, Raghav",
+        "Sakshi, Raghav",
+        "Sakshi, Raghav, Himanshu",
+        "Amit, Prateek, Sakshi"
       ],
       "answer": 1
     },
     {
       "id": 24,
       "type": "theory",
-      "question": "Which memory region stores local variables?",
-      "options": ["Heap", "Stack", "Data segment", "ROM"],
-      "answer": 1
+      "question": "Which indexes are supported by MongoDB?",
+      "options": [
+        "Compound indexes",
+        "Multikey indexes",
+        "Geospatial indexes",
+        "All of the above"
+      ],
+      "answer": 3
     },
     {
       "id": 25,
       "type": "theory",
-      "question": "What is TRUE about function overloading?",
-      "options": [
-        "Return type must differ",
-        "Parameter list must differ",
-        "Only number of arguments must differ",
-        "Only type of arguments must differ"
-      ],
+      "question": "Which of the following is NOT an integrity constraint?",
+      "options": ["NOT NULL", "POSITIVE", "UNIQUE", "CHECK"],
       "answer": 1
     },
     {
       "id": 26,
       "type": "theory",
-      "question": "Dynamic memory in C++ is allocated using:",
-      "options": ["malloc", "calloc", "new", "create"],
-      "answer": 2
+      "question": "What is the result of AVG(A)?",
+      "options": ["3", "4", "5", "6"],
+      "answer": 1
     },
     {
       "id": 27,
       "type": "theory",
-      "question": "Which of the following ensures no duplicate base class in diamond inheritance?",
-      "options": ["virtual inheritance", "private inheritance", "protected inheritance", "function overriding"],
-      "answer": 0
+      "question": "Indexes for primary key and unique key are:",
+      "options": ["Created manually", "Created automatically", "Never created", "Optional"],
+      "answer": 1
     },
     {
       "id": 28,
       "type": "theory",
-      "question": "Which STL container maintains sorted key-value pairs?",
-      "options": ["vector", "map", "queue", "stack"],
-      "answer": 1
+      "question": "Graph databases are best suited for storing:",
+      "options": [
+        "Key-value data",
+        "Documents",
+        "Social network connections",
+        "Column families"
+      ],
+      "answer": 2
     },
     {
       "id": 29,
       "type": "theory",
-      "question": "Which pointer arithmetic is valid?",
-      "options": ["p = p * 2;", "p++;", "p = p / 2;", "p = p % 5;"],
+      "question": "Which normal form removes partial dependency?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
       "answer": 1
     },
     {
       "id": 30,
       "type": "theory",
-      "question": "Which exception handler catches ANY type?",
-      "options": ["catch(int)", "catch(...)", "catch(float)", "catch(exception)"],
-      "answer": 1
+      "question": "Which SQL clause is used to filter groups?",
+      "options": ["WHERE", "GROUP BY", "HAVING", "ORDER BY"],
+      "answer": 2
     },
     {
       "id": 31,
       "type": "theory",
-      "question": "Which C++ feature enforces encapsulation?",
-      "options": ["Access specifiers", "Templates", "Inheritance", "Macros"],
-      "answer": 0
+      "question": "Which relational algebra operation combines tuples of two relations?",
+      "options": ["Selection", "Projection", "Join", "Division"],
+      "answer": 2
     },
     {
       "id": 32,
       "type": "theory",
-      "question": "Which file operation sets the get pointer to a specific position?",
-      "options": ["tellg()", "seekg()", "seekp()", "open()"],
-      "answer": 1
+      "question": "Which command copies both structure and data of a table?",
+      "options": ["CREATE TABLE AS", "INSERT INTO", "SELECT INTO", "COPY"],
+      "answer": 0
     },
     {
       "id": 33,
       "type": "theory",
-      "question": "Which constructor cannot be inherited?",
-      "options": ["Default constructor", "Copy constructor", "Parameterized constructor", "All constructors"],
+      "question": "Which of the following is a TCL command?",
+      "options": ["GRANT", "COMMIT", "CREATE", "SELECT"],
       "answer": 1
     },
     {
       "id": 34,
       "type": "theory",
-      "question": "Which keyword is used to prevent modification of function parameters?",
-      "options": ["volatile", "static", "const", "friend"],
+      "question": "Which normal form removes multivalued dependency?",
+      "options": ["3NF", "BCNF", "4NF", "5NF"],
       "answer": 2
     },
     {
       "id": 35,
       "type": "theory",
-      "question": "Which of the following destroys all local automatic objects?",
-      "options": ["free()", "exit()", "terminate()", "return"],
-      "answer": 3
+      "question": "Which join returns matching rows and NULLs for non-matching rows?",
+      "options": ["INNER JOIN", "NATURAL JOIN", "OUTER JOIN", "CROSS JOIN"],
+      "answer": 2
     },
     {
       "id": 36,
       "type": "theory",
-      "question": "Which class cannot be instantiated?",
-      "options": ["Normal class", "Abstract class", "Static class", "Friend class"],
-      "answer": 1
+      "question": "Which NoSQL model follows the CAP theorem strictly?",
+      "options": ["RDBMS", "Document store", "Key-value store", "Graph database"],
+      "answer": 2
     },
     {
       "id": 37,
       "type": "theory",
-      "question": "A function becomes virtual when:",
-      "options": ["It is overloaded", "It is defined outside class", "It is preceded by 'virtual' keyword", "It returns a pointer"],
-      "answer": 2
+      "question": "Which SQL keyword is used to remove duplicate rows?",
+      "options": ["UNIQUE", "DISTINCT", "GROUP", "FILTER"],
+      "answer": 1
     },
     {
       "id": 38,
       "type": "theory",
-      "question": "Which of the following BEST defines a pure virtual function?",
-      "options": ["A function with no parameters", "A function with no return type", "A function declared with = 0", "A function returning void only"],
-      "answer": 2
+      "question": "Which storage engine in MySQL supports transactions?",
+      "options": ["MyISAM", "InnoDB", "MEMORY", "CSV"],
+      "answer": 1
     },
     {
       "id": 39,
       "type": "theory",
-      "question": "Which members are inherited privately by default?",
-      "options": ["Struct members", "Class members", "Protected members only", "None"],
-      "answer": 1
+      "question": "Which MongoDB operation updates or inserts if not present?",
+      "options": ["insert", "update", "upsert", "replace"],
+      "answer": 2
     },
     {
       "id": 40,
       "type": "theory",
-      "question": "Which casting operator performs runtime checking?",
-      "options": ["reinterpret_cast", "dynamic_cast", "const_cast", "static_cast"],
-      "answer": 1
+      "question": "Which of the following is TRUE about ACID?",
+      "options": [
+        "Atomicity ensures isolation",
+        "Consistency ensures durability",
+        "Durability ensures committed data is permanent",
+        "Isolation allows partial commits"
+      ],
+      "answer": 2
     }
   ]
 }
