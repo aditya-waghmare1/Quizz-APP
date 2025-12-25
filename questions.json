@@ -3,327 +3,482 @@
     {
       "id": 1,
       "type": "theory",
-      "question": "Which of the following is a Data Control Language (DCL) command?",
-      "options": ["COMMIT", "INSERT", "ROLLBACK", "GRANT"],
-      "answer": 3
+      "question": "Which of the following is a wrong statement?",
+      "options": [
+        "MySQL cursor is by default asensitive.",
+        "An insensitive cursor performs faster than an asensitive cursor.",
+        "MySQL cursor is read-only.",
+        "MySQL cursor is non-scrollable."
+      ],
+      "answer": 1
     },
     {
       "id": 2,
       "type": "theory",
-      "question": "Which of the following does NOT allow an attribute value to be multivalued or composite?",
-      "options": ["1NF", "2NF", "3NF", "4NF"],
-      "answer": 0
+      "question": "Which index maintenance task discards the entire index and recreates it?",
+      "options": [
+        "Repair",
+        "Remake",
+        "Reorganize",
+        "Rebuild"
+      ],
+      "answer": 3
     },
     {
       "id": 3,
       "type": "theory",
-      "question": "The single-table hash cluster provides fast access to rows in a table. Essentially, there must be which mapping between hash keys and data rows?",
-      "options": ["Many-to-one mapping", "One-to-many mapping", "One-to-one mapping", "Both A and B"],
-      "answer": 2
+      "question": "Which of the following is a wrong statement?",
+      "options": [
+        "MySQL removes the temporary table automatically when the session ends or the connection is terminated.",
+        "A temporary table is only available and accessible to the client that creates it.",
+        "A temporary table can have the same name as a normal table in a database.",
+        "MySQL does not support Temporary Table."
+      ],
+      "answer": 3
     },
     {
       "id": 4,
       "type": "theory",
-      "question": "Information stored in the database at a particular moment is called:",
-      "options": ["Schema", "View", "Instance", "Abstraction"],
-      "answer": 2
+      "question": "Which of the following is a wrong statement?",
+      "options": [
+        "WITH CHECK OPTION in view is applicable only for updatable views.",
+        "Different views can be created on the same table for different users.",
+        "A view can hide the complexity that exists in a multiple table join.",
+        "We cannot use WITH CHECK OPTION while creating a view."
+      ],
+      "answer": 3
     },
     {
       "id": 5,
       "type": "theory",
-      "question": "Consider relations R(A, B) and S(P, B) with A and P as primary keys respectively. R contains 300 tuples and S contains 200 tuples. What is the maximum number of tuples possible in the INNER JOIN of R and S?",
-      "options": ["200", "300", "500", "6000"],
-      "answer": 3
+      "question": "What is a complex view?",
+      "options": [
+        "A view that is created from only one table",
+        "A view that is created from more than one table",
+        "A view that does not contain groups of data",
+        "A view that is used to update the data in the tables used to create the view"
+      ],
+      "answer": 1
     },
     {
       "id": 6,
       "type": "theory",
-      "question": "B is the primary key and A is a foreign key referencing B with ON DELETE CASCADE. Which set of tuples must be deleted when the tuple (1,3) is deleted?",
-      "options": ["(3,9), (3,8)", "(6,1), (9,6)", "(3,9), (3,8), (9,6)", "(3,9), (9,6)"],
+      "question": "In MySQL, if you would like to throw your own exceptions, you can do so by changing SQLSTATE using ______ keyword.",
+      "options": [
+        "SIGNAL",
+        "SQLEXCEPTION",
+        "DECLARE",
+        "END"
+      ],
       "answer": 0
     },
     {
       "id": 7,
       "type": "theory",
-      "question": "Which operator is used to compare a specified value from a list of values?",
-      "options": ["BETWEEN", "IN", "ALL", "ANY"],
+      "question": "What is the difference between a PRIMARY KEY and a UNIQUE KEY?",
+      "options": [
+        "Primary key can store null value, whereas a unique key cannot store null value.",
+        "Primary key has unique and not null values, whereas a unique key has only unique values.",
+        "Primary key cannot be a date variable whereas unique key can be.",
+        "Primary key has unique values whereas a unique key has unique and not null values."
+      ],
       "answer": 1
     },
     {
       "id": 8,
       "type": "theory",
-      "question": "The minimal subset of fields which identifies the row uniquely in a table is:",
-      "options": ["Candidate key", "Primary key", "Foreign key", "Alternate key"],
+      "question": "Which of the following function returns the current date and time?",
+      "options": [
+        "CURRENT_TIMESTAMP",
+        "TIMESTAMP",
+        "CURDATE",
+        "CURTS"
+      ],
       "answer": 0
     },
     {
       "id": 9,
       "type": "theory",
-      "question": "The maximum size of a MongoDB document is:",
-      "options": ["12 MB", "16 MB", "2 MB", "Unlimited (depends on RAM)"],
-      "answer": 1
+      "question": "Identify the correct statement from the following:",
+      "options": [
+        "LIKE clause can work with only one operator %.",
+        "LIKE clause cannot work with operator _.",
+        "LIKE clause can work with two operators % and _.",
+        "LIKE clause can work with two operators % and ?."
+      ],
+      "answer": 2
     },
     {
       "id": 10,
       "type": "theory",
-      "question": "MongoDB documents are equivalent to ______ in MySQL.",
-      "options": ["Rows of tables", "Tables", "Primary keys", "Fields"],
-      "answer": 0
+      "question": "The names of columns can be altered in a query’s results by using the ______ keyword.",
+      "options": [
+        "NAMED",
+        "RENAME",
+        "ALIAS",
+        "AS"
+      ],
+      "answer": 3
     },
     {
       "id": 11,
       "type": "theory",
-      "question": "Which of the following are DDL statements?",
-      "options": ["CREATE", "DROP", "ALTER", "All of the above"],
-      "answer": 3
+      "question": "How many Primary keys can we have in a MySQL table?",
+      "options": [
+        "Only 1",
+        "Only 2",
+        "Depends on number of columns",
+        "Depends on DBA"
+      ],
+      "answer": 0
     },
     {
       "id": 12,
       "type": "theory",
-      "question": "Which of the following statements are true for stored procedures in PL/SQL?",
-      "options": ["IN parameters are read-only", "OUT parameters are write-only", "IN OUT parameters are read and modified", "All of the above"],
-      "answer": 3
+      "question": "Which of the following is the correct IF statement syntax?",
+      "options": [
+        "IF boolean_expression { statement_block } FI",
+        "IF boolean_expression START { statement_block } END",
+        "IF boolean_expression BEGIN { statement_block } END",
+        "IF boolean_expression START { statement_block } FI"
+      ],
+      "answer": 2
     },
     {
       "id": 13,
       "type": "theory",
-      "question": "What does the TRIM() function in SQL perform?",
-      "options": ["Removes leading spaces", "Removes trailing spaces", "Removes both leading and trailing spaces", "Deletes part of a string and inserts another"],
-      "answer": 2
+      "question": "To get all the rows that are common in both tables based on the condition specified, use:",
+      "options": [
+        "Self Join",
+        "Inner Join",
+        "Outer Join",
+        "Full Join"
+      ],
+      "answer": 1
     },
     {
       "id": 14,
       "type": "theory",
-      "question": "Which function deletes the current database in MongoDB?",
-      "options": ["db.drop()", "db.dropDatabase()", "db.remove()", "db.flush()"],
-      "answer": 1
+      "question": "Which of the following is a wrong statement?",
+      "options": [
+        "When compared to relational databases, NoSQL databases are more scalable and provide superior performance.",
+        "Non-relational databases require that schemas be defined before you can add data.",
+        "NoSQL databases are built to allow the insertion of data with a predefined schema.",
+        "SQL Server is a type of NoSQL Database."
+      ],
+      "answer": 3
     },
     {
       "id": 15,
       "type": "theory",
-      "question": "What does the given query return?",
+      "question": "For which of the following MySQL triggers are not supported?",
       "options": [
-        "Students with at least one EXCELLENT grade",
-        "Students with at most one EXCELLENT grade",
-        "Students with all courses EXCELLENT",
-        "Students with no EXCELLENT grades"
+        "DELETE",
+        "UPDATE",
+        "INSERT",
+        "VIEWS"
       ],
       "answer": 3
     },
     {
       "id": 16,
       "type": "theory",
-      "question": "If a relation is in 2NF and has no transitive dependency, it is in:",
-      "options": ["First Normal Form", "Second Normal Form", "Third Normal Form", "None of the above"],
-      "answer": 2
+      "question": "Which of these tasks can you accomplish using SQL as a DML?",
+      "options": [
+        "Inserting a record into a table",
+        "Deleting the database",
+        "Allowing a new user access to read data from a table",
+        "Removing a column from a table"
+      ],
+      "answer": 0
     },
     {
       "id": 17,
       "type": "theory",
-      "question": "Which MongoDB query finds all students with marks greater than 80?",
+      "question": "Which of the below is not a valid TCL command?",
       "options": [
-        "db.student.find({marks:{$gt:80}})",
-        "db.student.find({marks:{$gte:80}})",
-        "db.student.find({marks:80})",
-        "Both A and B"
+        "SAVEPOINT",
+        "COMMIT",
+        "ROLLBACK",
+        "REVOKE"
       ],
-      "answer": 0
+      "answer": 3
     },
     {
       "id": 18,
       "type": "theory",
-      "question": "Which query inserts a document into the employee collection in MongoDB?",
+      "question": "How can a constraint be placed on a table where a field will contain the value “Rohan” if nothing is provided?",
       "options": [
-        "db.employee.insertData({...})",
-        "db.employee.add({...})",
-        "db.employee.insert({...})",
-        "None of the above"
+        "CREATE TABLE People (FirstName TEXT CONSTRAINT Rohan, address TEXT, city TEXT);",
+        "CREATE TABLE People (FirstName TEXT DEFAULT 'Rohan', address TEXT, city TEXT);",
+        "CREATE TABLE People (FirstName TEXT DEFAULT (Rohan), address TEXT, city TEXT);",
+        "CREATE TABLE People (FirstName TEXT DEFAULT = 'Rohan', address TEXT, city TEXT);"
       ],
-      "answer": 2
+      "answer": 1
     },
     {
       "id": 19,
       "type": "theory",
-      "question": "Which utility is used to import JSON data into MongoDB?",
-      "options": ["mongodump", "mongofiles", "mongosupport", "mongoimport"],
-      "answer": 3
+      "question": "Which syntax is followed by MySQL for stored routines?",
+      "options": [
+        "SQL 2000",
+        "SQL 2003",
+        "SQL 2005",
+        "SQL 2008"
+      ],
+      "answer": 1
     },
     {
       "id": 20,
       "type": "theory",
-      "question": "Which statement is TRUE with respect to MySQL GROUP BY?",
+      "question": "Which column attribute enables the generation of sequential numbers automatically for identification?",
       "options": [
-        "Aggregate functions can be used in WHERE clause",
-        "GROUP BY can include attributes not in SELECT",
-        "HAVING can be used without GROUP BY",
-        "SELECT must contain only grouped or aggregated columns"
+        "AUTO_INCREMENT",
+        "UNSIGNED",
+        "IDENTIFY",
+        "DESCRIBE"
       ],
-      "answer": 3
+      "answer": 0
     },
     {
       "id": 21,
       "type": "theory",
-      "question": "Which of the following statements are true?",
+      "question": "Which of the following is a wrong statement?",
       "options": [
-        "A UNIQUE key allows only one NULL",
-        "UNIQUE key allows multiple NULLs",
-        "A table cannot have more than one UNIQUE constraint",
-        "Both B and C"
+        "In MongoDB, field names cannot start with the dollar sign ($).",
+        "In MongoDB, field names cannot contain dot (.) character.",
+        "BSON documents cannot have more than one field with the same name.",
+        "BSON is a serialization format encoding for JSON."
       ],
-      "answer": 1
+      "answer": 0
     },
     {
       "id": 22,
       "type": "theory",
-      "question": "MongoDB queries can return specific fields and include user-defined functions written in:",
-      "options": ["JavaScript", "C", "C++", "Java"],
-      "answer": 0
-    },
-    {
-      "id": 23,
-      "type": "theory",
-      "question": "Output of the given SQL query?",
+      "question": "Identify the wrong statement from the following:",
       "options": [
-        "Prateek, Raghav",
-        "Sakshi, Raghav",
-        "Sakshi, Raghav, Himanshu",
-        "Amit, Prateek, Sakshi"
-      ],
-      "answer": 1
-    },
-    {
-      "id": 24,
-      "type": "theory",
-      "question": "Which indexes are supported by MongoDB?",
-      "options": [
-        "Compound indexes",
-        "Multikey indexes",
-        "Geospatial indexes",
-        "All of the above"
+        "Primary Key cannot hold NULL values.",
+        "Unique Key can hold NULL values.",
+        "A Primary Key in a table can be referred to as a Foreign Key in another table.",
+        "One or more fields can be declared as a unique Key."
       ],
       "answer": 3
     },
     {
+      "id": 23,
+      "type": "theory",
+      "question": "Which of the below is not a MySQL Storage Engine?",
+      "options": [
+        "MyISAM",
+        "InnoDB",
+        "CSV",
+        "FEDERAL"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 24,
+      "type": "theory",
+      "question": "A query that is executed inside of another query is called a ______.",
+      "options": [
+        "Embedded Query",
+        "Subquery",
+        "Secondary Query",
+        "Join Query"
+      ],
+      "answer": 1
+    },
+    {
       "id": 25,
       "type": "theory",
-      "question": "Which of the following is NOT an integrity constraint?",
-      "options": ["NOT NULL", "POSITIVE", "UNIQUE", "CHECK"],
-      "answer": 1
+      "question": "What does OPEN cursor_name statement do when working with cursors in MySQL?",
+      "options": [
+        "Opens a previously declared cursor",
+        "Fetches the next row for the SELECT statement associated with the cursor",
+        "Declares a cursor",
+        "Closes a cursor"
+      ],
+      "answer": 0
     },
     {
       "id": 26,
       "type": "theory",
-      "question": "What is the result of AVG(A)?",
-      "options": ["3", "4", "5", "6"],
-      "answer": 1
-    },
-    {
-      "id": 27,
-      "type": "theory",
-      "question": "Indexes for primary key and unique key are:",
-      "options": ["Created manually", "Created automatically", "Never created", "Optional"],
-      "answer": 1
-    },
-    {
-      "id": 28,
-      "type": "theory",
-      "question": "Graph databases are best suited for storing:",
+      "question": "When you use SQL statements to create or modify the structure of a database, SQL is being used as:",
       "options": [
-        "Key-value data",
-        "Documents",
-        "Social network connections",
-        "Column families"
+        "Data Manipulation Language (DML)",
+        "Database Management Solution (DBMS)",
+        "Data Definition Language (DDL)",
+        "Data Control Language (DCL)"
       ],
       "answer": 2
     },
     {
+      "id": 27,
+      "type": "theory",
+      "question": "Which of the following command is used to insert data into collection in MongoDB?",
+      "options": [
+        "db.COLLECTION_NAME.update(document)",
+        "db.COLLECTION_NAME.insert(document)",
+        "db.COLLECTION_NAME.create(document)",
+        "db.COLLECTION_NAME.insertOne(document)"
+      ],
+      "answer": 3
+    },
+    {
+      "id": 28,
+      "type": "theory",
+      "question": "When you use an aggregate function without a GROUP BY clause, how many results do you expect?",
+      "options": [
+        "One",
+        "Two",
+        "Zero",
+        "All the records in a table"
+      ],
+      "answer": 0
+    },
+    {
       "id": 29,
       "type": "theory",
-      "question": "Which normal form removes partial dependency?",
-      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "question": "What will be the output of the join query?",
+      "options": [
+        "upperbirth = S1, lowerbirth = B0",
+        "upperbirth = S0, lowerbirth = NULL",
+        "upperbirth = 0, lowerbirth = S0",
+        "upperbirth = S1, lowerbirth = B1"
+      ],
       "answer": 1
     },
     {
       "id": 30,
       "type": "theory",
-      "question": "Which SQL clause is used to filter groups?",
-      "options": ["WHERE", "GROUP BY", "HAVING", "ORDER BY"],
-      "answer": 2
+      "question": "Which operator is used to test whether or not a value lies within a specified range?",
+      "options": [
+        "LIKE",
+        "BETWEEN",
+        "IN",
+        "FOR"
+      ],
+      "answer": 1
     },
     {
       "id": 31,
       "type": "theory",
-      "question": "Which relational algebra operation combines tuples of two relations?",
-      "options": ["Selection", "Projection", "Join", "Division"],
-      "answer": 2
+      "question": "A relation is said to be in ______ if it is in 2NF and no transitive dependency exists.",
+      "options": [
+        "BCNF",
+        "3NF",
+        "1NF",
+        "5NF"
+      ],
+      "answer": 1
     },
     {
       "id": 32,
       "type": "theory",
-      "question": "Which command copies both structure and data of a table?",
-      "options": ["CREATE TABLE AS", "INSERT INTO", "SELECT INTO", "COPY"],
+      "question": "Which of the following is not a NoSQL database?",
+      "options": [
+        "SQL Server",
+        "MongoDB",
+        "Cassandra",
+        "HBase"
+      ],
       "answer": 0
     },
     {
       "id": 33,
       "type": "theory",
-      "question": "Which of the following is a TCL command?",
-      "options": ["GRANT", "COMMIT", "CREATE", "SELECT"],
-      "answer": 1
+      "question": "How are transactions handled within a database?",
+      "options": [
+        "Failed operations are ignored and the transaction continues.",
+        "Failed operations are flagged for review at the end of the transaction.",
+        "If any operation fails, the entire group of operations is deleted from the database.",
+        "If any operation fails, the entire group of operations fails."
+      ],
+      "answer": 3
     },
     {
       "id": 34,
       "type": "theory",
-      "question": "Which normal form removes multivalued dependency?",
-      "options": ["3NF", "BCNF", "4NF", "5NF"],
-      "answer": 2
+      "question": "To iterate the cursor and return more documents, which keyword in the Mongo shell is used?",
+      "options": [
+        "cursor",
+        "it",
+        "next",
+        "more"
+      ],
+      "answer": 1
     },
     {
       "id": 35,
       "type": "theory",
-      "question": "Which join returns matching rows and NULLs for non-matching rows?",
-      "options": ["INNER JOIN", "NATURAL JOIN", "OUTER JOIN", "CROSS JOIN"],
-      "answer": 2
+      "question": "The standard user and application program interface (API) of a relational database is the:",
+      "options": [
+        "Structured Query Language",
+        "Sequential Query Language",
+        "Relational Query Language",
+        "Standard Query Language"
+      ],
+      "answer": 0
     },
     {
       "id": 36,
       "type": "theory",
-      "question": "Which NoSQL model follows the CAP theorem strictly?",
-      "options": ["RDBMS", "Document store", "Key-value store", "Graph database"],
-      "answer": 2
+      "question": "Which of the following is a wrong statement?",
+      "options": [
+        "A subquery can be nested within another subquery.",
+        "We can use subquery in clauses such as SELECT, INSERT, UPDATE, DELETE.",
+        "A MySQL subquery is called an inner query while the query that contains the subquery is called an outer query.",
+        "A subquery cannot return more than one value."
+      ],
+      "answer": 3
     },
     {
       "id": 37,
       "type": "theory",
-      "question": "Which SQL keyword is used to remove duplicate rows?",
-      "options": ["UNIQUE", "DISTINCT", "GROUP", "FILTER"],
+      "question": "What is the purpose of a foreign key?",
+      "options": [
+        "Foreign keys are the unique identifier for a table.",
+        "Foreign keys refer to the primary key in another table to link the two tables together.",
+        "Foreign keys refer to a foreign key in another table to link the two tables together.",
+        "Foreign keys are used to update a row in a table."
+      ],
       "answer": 1
     },
     {
       "id": 38,
       "type": "theory",
-      "question": "Which storage engine in MySQL supports transactions?",
-      "options": ["MyISAM", "InnoDB", "MEMORY", "CSV"],
-      "answer": 1
+      "question": "What is the latest SQL Server version?",
+      "options": [
+        "SQL Server 2021",
+        "SQL Server 2020",
+        "SQL Server 2022",
+        "SQL Server 2019"
+      ],
+      "answer": 2
     },
     {
       "id": 39,
       "type": "theory",
-      "question": "Which MongoDB operation updates or inserts if not present?",
-      "options": ["insert", "update", "upsert", "replace"],
-      "answer": 2
+      "question": "Which code returns only the columns pgcode, pgdata, pgdesc from the data table?",
+      "options": [
+        "SELECT pgcode, pgdata, pgdesc FROM data;",
+        "SELECT pgdata, pgdesc FROM data;",
+        "SELECT * FROM data;",
+        "SELECT pgdata, pgcode, pgdesc FROM data;"
+      ],
+      "answer": 0
     },
     {
       "id": 40,
       "type": "theory",
-      "question": "Which of the following is TRUE about ACID?",
+      "question": "Identify the correct statement from the following:",
       "options": [
-        "Atomicity ensures isolation",
-        "Consistency ensures durability",
-        "Durability ensures committed data is permanent",
-        "Isolation allows partial commits"
+        "We cannot use WHERE clause with DELETE command.",
+        "TRUNCATE command deletes all rows of a table in one go.",
+        "DELETE command is comparatively faster than TRUNCATE command.",
+        "In case of DROP statement, we can restore the table using ROLLBACK."
       ],
-      "answer": 2
+      "answer": 1
     }
   ]
 }
